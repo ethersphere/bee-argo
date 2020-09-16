@@ -43,7 +43,7 @@ data:
     p2p-addr: :7070
     p2p-quic-enable: false
     p2p-ws-enable: false
-    resolver-options: 
+    resolver-options: https://cloudflare-eth.com
     standalone: false
     tracing-enable: true
     tracing-endpoint: jaeger-operator-jaeger-agent.observability:6831

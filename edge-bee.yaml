@@ -75,6 +75,7 @@ beeConfig:
   existingSecret: bee-password
   tracing_enable: true
   tracing_endpoint: jaeger-operator-jaeger-agent.observability:6831
+  resolver_options: "https://cloudflare-eth.com"
   verbosity: 5
 
 libp2pSettings:
