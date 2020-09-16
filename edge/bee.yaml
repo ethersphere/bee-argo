@@ -36,7 +36,7 @@ data:
     debug-api-enable: true
     global-pinning-enable: false
     nat-addr: 
-    network-id: 1
+    network-id: 2
     password-file: /home/bee/.secret/password
     payment-threshold: 100000
     payment-tolerance: 10000

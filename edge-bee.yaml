@@ -70,6 +70,7 @@ updateStrategy:
 beeConfig:
   bootnode: "/dnsaddr/bootnode.staging.ethswarm.org"
   debug_api_enable: true
+  network_id: 2
   usePasswordFile: true
   existingSecret: bee-password
   tracing_enable: true
