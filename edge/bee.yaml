@@ -331,6 +331,286 @@ spec:
     app.kubernetes.io/instance: bee
     statefulset.kubernetes.io/pod-name: bee-9
 ---
+# Source: bee/templates/service-debug.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: bee-10-debug
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+    pod: bee-10
+    endpoint: debug
+    app: bee
+    release: bee
+spec:
+  type: ClusterIP
+  ports:
+    - name: debug
+      port: 6060
+      protocol: TCP
+      targetPort: debug
+  selector:
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    statefulset.kubernetes.io/pod-name: bee-10
+---
+# Source: bee/templates/service-debug.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: bee-11-debug
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+    pod: bee-11
+    endpoint: debug
+    app: bee
+    release: bee
+spec:
+  type: ClusterIP
+  ports:
+    - name: debug
+      port: 6060
+      protocol: TCP
+      targetPort: debug
+  selector:
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    statefulset.kubernetes.io/pod-name: bee-11
+---
+# Source: bee/templates/service-debug.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: bee-12-debug
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+    pod: bee-12
+    endpoint: debug
+    app: bee
+    release: bee
+spec:
+  type: ClusterIP
+  ports:
+    - name: debug
+      port: 6060
+      protocol: TCP
+      targetPort: debug
+  selector:
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    statefulset.kubernetes.io/pod-name: bee-12
+---
+# Source: bee/templates/service-debug.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: bee-13-debug
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+    pod: bee-13
+    endpoint: debug
+    app: bee
+    release: bee
+spec:
+  type: ClusterIP
+  ports:
+    - name: debug
+      port: 6060
+      protocol: TCP
+      targetPort: debug
+  selector:
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    statefulset.kubernetes.io/pod-name: bee-13
+---
+# Source: bee/templates/service-debug.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: bee-14-debug
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+    pod: bee-14
+    endpoint: debug
+    app: bee
+    release: bee
+spec:
+  type: ClusterIP
+  ports:
+    - name: debug
+      port: 6060
+      protocol: TCP
+      targetPort: debug
+  selector:
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    statefulset.kubernetes.io/pod-name: bee-14
+---
+# Source: bee/templates/service-debug.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: bee-15-debug
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+    pod: bee-15
+    endpoint: debug
+    app: bee
+    release: bee
+spec:
+  type: ClusterIP
+  ports:
+    - name: debug
+      port: 6060
+      protocol: TCP
+      targetPort: debug
+  selector:
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    statefulset.kubernetes.io/pod-name: bee-15
+---
+# Source: bee/templates/service-debug.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: bee-16-debug
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+    pod: bee-16
+    endpoint: debug
+    app: bee
+    release: bee
+spec:
+  type: ClusterIP
+  ports:
+    - name: debug
+      port: 6060
+      protocol: TCP
+      targetPort: debug
+  selector:
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    statefulset.kubernetes.io/pod-name: bee-16
+---
+# Source: bee/templates/service-debug.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: bee-17-debug
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+    pod: bee-17
+    endpoint: debug
+    app: bee
+    release: bee
+spec:
+  type: ClusterIP
+  ports:
+    - name: debug
+      port: 6060
+      protocol: TCP
+      targetPort: debug
+  selector:
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    statefulset.kubernetes.io/pod-name: bee-17
+---
+# Source: bee/templates/service-debug.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: bee-18-debug
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+    pod: bee-18
+    endpoint: debug
+    app: bee
+    release: bee
+spec:
+  type: ClusterIP
+  ports:
+    - name: debug
+      port: 6060
+      protocol: TCP
+      targetPort: debug
+  selector:
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    statefulset.kubernetes.io/pod-name: bee-18
+---
+# Source: bee/templates/service-debug.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: bee-19-debug
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+    pod: bee-19
+    endpoint: debug
+    app: bee
+    release: bee
+spec:
+  type: ClusterIP
+  ports:
+    - name: debug
+      port: 6060
+      protocol: TCP
+      targetPort: debug
+  selector:
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    statefulset.kubernetes.io/pod-name: bee-19
+---
 # Source: bee/templates/service-headless.yaml
 apiVersion: v1
 kind: Service
@@ -635,6 +915,276 @@ spec:
     app.kubernetes.io/instance: bee
     statefulset.kubernetes.io/pod-name: bee-9
 ---
+# Source: bee/templates/service-headless.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: bee-10-headless
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+    pod: bee-10
+    endpoint: p2p
+spec:
+  type: ClusterIP
+  clusterIP: None
+  ports:
+    - name: p2p
+      port: 7070
+      protocol: TCP
+      targetPort: p2p
+  selector:
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    statefulset.kubernetes.io/pod-name: bee-10
+---
+# Source: bee/templates/service-headless.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: bee-11-headless
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+    pod: bee-11
+    endpoint: p2p
+spec:
+  type: ClusterIP
+  clusterIP: None
+  ports:
+    - name: p2p
+      port: 7070
+      protocol: TCP
+      targetPort: p2p
+  selector:
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    statefulset.kubernetes.io/pod-name: bee-11
+---
+# Source: bee/templates/service-headless.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: bee-12-headless
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+    pod: bee-12
+    endpoint: p2p
+spec:
+  type: ClusterIP
+  clusterIP: None
+  ports:
+    - name: p2p
+      port: 7070
+      protocol: TCP
+      targetPort: p2p
+  selector:
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    statefulset.kubernetes.io/pod-name: bee-12
+---
+# Source: bee/templates/service-headless.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: bee-13-headless
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+    pod: bee-13
+    endpoint: p2p
+spec:
+  type: ClusterIP
+  clusterIP: None
+  ports:
+    - name: p2p
+      port: 7070
+      protocol: TCP
+      targetPort: p2p
+  selector:
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    statefulset.kubernetes.io/pod-name: bee-13
+---
+# Source: bee/templates/service-headless.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: bee-14-headless
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+    pod: bee-14
+    endpoint: p2p
+spec:
+  type: ClusterIP
+  clusterIP: None
+  ports:
+    - name: p2p
+      port: 7070
+      protocol: TCP
+      targetPort: p2p
+  selector:
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    statefulset.kubernetes.io/pod-name: bee-14
+---
+# Source: bee/templates/service-headless.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: bee-15-headless
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+    pod: bee-15
+    endpoint: p2p
+spec:
+  type: ClusterIP
+  clusterIP: None
+  ports:
+    - name: p2p
+      port: 7070
+      protocol: TCP
+      targetPort: p2p
+  selector:
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    statefulset.kubernetes.io/pod-name: bee-15
+---
+# Source: bee/templates/service-headless.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: bee-16-headless
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+    pod: bee-16
+    endpoint: p2p
+spec:
+  type: ClusterIP
+  clusterIP: None
+  ports:
+    - name: p2p
+      port: 7070
+      protocol: TCP
+      targetPort: p2p
+  selector:
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    statefulset.kubernetes.io/pod-name: bee-16
+---
+# Source: bee/templates/service-headless.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: bee-17-headless
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+    pod: bee-17
+    endpoint: p2p
+spec:
+  type: ClusterIP
+  clusterIP: None
+  ports:
+    - name: p2p
+      port: 7070
+      protocol: TCP
+      targetPort: p2p
+  selector:
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    statefulset.kubernetes.io/pod-name: bee-17
+---
+# Source: bee/templates/service-headless.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: bee-18-headless
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+    pod: bee-18
+    endpoint: p2p
+spec:
+  type: ClusterIP
+  clusterIP: None
+  ports:
+    - name: p2p
+      port: 7070
+      protocol: TCP
+      targetPort: p2p
+  selector:
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    statefulset.kubernetes.io/pod-name: bee-18
+---
+# Source: bee/templates/service-headless.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: bee-19-headless
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+    pod: bee-19
+    endpoint: p2p
+spec:
+  type: ClusterIP
+  clusterIP: None
+  ports:
+    - name: p2p
+      port: 7070
+      protocol: TCP
+      targetPort: p2p
+  selector:
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    statefulset.kubernetes.io/pod-name: bee-19
+---
 # Source: bee/templates/service-p2p.yaml
 apiVersion: v1
 kind: Service
@@ -914,6 +1464,286 @@ spec:
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     statefulset.kubernetes.io/pod-name: bee-9
+---
+# Source: bee/templates/service-p2p.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: bee-10-p2p
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+    pod: bee-10
+    endpoint: p2p
+spec:
+  type: NodePort
+  externalTrafficPolicy: Local
+  ports:
+    - name: p2p
+      port: 7070
+      protocol: TCP
+      targetPort: p2p
+      nodePort: 31010
+  selector:
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    statefulset.kubernetes.io/pod-name: bee-10
+---
+# Source: bee/templates/service-p2p.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: bee-11-p2p
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+    pod: bee-11
+    endpoint: p2p
+spec:
+  type: NodePort
+  externalTrafficPolicy: Local
+  ports:
+    - name: p2p
+      port: 7070
+      protocol: TCP
+      targetPort: p2p
+      nodePort: 31011
+  selector:
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    statefulset.kubernetes.io/pod-name: bee-11
+---
+# Source: bee/templates/service-p2p.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: bee-12-p2p
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+    pod: bee-12
+    endpoint: p2p
+spec:
+  type: NodePort
+  externalTrafficPolicy: Local
+  ports:
+    - name: p2p
+      port: 7070
+      protocol: TCP
+      targetPort: p2p
+      nodePort: 31012
+  selector:
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    statefulset.kubernetes.io/pod-name: bee-12
+---
+# Source: bee/templates/service-p2p.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: bee-13-p2p
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+    pod: bee-13
+    endpoint: p2p
+spec:
+  type: NodePort
+  externalTrafficPolicy: Local
+  ports:
+    - name: p2p
+      port: 7070
+      protocol: TCP
+      targetPort: p2p
+      nodePort: 31013
+  selector:
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    statefulset.kubernetes.io/pod-name: bee-13
+---
+# Source: bee/templates/service-p2p.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: bee-14-p2p
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+    pod: bee-14
+    endpoint: p2p
+spec:
+  type: NodePort
+  externalTrafficPolicy: Local
+  ports:
+    - name: p2p
+      port: 7070
+      protocol: TCP
+      targetPort: p2p
+      nodePort: 31014
+  selector:
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    statefulset.kubernetes.io/pod-name: bee-14
+---
+# Source: bee/templates/service-p2p.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: bee-15-p2p
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+    pod: bee-15
+    endpoint: p2p
+spec:
+  type: NodePort
+  externalTrafficPolicy: Local
+  ports:
+    - name: p2p
+      port: 7070
+      protocol: TCP
+      targetPort: p2p
+      nodePort: 31015
+  selector:
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    statefulset.kubernetes.io/pod-name: bee-15
+---
+# Source: bee/templates/service-p2p.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: bee-16-p2p
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+    pod: bee-16
+    endpoint: p2p
+spec:
+  type: NodePort
+  externalTrafficPolicy: Local
+  ports:
+    - name: p2p
+      port: 7070
+      protocol: TCP
+      targetPort: p2p
+      nodePort: 31016
+  selector:
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    statefulset.kubernetes.io/pod-name: bee-16
+---
+# Source: bee/templates/service-p2p.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: bee-17-p2p
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+    pod: bee-17
+    endpoint: p2p
+spec:
+  type: NodePort
+  externalTrafficPolicy: Local
+  ports:
+    - name: p2p
+      port: 7070
+      protocol: TCP
+      targetPort: p2p
+      nodePort: 31017
+  selector:
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    statefulset.kubernetes.io/pod-name: bee-17
+---
+# Source: bee/templates/service-p2p.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: bee-18-p2p
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+    pod: bee-18
+    endpoint: p2p
+spec:
+  type: NodePort
+  externalTrafficPolicy: Local
+  ports:
+    - name: p2p
+      port: 7070
+      protocol: TCP
+      targetPort: p2p
+      nodePort: 31018
+  selector:
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    statefulset.kubernetes.io/pod-name: bee-18
+---
+# Source: bee/templates/service-p2p.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: bee-19-p2p
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+    pod: bee-19
+    endpoint: p2p
+spec:
+  type: NodePort
+  externalTrafficPolicy: Local
+  ports:
+    - name: p2p
+      port: 7070
+      protocol: TCP
+      targetPort: p2p
+      nodePort: 31019
+  selector:
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    statefulset.kubernetes.io/pod-name: bee-19
 ---
 # Source: bee/templates/service.yaml
 apiVersion: v1
@@ -1200,6 +2030,266 @@ spec:
     app.kubernetes.io/instance: bee
     statefulset.kubernetes.io/pod-name: bee-9
 ---
+# Source: bee/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: bee-10
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+    pod: bee-10
+    endpoint: api
+spec:
+  type: ClusterIP
+  ports:
+    - name: api
+      port: 8080
+      protocol: TCP
+      targetPort: api
+  selector:
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    statefulset.kubernetes.io/pod-name: bee-10
+---
+# Source: bee/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: bee-11
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+    pod: bee-11
+    endpoint: api
+spec:
+  type: ClusterIP
+  ports:
+    - name: api
+      port: 8080
+      protocol: TCP
+      targetPort: api
+  selector:
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    statefulset.kubernetes.io/pod-name: bee-11
+---
+# Source: bee/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: bee-12
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+    pod: bee-12
+    endpoint: api
+spec:
+  type: ClusterIP
+  ports:
+    - name: api
+      port: 8080
+      protocol: TCP
+      targetPort: api
+  selector:
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    statefulset.kubernetes.io/pod-name: bee-12
+---
+# Source: bee/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: bee-13
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+    pod: bee-13
+    endpoint: api
+spec:
+  type: ClusterIP
+  ports:
+    - name: api
+      port: 8080
+      protocol: TCP
+      targetPort: api
+  selector:
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    statefulset.kubernetes.io/pod-name: bee-13
+---
+# Source: bee/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: bee-14
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+    pod: bee-14
+    endpoint: api
+spec:
+  type: ClusterIP
+  ports:
+    - name: api
+      port: 8080
+      protocol: TCP
+      targetPort: api
+  selector:
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    statefulset.kubernetes.io/pod-name: bee-14
+---
+# Source: bee/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: bee-15
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+    pod: bee-15
+    endpoint: api
+spec:
+  type: ClusterIP
+  ports:
+    - name: api
+      port: 8080
+      protocol: TCP
+      targetPort: api
+  selector:
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    statefulset.kubernetes.io/pod-name: bee-15
+---
+# Source: bee/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: bee-16
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+    pod: bee-16
+    endpoint: api
+spec:
+  type: ClusterIP
+  ports:
+    - name: api
+      port: 8080
+      protocol: TCP
+      targetPort: api
+  selector:
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    statefulset.kubernetes.io/pod-name: bee-16
+---
+# Source: bee/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: bee-17
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+    pod: bee-17
+    endpoint: api
+spec:
+  type: ClusterIP
+  ports:
+    - name: api
+      port: 8080
+      protocol: TCP
+      targetPort: api
+  selector:
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    statefulset.kubernetes.io/pod-name: bee-17
+---
+# Source: bee/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: bee-18
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+    pod: bee-18
+    endpoint: api
+spec:
+  type: ClusterIP
+  ports:
+    - name: api
+      port: 8080
+      protocol: TCP
+      targetPort: api
+  selector:
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    statefulset.kubernetes.io/pod-name: bee-18
+---
+# Source: bee/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: bee-19
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+    pod: bee-19
+    endpoint: api
+spec:
+  type: ClusterIP
+  ports:
+    - name: api
+      port: 8080
+      protocol: TCP
+      targetPort: api
+  selector:
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    statefulset.kubernetes.io/pod-name: bee-19
+---
 # Source: bee/templates/statefulset.yaml
 apiVersion: apps/v1
 kind: StatefulSet
@@ -1214,7 +2304,7 @@ metadata:
     app.kubernetes.io/managed-by: Helm
 spec:
   serviceName: bee-headless
-  replicas: 10
+  replicas: 20
   updateStrategy:
     type: OnDelete
   selector:
@@ -1654,6 +2744,316 @@ spec:
           - path: /
             backend:
               serviceName: bee-9-debug
+              servicePort: debug
+---
+# Source: bee/templates/ingress-debug.yaml
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: bee-10-debug
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+  annotations:
+    kubernetes.io/ingress.class: nginx-internal
+spec:
+  rules:
+    - host: bee-10-debug.staging.internal
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: bee-10-debug
+              servicePort: debug
+    - host: bee-10-debug.bee.staging.internal
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: bee-10-debug
+              servicePort: debug
+---
+# Source: bee/templates/ingress-debug.yaml
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: bee-11-debug
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+  annotations:
+    kubernetes.io/ingress.class: nginx-internal
+spec:
+  rules:
+    - host: bee-11-debug.staging.internal
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: bee-11-debug
+              servicePort: debug
+    - host: bee-11-debug.bee.staging.internal
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: bee-11-debug
+              servicePort: debug
+---
+# Source: bee/templates/ingress-debug.yaml
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: bee-12-debug
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+  annotations:
+    kubernetes.io/ingress.class: nginx-internal
+spec:
+  rules:
+    - host: bee-12-debug.staging.internal
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: bee-12-debug
+              servicePort: debug
+    - host: bee-12-debug.bee.staging.internal
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: bee-12-debug
+              servicePort: debug
+---
+# Source: bee/templates/ingress-debug.yaml
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: bee-13-debug
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+  annotations:
+    kubernetes.io/ingress.class: nginx-internal
+spec:
+  rules:
+    - host: bee-13-debug.staging.internal
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: bee-13-debug
+              servicePort: debug
+    - host: bee-13-debug.bee.staging.internal
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: bee-13-debug
+              servicePort: debug
+---
+# Source: bee/templates/ingress-debug.yaml
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: bee-14-debug
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+  annotations:
+    kubernetes.io/ingress.class: nginx-internal
+spec:
+  rules:
+    - host: bee-14-debug.staging.internal
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: bee-14-debug
+              servicePort: debug
+    - host: bee-14-debug.bee.staging.internal
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: bee-14-debug
+              servicePort: debug
+---
+# Source: bee/templates/ingress-debug.yaml
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: bee-15-debug
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+  annotations:
+    kubernetes.io/ingress.class: nginx-internal
+spec:
+  rules:
+    - host: bee-15-debug.staging.internal
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: bee-15-debug
+              servicePort: debug
+    - host: bee-15-debug.bee.staging.internal
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: bee-15-debug
+              servicePort: debug
+---
+# Source: bee/templates/ingress-debug.yaml
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: bee-16-debug
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+  annotations:
+    kubernetes.io/ingress.class: nginx-internal
+spec:
+  rules:
+    - host: bee-16-debug.staging.internal
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: bee-16-debug
+              servicePort: debug
+    - host: bee-16-debug.bee.staging.internal
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: bee-16-debug
+              servicePort: debug
+---
+# Source: bee/templates/ingress-debug.yaml
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: bee-17-debug
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+  annotations:
+    kubernetes.io/ingress.class: nginx-internal
+spec:
+  rules:
+    - host: bee-17-debug.staging.internal
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: bee-17-debug
+              servicePort: debug
+    - host: bee-17-debug.bee.staging.internal
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: bee-17-debug
+              servicePort: debug
+---
+# Source: bee/templates/ingress-debug.yaml
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: bee-18-debug
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+  annotations:
+    kubernetes.io/ingress.class: nginx-internal
+spec:
+  rules:
+    - host: bee-18-debug.staging.internal
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: bee-18-debug
+              servicePort: debug
+    - host: bee-18-debug.bee.staging.internal
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: bee-18-debug
+              servicePort: debug
+---
+# Source: bee/templates/ingress-debug.yaml
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: bee-19-debug
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+  annotations:
+    kubernetes.io/ingress.class: nginx-internal
+spec:
+  rules:
+    - host: bee-19-debug.staging.internal
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: bee-19-debug
+              servicePort: debug
+    - host: bee-19-debug.bee.staging.internal
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: bee-19-debug
               servicePort: debug
 ---
 # Source: bee/templates/ingress.yaml
@@ -2140,6 +3540,446 @@ spec:
           - path: /
             backend:
               serviceName: bee-9
+              servicePort: api
+---
+# Source: bee/templates/ingress.yaml
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: bee-10
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/affinity: cookie
+    nginx.ingress.kubernetes.io/affinity-mode: persistent
+    nginx.ingress.kubernetes.io/proxy-body-size: "0"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "7200"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "7200"
+    nginx.ingress.kubernetes.io/server-snippet: |
+      if ($scheme = http) {
+        return 301 https://$server_name$request_uri;
+      }
+      location = / {
+        proxy_pass https://ethswarm-core.s3.amazonaws.com/gateway/index.html;
+      }
+    nginx.ingress.kubernetes.io/session-cookie-max-age: "86400"
+    nginx.ingress.kubernetes.io/session-cookie-name: SWARMGATEWAY
+    nginx.ingress.kubernetes.io/session-cookie-path: default
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+spec:
+  tls:
+    - hosts:
+        - bee-10.gateway.staging.ethswarm.org
+      secretName: gateway-staging-ethswarm-org-wildcard-cert
+  rules:
+    - host: bee-10.gateway.staging.ethswarm.org
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: bee-10
+              servicePort: api
+---
+# Source: bee/templates/ingress.yaml
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: bee-11
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/affinity: cookie
+    nginx.ingress.kubernetes.io/affinity-mode: persistent
+    nginx.ingress.kubernetes.io/proxy-body-size: "0"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "7200"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "7200"
+    nginx.ingress.kubernetes.io/server-snippet: |
+      if ($scheme = http) {
+        return 301 https://$server_name$request_uri;
+      }
+      location = / {
+        proxy_pass https://ethswarm-core.s3.amazonaws.com/gateway/index.html;
+      }
+    nginx.ingress.kubernetes.io/session-cookie-max-age: "86400"
+    nginx.ingress.kubernetes.io/session-cookie-name: SWARMGATEWAY
+    nginx.ingress.kubernetes.io/session-cookie-path: default
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+spec:
+  tls:
+    - hosts:
+        - bee-11.gateway.staging.ethswarm.org
+      secretName: gateway-staging-ethswarm-org-wildcard-cert
+  rules:
+    - host: bee-11.gateway.staging.ethswarm.org
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: bee-11
+              servicePort: api
+---
+# Source: bee/templates/ingress.yaml
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: bee-12
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/affinity: cookie
+    nginx.ingress.kubernetes.io/affinity-mode: persistent
+    nginx.ingress.kubernetes.io/proxy-body-size: "0"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "7200"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "7200"
+    nginx.ingress.kubernetes.io/server-snippet: |
+      if ($scheme = http) {
+        return 301 https://$server_name$request_uri;
+      }
+      location = / {
+        proxy_pass https://ethswarm-core.s3.amazonaws.com/gateway/index.html;
+      }
+    nginx.ingress.kubernetes.io/session-cookie-max-age: "86400"
+    nginx.ingress.kubernetes.io/session-cookie-name: SWARMGATEWAY
+    nginx.ingress.kubernetes.io/session-cookie-path: default
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+spec:
+  tls:
+    - hosts:
+        - bee-12.gateway.staging.ethswarm.org
+      secretName: gateway-staging-ethswarm-org-wildcard-cert
+  rules:
+    - host: bee-12.gateway.staging.ethswarm.org
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: bee-12
+              servicePort: api
+---
+# Source: bee/templates/ingress.yaml
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: bee-13
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/affinity: cookie
+    nginx.ingress.kubernetes.io/affinity-mode: persistent
+    nginx.ingress.kubernetes.io/proxy-body-size: "0"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "7200"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "7200"
+    nginx.ingress.kubernetes.io/server-snippet: |
+      if ($scheme = http) {
+        return 301 https://$server_name$request_uri;
+      }
+      location = / {
+        proxy_pass https://ethswarm-core.s3.amazonaws.com/gateway/index.html;
+      }
+    nginx.ingress.kubernetes.io/session-cookie-max-age: "86400"
+    nginx.ingress.kubernetes.io/session-cookie-name: SWARMGATEWAY
+    nginx.ingress.kubernetes.io/session-cookie-path: default
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+spec:
+  tls:
+    - hosts:
+        - bee-13.gateway.staging.ethswarm.org
+      secretName: gateway-staging-ethswarm-org-wildcard-cert
+  rules:
+    - host: bee-13.gateway.staging.ethswarm.org
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: bee-13
+              servicePort: api
+---
+# Source: bee/templates/ingress.yaml
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: bee-14
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/affinity: cookie
+    nginx.ingress.kubernetes.io/affinity-mode: persistent
+    nginx.ingress.kubernetes.io/proxy-body-size: "0"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "7200"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "7200"
+    nginx.ingress.kubernetes.io/server-snippet: |
+      if ($scheme = http) {
+        return 301 https://$server_name$request_uri;
+      }
+      location = / {
+        proxy_pass https://ethswarm-core.s3.amazonaws.com/gateway/index.html;
+      }
+    nginx.ingress.kubernetes.io/session-cookie-max-age: "86400"
+    nginx.ingress.kubernetes.io/session-cookie-name: SWARMGATEWAY
+    nginx.ingress.kubernetes.io/session-cookie-path: default
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+spec:
+  tls:
+    - hosts:
+        - bee-14.gateway.staging.ethswarm.org
+      secretName: gateway-staging-ethswarm-org-wildcard-cert
+  rules:
+    - host: bee-14.gateway.staging.ethswarm.org
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: bee-14
+              servicePort: api
+---
+# Source: bee/templates/ingress.yaml
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: bee-15
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/affinity: cookie
+    nginx.ingress.kubernetes.io/affinity-mode: persistent
+    nginx.ingress.kubernetes.io/proxy-body-size: "0"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "7200"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "7200"
+    nginx.ingress.kubernetes.io/server-snippet: |
+      if ($scheme = http) {
+        return 301 https://$server_name$request_uri;
+      }
+      location = / {
+        proxy_pass https://ethswarm-core.s3.amazonaws.com/gateway/index.html;
+      }
+    nginx.ingress.kubernetes.io/session-cookie-max-age: "86400"
+    nginx.ingress.kubernetes.io/session-cookie-name: SWARMGATEWAY
+    nginx.ingress.kubernetes.io/session-cookie-path: default
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+spec:
+  tls:
+    - hosts:
+        - bee-15.gateway.staging.ethswarm.org
+      secretName: gateway-staging-ethswarm-org-wildcard-cert
+  rules:
+    - host: bee-15.gateway.staging.ethswarm.org
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: bee-15
+              servicePort: api
+---
+# Source: bee/templates/ingress.yaml
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: bee-16
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/affinity: cookie
+    nginx.ingress.kubernetes.io/affinity-mode: persistent
+    nginx.ingress.kubernetes.io/proxy-body-size: "0"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "7200"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "7200"
+    nginx.ingress.kubernetes.io/server-snippet: |
+      if ($scheme = http) {
+        return 301 https://$server_name$request_uri;
+      }
+      location = / {
+        proxy_pass https://ethswarm-core.s3.amazonaws.com/gateway/index.html;
+      }
+    nginx.ingress.kubernetes.io/session-cookie-max-age: "86400"
+    nginx.ingress.kubernetes.io/session-cookie-name: SWARMGATEWAY
+    nginx.ingress.kubernetes.io/session-cookie-path: default
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+spec:
+  tls:
+    - hosts:
+        - bee-16.gateway.staging.ethswarm.org
+      secretName: gateway-staging-ethswarm-org-wildcard-cert
+  rules:
+    - host: bee-16.gateway.staging.ethswarm.org
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: bee-16
+              servicePort: api
+---
+# Source: bee/templates/ingress.yaml
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: bee-17
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/affinity: cookie
+    nginx.ingress.kubernetes.io/affinity-mode: persistent
+    nginx.ingress.kubernetes.io/proxy-body-size: "0"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "7200"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "7200"
+    nginx.ingress.kubernetes.io/server-snippet: |
+      if ($scheme = http) {
+        return 301 https://$server_name$request_uri;
+      }
+      location = / {
+        proxy_pass https://ethswarm-core.s3.amazonaws.com/gateway/index.html;
+      }
+    nginx.ingress.kubernetes.io/session-cookie-max-age: "86400"
+    nginx.ingress.kubernetes.io/session-cookie-name: SWARMGATEWAY
+    nginx.ingress.kubernetes.io/session-cookie-path: default
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+spec:
+  tls:
+    - hosts:
+        - bee-17.gateway.staging.ethswarm.org
+      secretName: gateway-staging-ethswarm-org-wildcard-cert
+  rules:
+    - host: bee-17.gateway.staging.ethswarm.org
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: bee-17
+              servicePort: api
+---
+# Source: bee/templates/ingress.yaml
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: bee-18
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/affinity: cookie
+    nginx.ingress.kubernetes.io/affinity-mode: persistent
+    nginx.ingress.kubernetes.io/proxy-body-size: "0"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "7200"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "7200"
+    nginx.ingress.kubernetes.io/server-snippet: |
+      if ($scheme = http) {
+        return 301 https://$server_name$request_uri;
+      }
+      location = / {
+        proxy_pass https://ethswarm-core.s3.amazonaws.com/gateway/index.html;
+      }
+    nginx.ingress.kubernetes.io/session-cookie-max-age: "86400"
+    nginx.ingress.kubernetes.io/session-cookie-name: SWARMGATEWAY
+    nginx.ingress.kubernetes.io/session-cookie-path: default
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+spec:
+  tls:
+    - hosts:
+        - bee-18.gateway.staging.ethswarm.org
+      secretName: gateway-staging-ethswarm-org-wildcard-cert
+  rules:
+    - host: bee-18.gateway.staging.ethswarm.org
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: bee-18
+              servicePort: api
+---
+# Source: bee/templates/ingress.yaml
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: bee-19
+  namespace: bee
+  labels:
+    helm.sh/chart: bee-0.5.9
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/affinity: cookie
+    nginx.ingress.kubernetes.io/affinity-mode: persistent
+    nginx.ingress.kubernetes.io/proxy-body-size: "0"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "7200"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "7200"
+    nginx.ingress.kubernetes.io/server-snippet: |
+      if ($scheme = http) {
+        return 301 https://$server_name$request_uri;
+      }
+      location = / {
+        proxy_pass https://ethswarm-core.s3.amazonaws.com/gateway/index.html;
+      }
+    nginx.ingress.kubernetes.io/session-cookie-max-age: "86400"
+    nginx.ingress.kubernetes.io/session-cookie-name: SWARMGATEWAY
+    nginx.ingress.kubernetes.io/session-cookie-path: default
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+spec:
+  tls:
+    - hosts:
+        - bee-19.gateway.staging.ethswarm.org
+      secretName: gateway-staging-ethswarm-org-wildcard-cert
+  rules:
+    - host: bee-19.gateway.staging.ethswarm.org
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: bee-19
               servicePort: api
 ---
 # Source: bee/templates/ingress-debug.yaml
