@@ -65,7 +65,7 @@ nodeSelector:
   node-group: bee
 
 updateStrategy:
-  type: OnDelete
+  type: RollingUpdate
 
 beeConfig:
   bootnode: "/dnsaddr/bootnode.staging.ethswarm.org"

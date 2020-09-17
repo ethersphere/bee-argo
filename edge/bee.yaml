@@ -2306,7 +2306,7 @@ spec:
   serviceName: bee-headless
   replicas: 20
   updateStrategy:
-    type: OnDelete
+    type: RollingUpdate
   selector:
     matchLabels:
       app.kubernetes.io/name: bee
