@@ -47,10 +47,10 @@ data:
     p2p-ws-enable: false
     resolver-options: https://cloudflare-eth.com
     standalone: false
-    swap-enable: false
-    swap-endpoint: http://localhost:8545
+    swap-enable: true
+    swap-endpoint: https://goerli.infura.io/v3/6a0bdcb996734d71844e948f3116a52b
     swap-factory-address: 
-    swap-initial-deposit: 0
+    swap-initial-deposit: 10000000000
     tracing-enable: true
     tracing-endpoint: jaeger-operator-jaeger-agent.observability:6831
     tracing-service-name: bee
@@ -2366,7 +2366,7 @@ spec:
               subPath: .bee.yaml
       containers:
         - name: bee
-          image: "ethersphere/bee@sha256:82a48c36cff226cc221a2c2a74d41d32255297a7a0f7308cae6030b9452472aa"
+          image: "ethersphere/bee:latest"
           imagePullPolicy: Always
           command:
             - bee
