@@ -12,6 +12,9 @@ ingress:
   enabled: true
   annotations:
     kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/enable-cors: "true"
+    nginx.ingress.kubernetes.io/cors-allow-origin: "*"
+    nginx.ingress.kubernetes.io/cors-allow-methods: "PUT, GET, POST, OPTIONS, DELETE"
     # nginx.ingress.kubernetes.io/proxy-body-size: 50m
     nginx.ingress.kubernetes.io/proxy-body-size: "0"
     nginx.ingress.kubernetes.io/ssl-redirect: "true"
@@ -70,6 +73,7 @@ updateStrategy:
 beeConfig:
   bootnode: "/dnsaddr/bootnode.staging.ethswarm.org"
   debug_api_enable: true
+  gateway_mode: true
   network_id: 2
   usePasswordFile: true
   existingSecret: bee-password
