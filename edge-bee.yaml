@@ -23,9 +23,10 @@ ingress:
     nginx.ingress.kubernetes.io/proxy-send-timeout: "7200"
     nginx.ingress.kubernetes.io/proxy-read-timeout: "7200"
     nginx.ingress.kubernetes.io/configuration-snippet: |
-      add_header Access-Control-Allow-Origin $http_origin;
-      add_header Access-Control-Allow-Methods "PUT, GET, POST, OPTIONS, DELETE";
-      add_header Access-Control-Allow-Credentials true;
+      more_set_headers "Access-Control-Allow-Origin: $http_origin";
+    nginx.ingress.kubernetes.io/cors-allow-credentials: "true"
+    nginx.ingress.kubernetes.io/cors-allow-methods: "PUT, GET, POST, OPTIONS, DELETE, PATCH"
+    nginx.ingress.kubernetes.io/enable-cors: "true"
     nginx.ingress.kubernetes.io/server-snippet: |
       if ($scheme = http) {
         return 301 https://$server_name$request_uri;
