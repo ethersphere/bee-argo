@@ -3081,9 +3081,10 @@ metadata:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/affinity: cookie
     nginx.ingress.kubernetes.io/affinity-mode: persistent
-    nginx.ingress.kubernetes.io/cors-allow-methods: PUT, GET, POST, OPTIONS, DELETE
-    nginx.ingress.kubernetes.io/cors-allow-origin: '*'
-    nginx.ingress.kubernetes.io/enable-cors: "true"
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      add_header Access-Control-Allow-Origin $http_origin;
+      add_header Access-Control-Allow-Methods "PUT, GET, POST, OPTIONS, DELETE";
+      add_header Access-Control-Allow-Credentials true;
     nginx.ingress.kubernetes.io/proxy-body-size: "0"
     nginx.ingress.kubernetes.io/proxy-read-timeout: "7200"
     nginx.ingress.kubernetes.io/proxy-send-timeout: "7200"
@@ -3130,9 +3131,10 @@ metadata:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/affinity: cookie
     nginx.ingress.kubernetes.io/affinity-mode: persistent
-    nginx.ingress.kubernetes.io/cors-allow-methods: PUT, GET, POST, OPTIONS, DELETE
-    nginx.ingress.kubernetes.io/cors-allow-origin: '*'
-    nginx.ingress.kubernetes.io/enable-cors: "true"
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      add_header Access-Control-Allow-Origin $http_origin;
+      add_header Access-Control-Allow-Methods "PUT, GET, POST, OPTIONS, DELETE";
+      add_header Access-Control-Allow-Credentials true;
     nginx.ingress.kubernetes.io/proxy-body-size: "0"
     nginx.ingress.kubernetes.io/proxy-read-timeout: "7200"
     nginx.ingress.kubernetes.io/proxy-send-timeout: "7200"
@@ -3177,9 +3179,10 @@ metadata:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/affinity: cookie
     nginx.ingress.kubernetes.io/affinity-mode: persistent
-    nginx.ingress.kubernetes.io/cors-allow-methods: PUT, GET, POST, OPTIONS, DELETE
-    nginx.ingress.kubernetes.io/cors-allow-origin: '*'
-    nginx.ingress.kubernetes.io/enable-cors: "true"
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      add_header Access-Control-Allow-Origin $http_origin;
+      add_header Access-Control-Allow-Methods "PUT, GET, POST, OPTIONS, DELETE";
+      add_header Access-Control-Allow-Credentials true;
     nginx.ingress.kubernetes.io/proxy-body-size: "0"
     nginx.ingress.kubernetes.io/proxy-read-timeout: "7200"
     nginx.ingress.kubernetes.io/proxy-send-timeout: "7200"
@@ -3224,9 +3227,10 @@ metadata:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/affinity: cookie
     nginx.ingress.kubernetes.io/affinity-mode: persistent
-    nginx.ingress.kubernetes.io/cors-allow-methods: PUT, GET, POST, OPTIONS, DELETE
-    nginx.ingress.kubernetes.io/cors-allow-origin: '*'
-    nginx.ingress.kubernetes.io/enable-cors: "true"
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      add_header Access-Control-Allow-Origin $http_origin;
+      add_header Access-Control-Allow-Methods "PUT, GET, POST, OPTIONS, DELETE";
+      add_header Access-Control-Allow-Credentials true;
     nginx.ingress.kubernetes.io/proxy-body-size: "0"
     nginx.ingress.kubernetes.io/proxy-read-timeout: "7200"
     nginx.ingress.kubernetes.io/proxy-send-timeout: "7200"
@@ -3271,9 +3275,10 @@ metadata:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/affinity: cookie
     nginx.ingress.kubernetes.io/affinity-mode: persistent
-    nginx.ingress.kubernetes.io/cors-allow-methods: PUT, GET, POST, OPTIONS, DELETE
-    nginx.ingress.kubernetes.io/cors-allow-origin: '*'
-    nginx.ingress.kubernetes.io/enable-cors: "true"
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      add_header Access-Control-Allow-Origin $http_origin;
+      add_header Access-Control-Allow-Methods "PUT, GET, POST, OPTIONS, DELETE";
+      add_header Access-Control-Allow-Credentials true;
     nginx.ingress.kubernetes.io/proxy-body-size: "0"
     nginx.ingress.kubernetes.io/proxy-read-timeout: "7200"
     nginx.ingress.kubernetes.io/proxy-send-timeout: "7200"
@@ -3318,9 +3323,10 @@ metadata:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/affinity: cookie
     nginx.ingress.kubernetes.io/affinity-mode: persistent
-    nginx.ingress.kubernetes.io/cors-allow-methods: PUT, GET, POST, OPTIONS, DELETE
-    nginx.ingress.kubernetes.io/cors-allow-origin: '*'
-    nginx.ingress.kubernetes.io/enable-cors: "true"
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      add_header Access-Control-Allow-Origin $http_origin;
+      add_header Access-Control-Allow-Methods "PUT, GET, POST, OPTIONS, DELETE";
+      add_header Access-Control-Allow-Credentials true;
     nginx.ingress.kubernetes.io/proxy-body-size: "0"
     nginx.ingress.kubernetes.io/proxy-read-timeout: "7200"
     nginx.ingress.kubernetes.io/proxy-send-timeout: "7200"
@@ -3365,9 +3371,10 @@ metadata:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/affinity: cookie
     nginx.ingress.kubernetes.io/affinity-mode: persistent
-    nginx.ingress.kubernetes.io/cors-allow-methods: PUT, GET, POST, OPTIONS, DELETE
-    nginx.ingress.kubernetes.io/cors-allow-origin: '*'
-    nginx.ingress.kubernetes.io/enable-cors: "true"
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      add_header Access-Control-Allow-Origin $http_origin;
+      add_header Access-Control-Allow-Methods "PUT, GET, POST, OPTIONS, DELETE";
+      add_header Access-Control-Allow-Credentials true;
     nginx.ingress.kubernetes.io/proxy-body-size: "0"
     nginx.ingress.kubernetes.io/proxy-read-timeout: "7200"
     nginx.ingress.kubernetes.io/proxy-send-timeout: "7200"
@@ -3412,9 +3419,10 @@ metadata:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/affinity: cookie
     nginx.ingress.kubernetes.io/affinity-mode: persistent
-    nginx.ingress.kubernetes.io/cors-allow-methods: PUT, GET, POST, OPTIONS, DELETE
-    nginx.ingress.kubernetes.io/cors-allow-origin: '*'
-    nginx.ingress.kubernetes.io/enable-cors: "true"
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      add_header Access-Control-Allow-Origin $http_origin;
+      add_header Access-Control-Allow-Methods "PUT, GET, POST, OPTIONS, DELETE";
+      add_header Access-Control-Allow-Credentials true;
     nginx.ingress.kubernetes.io/proxy-body-size: "0"
     nginx.ingress.kubernetes.io/proxy-read-timeout: "7200"
     nginx.ingress.kubernetes.io/proxy-send-timeout: "7200"
@@ -3459,9 +3467,10 @@ metadata:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/affinity: cookie
     nginx.ingress.kubernetes.io/affinity-mode: persistent
-    nginx.ingress.kubernetes.io/cors-allow-methods: PUT, GET, POST, OPTIONS, DELETE
-    nginx.ingress.kubernetes.io/cors-allow-origin: '*'
-    nginx.ingress.kubernetes.io/enable-cors: "true"
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      add_header Access-Control-Allow-Origin $http_origin;
+      add_header Access-Control-Allow-Methods "PUT, GET, POST, OPTIONS, DELETE";
+      add_header Access-Control-Allow-Credentials true;
     nginx.ingress.kubernetes.io/proxy-body-size: "0"
     nginx.ingress.kubernetes.io/proxy-read-timeout: "7200"
     nginx.ingress.kubernetes.io/proxy-send-timeout: "7200"
@@ -3506,9 +3515,10 @@ metadata:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/affinity: cookie
     nginx.ingress.kubernetes.io/affinity-mode: persistent
-    nginx.ingress.kubernetes.io/cors-allow-methods: PUT, GET, POST, OPTIONS, DELETE
-    nginx.ingress.kubernetes.io/cors-allow-origin: '*'
-    nginx.ingress.kubernetes.io/enable-cors: "true"
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      add_header Access-Control-Allow-Origin $http_origin;
+      add_header Access-Control-Allow-Methods "PUT, GET, POST, OPTIONS, DELETE";
+      add_header Access-Control-Allow-Credentials true;
     nginx.ingress.kubernetes.io/proxy-body-size: "0"
     nginx.ingress.kubernetes.io/proxy-read-timeout: "7200"
     nginx.ingress.kubernetes.io/proxy-send-timeout: "7200"
@@ -3553,9 +3563,10 @@ metadata:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/affinity: cookie
     nginx.ingress.kubernetes.io/affinity-mode: persistent
-    nginx.ingress.kubernetes.io/cors-allow-methods: PUT, GET, POST, OPTIONS, DELETE
-    nginx.ingress.kubernetes.io/cors-allow-origin: '*'
-    nginx.ingress.kubernetes.io/enable-cors: "true"
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      add_header Access-Control-Allow-Origin $http_origin;
+      add_header Access-Control-Allow-Methods "PUT, GET, POST, OPTIONS, DELETE";
+      add_header Access-Control-Allow-Credentials true;
     nginx.ingress.kubernetes.io/proxy-body-size: "0"
     nginx.ingress.kubernetes.io/proxy-read-timeout: "7200"
     nginx.ingress.kubernetes.io/proxy-send-timeout: "7200"
@@ -3600,9 +3611,10 @@ metadata:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/affinity: cookie
     nginx.ingress.kubernetes.io/affinity-mode: persistent
-    nginx.ingress.kubernetes.io/cors-allow-methods: PUT, GET, POST, OPTIONS, DELETE
-    nginx.ingress.kubernetes.io/cors-allow-origin: '*'
-    nginx.ingress.kubernetes.io/enable-cors: "true"
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      add_header Access-Control-Allow-Origin $http_origin;
+      add_header Access-Control-Allow-Methods "PUT, GET, POST, OPTIONS, DELETE";
+      add_header Access-Control-Allow-Credentials true;
     nginx.ingress.kubernetes.io/proxy-body-size: "0"
     nginx.ingress.kubernetes.io/proxy-read-timeout: "7200"
     nginx.ingress.kubernetes.io/proxy-send-timeout: "7200"
@@ -3647,9 +3659,10 @@ metadata:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/affinity: cookie
     nginx.ingress.kubernetes.io/affinity-mode: persistent
-    nginx.ingress.kubernetes.io/cors-allow-methods: PUT, GET, POST, OPTIONS, DELETE
-    nginx.ingress.kubernetes.io/cors-allow-origin: '*'
-    nginx.ingress.kubernetes.io/enable-cors: "true"
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      add_header Access-Control-Allow-Origin $http_origin;
+      add_header Access-Control-Allow-Methods "PUT, GET, POST, OPTIONS, DELETE";
+      add_header Access-Control-Allow-Credentials true;
     nginx.ingress.kubernetes.io/proxy-body-size: "0"
     nginx.ingress.kubernetes.io/proxy-read-timeout: "7200"
     nginx.ingress.kubernetes.io/proxy-send-timeout: "7200"
@@ -3694,9 +3707,10 @@ metadata:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/affinity: cookie
     nginx.ingress.kubernetes.io/affinity-mode: persistent
-    nginx.ingress.kubernetes.io/cors-allow-methods: PUT, GET, POST, OPTIONS, DELETE
-    nginx.ingress.kubernetes.io/cors-allow-origin: '*'
-    nginx.ingress.kubernetes.io/enable-cors: "true"
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      add_header Access-Control-Allow-Origin $http_origin;
+      add_header Access-Control-Allow-Methods "PUT, GET, POST, OPTIONS, DELETE";
+      add_header Access-Control-Allow-Credentials true;
     nginx.ingress.kubernetes.io/proxy-body-size: "0"
     nginx.ingress.kubernetes.io/proxy-read-timeout: "7200"
     nginx.ingress.kubernetes.io/proxy-send-timeout: "7200"
@@ -3741,9 +3755,10 @@ metadata:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/affinity: cookie
     nginx.ingress.kubernetes.io/affinity-mode: persistent
-    nginx.ingress.kubernetes.io/cors-allow-methods: PUT, GET, POST, OPTIONS, DELETE
-    nginx.ingress.kubernetes.io/cors-allow-origin: '*'
-    nginx.ingress.kubernetes.io/enable-cors: "true"
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      add_header Access-Control-Allow-Origin $http_origin;
+      add_header Access-Control-Allow-Methods "PUT, GET, POST, OPTIONS, DELETE";
+      add_header Access-Control-Allow-Credentials true;
     nginx.ingress.kubernetes.io/proxy-body-size: "0"
     nginx.ingress.kubernetes.io/proxy-read-timeout: "7200"
     nginx.ingress.kubernetes.io/proxy-send-timeout: "7200"
@@ -3788,9 +3803,10 @@ metadata:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/affinity: cookie
     nginx.ingress.kubernetes.io/affinity-mode: persistent
-    nginx.ingress.kubernetes.io/cors-allow-methods: PUT, GET, POST, OPTIONS, DELETE
-    nginx.ingress.kubernetes.io/cors-allow-origin: '*'
-    nginx.ingress.kubernetes.io/enable-cors: "true"
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      add_header Access-Control-Allow-Origin $http_origin;
+      add_header Access-Control-Allow-Methods "PUT, GET, POST, OPTIONS, DELETE";
+      add_header Access-Control-Allow-Credentials true;
     nginx.ingress.kubernetes.io/proxy-body-size: "0"
     nginx.ingress.kubernetes.io/proxy-read-timeout: "7200"
     nginx.ingress.kubernetes.io/proxy-send-timeout: "7200"
@@ -3835,9 +3851,10 @@ metadata:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/affinity: cookie
     nginx.ingress.kubernetes.io/affinity-mode: persistent
-    nginx.ingress.kubernetes.io/cors-allow-methods: PUT, GET, POST, OPTIONS, DELETE
-    nginx.ingress.kubernetes.io/cors-allow-origin: '*'
-    nginx.ingress.kubernetes.io/enable-cors: "true"
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      add_header Access-Control-Allow-Origin $http_origin;
+      add_header Access-Control-Allow-Methods "PUT, GET, POST, OPTIONS, DELETE";
+      add_header Access-Control-Allow-Credentials true;
     nginx.ingress.kubernetes.io/proxy-body-size: "0"
     nginx.ingress.kubernetes.io/proxy-read-timeout: "7200"
     nginx.ingress.kubernetes.io/proxy-send-timeout: "7200"
@@ -3882,9 +3899,10 @@ metadata:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/affinity: cookie
     nginx.ingress.kubernetes.io/affinity-mode: persistent
-    nginx.ingress.kubernetes.io/cors-allow-methods: PUT, GET, POST, OPTIONS, DELETE
-    nginx.ingress.kubernetes.io/cors-allow-origin: '*'
-    nginx.ingress.kubernetes.io/enable-cors: "true"
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      add_header Access-Control-Allow-Origin $http_origin;
+      add_header Access-Control-Allow-Methods "PUT, GET, POST, OPTIONS, DELETE";
+      add_header Access-Control-Allow-Credentials true;
     nginx.ingress.kubernetes.io/proxy-body-size: "0"
     nginx.ingress.kubernetes.io/proxy-read-timeout: "7200"
     nginx.ingress.kubernetes.io/proxy-send-timeout: "7200"
@@ -3929,9 +3947,10 @@ metadata:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/affinity: cookie
     nginx.ingress.kubernetes.io/affinity-mode: persistent
-    nginx.ingress.kubernetes.io/cors-allow-methods: PUT, GET, POST, OPTIONS, DELETE
-    nginx.ingress.kubernetes.io/cors-allow-origin: '*'
-    nginx.ingress.kubernetes.io/enable-cors: "true"
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      add_header Access-Control-Allow-Origin $http_origin;
+      add_header Access-Control-Allow-Methods "PUT, GET, POST, OPTIONS, DELETE";
+      add_header Access-Control-Allow-Credentials true;
     nginx.ingress.kubernetes.io/proxy-body-size: "0"
     nginx.ingress.kubernetes.io/proxy-read-timeout: "7200"
     nginx.ingress.kubernetes.io/proxy-send-timeout: "7200"
@@ -3976,9 +3995,10 @@ metadata:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/affinity: cookie
     nginx.ingress.kubernetes.io/affinity-mode: persistent
-    nginx.ingress.kubernetes.io/cors-allow-methods: PUT, GET, POST, OPTIONS, DELETE
-    nginx.ingress.kubernetes.io/cors-allow-origin: '*'
-    nginx.ingress.kubernetes.io/enable-cors: "true"
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      add_header Access-Control-Allow-Origin $http_origin;
+      add_header Access-Control-Allow-Methods "PUT, GET, POST, OPTIONS, DELETE";
+      add_header Access-Control-Allow-Credentials true;
     nginx.ingress.kubernetes.io/proxy-body-size: "0"
     nginx.ingress.kubernetes.io/proxy-read-timeout: "7200"
     nginx.ingress.kubernetes.io/proxy-send-timeout: "7200"
@@ -4023,9 +4043,10 @@ metadata:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/affinity: cookie
     nginx.ingress.kubernetes.io/affinity-mode: persistent
-    nginx.ingress.kubernetes.io/cors-allow-methods: PUT, GET, POST, OPTIONS, DELETE
-    nginx.ingress.kubernetes.io/cors-allow-origin: '*'
-    nginx.ingress.kubernetes.io/enable-cors: "true"
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      add_header Access-Control-Allow-Origin $http_origin;
+      add_header Access-Control-Allow-Methods "PUT, GET, POST, OPTIONS, DELETE";
+      add_header Access-Control-Allow-Credentials true;
     nginx.ingress.kubernetes.io/proxy-body-size: "0"
     nginx.ingress.kubernetes.io/proxy-read-timeout: "7200"
     nginx.ingress.kubernetes.io/proxy-send-timeout: "7200"
