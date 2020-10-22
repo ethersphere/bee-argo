@@ -123,125 +123,123 @@ spec:
         app.kubernetes.io/name: beekeeper
         app.kubernetes.io/instance: beekeeper
     spec:
-      template:
-        spec:
-          serviceAccountName: beekeeper
-          initContainers:
-            - name: init-ping
-              image: "ethersphere/beekeeper:latest"
-              imagePullPolicy: IfNotPresent
-              env:
-                - name: BEEKEEPER_API_DOMAIN
-                  value: "svc.cluster.local:8080"
-                - name: BEEKEEPER_API_HOSTNAMES
-                  value: "bee-%d"
-                - name: BEEKEEPER_API_INSECURE_TLS
-                  value: "true"
-                - name: BEEKEEPER_API_SCHEME
-                  value: "http"
-                - name: BEEKEEPER_DEBUG_API_DOMAIN
-                  value: "svc.cluster.local:6060"
-                - name: BEEKEEPER_DEBUG_API_HOSTNAMES
-                  value: "bee-%d-debug"
-                - name: BEEKEEPER_DEBUG_API_INSECURE_TLS
-                  value: "true"
-                - name: BEEKEEPER_DEBUG_API_SCHEME
-                  value: "http"
-                - name: BEEKEEPER_DISABLE_NAMESPACE
-                  value: "false"
-                - name: BEEKEEPER_INSECURE_TLS
-                  value: "false"
-                - name: BEEKEEPER_NAMESPACE
-                  value: "infra-test"
-                - name: BEEKEEPER_NODE_COUNT
-                  value: "5"
-              command:
-                - sh
-                - -c
-                - >
-                  until beekeeper check pingpong; do echo "waiting for the cluster..."; sleep 1; done
-          containers:
-            - name: beekeeper
-              image: "ethersphere/beekeeper:latest"
-              imagePullPolicy: IfNotPresent
-              env:
-                - name: BEEKEEPER_API_DOMAIN
-                  value: "svc.cluster.local:8080"
-                - name: BEEKEEPER_API_HOSTNAMES
-                  value: "bee-%d"
-                - name: BEEKEEPER_API_INSECURE_TLS
-                  value: "true"
-                - name: BEEKEEPER_API_SCHEME
-                  value: "http"
-                - name: BEEKEEPER_DEBUG_API_DOMAIN
-                  value: "svc.cluster.local:6060"
-                - name: BEEKEEPER_DEBUG_API_HOSTNAMES
-                  value: "bee-%d-debug"
-                - name: BEEKEEPER_DEBUG_API_INSECURE_TLS
-                  value: "true"
-                - name: BEEKEEPER_DEBUG_API_SCHEME
-                  value: "http"
-                - name: BEEKEEPER_DISABLE_NAMESPACE
-                  value: "false"
-                - name: BEEKEEPER_INSECURE_TLS
-                  value: "false"
-                - name: BEEKEEPER_NAMESPACE
-                  value: "infra-test"
-                - name: BEEKEEPER_NODE_COUNT
-                  value: "5"
-                - name: BEEKEEPER_PUSH_GATEWAY
-                  value: "pushgateway-beekeeper-test.monitoring:9091"
-                - name: BEEKEEPER_PUSH_METRICS
-                  value: "false"
-                - name: BEEKEEPER_UPLOAD_NODE_COUNT
-                  value: "5"
-                - name: BEEKEEPER_CHUNKS_PER_NODE
-                  value: "3"
-                - name: PINGPONG_ENABLED
-                  value: "false"
-                - name: BALANCES_ENABLED
-                  value: "true"
-                - name: SETTLEMENTS_ENABLED
-                  value: "true"
-                - name: PUSHSYNC_ENABLED
-                  value: "true"
-                - name: RETRIEVAL_ENABLED
-                  value: "true"
-                - name: PULLSYNC_ENABLED
-                  value: "true"
-                - name: CHUNKREPAIR_ENABLED
-                  value: "true"
-                - name: MANIFEST_ENABLED
-                  value: "true"
-              command:
-                - sh
-                - -c
-                - >
-                  if [ $PINGPONG_ENABLED == "true" ]; then \
-                  beekeeper check pingpong; \
-                  fi;
-                  if [ $BALANCES_ENABLED == "true" ]; then \
-                  beekeeper check balances; \
-                  fi;
-                  if [ $SETTLEMENTS_ENABLED == "true" ]; then \
-                  beekeeper check settlements; \
-                  fi;
-                  if [ $PUSHSYNC_ENABLED == "true" ]; then
-                  beekeeper check pushsync \
-                  beekeeper check pushsync -; \-upload-chunks
-                  fi;
-                  if [ $RETRIEVAL_ENABLED == "true" ]; then \
-                  beekeeper check retrieval; \
-                  fi;
-                  if [ $PULLSYNC_ENABLED == "true" ]; then \
-                  beekeeper check pullsync; \
-                  fi;
-                  if [ $CHUNKREPAIR_ENABLED == "true" ]; then \
-                  beekeeper check chunkrepair; \
-                  fi;
-                  if [ $MANIFEST_ENABLED == "true" ]; then \
-                  beekeeper check manifest; \
-                  fi;
-          restartPolicy: "Never"
-          nodeSelector:
+      serviceAccountName: beekeeper
+      initContainers:
+        - name: init-ping
+          image: "ethersphere/beekeeper:latest"
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: BEEKEEPER_API_DOMAIN
+              value: "svc.cluster.local:8080"
+            - name: BEEKEEPER_API_HOSTNAMES
+              value: "bee-%d"
+            - name: BEEKEEPER_API_INSECURE_TLS
+              value: "true"
+            - name: BEEKEEPER_API_SCHEME
+              value: "http"
+            - name: BEEKEEPER_DEBUG_API_DOMAIN
+              value: "svc.cluster.local:6060"
+            - name: BEEKEEPER_DEBUG_API_HOSTNAMES
+              value: "bee-%d-debug"
+            - name: BEEKEEPER_DEBUG_API_INSECURE_TLS
+              value: "true"
+            - name: BEEKEEPER_DEBUG_API_SCHEME
+              value: "http"
+            - name: BEEKEEPER_DISABLE_NAMESPACE
+              value: "false"
+            - name: BEEKEEPER_INSECURE_TLS
+              value: "false"
+            - name: BEEKEEPER_NAMESPACE
+              value: "infra-test"
+            - name: BEEKEEPER_NODE_COUNT
+              value: "5"
+          command:
+            - sh
+            - -c
+            - >
+              until beekeeper check pingpong; do echo "waiting for the cluster..."; sleep 1; done
+      containers:
+        - name: beekeeper
+          image: "ethersphere/beekeeper:latest"
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: BEEKEEPER_API_DOMAIN
+              value: "svc.cluster.local:8080"
+            - name: BEEKEEPER_API_HOSTNAMES
+              value: "bee-%d"
+            - name: BEEKEEPER_API_INSECURE_TLS
+              value: "true"
+            - name: BEEKEEPER_API_SCHEME
+              value: "http"
+            - name: BEEKEEPER_DEBUG_API_DOMAIN
+              value: "svc.cluster.local:6060"
+            - name: BEEKEEPER_DEBUG_API_HOSTNAMES
+              value: "bee-%d-debug"
+            - name: BEEKEEPER_DEBUG_API_INSECURE_TLS
+              value: "true"
+            - name: BEEKEEPER_DEBUG_API_SCHEME
+              value: "http"
+            - name: BEEKEEPER_DISABLE_NAMESPACE
+              value: "false"
+            - name: BEEKEEPER_INSECURE_TLS
+              value: "false"
+            - name: BEEKEEPER_NAMESPACE
+              value: "infra-test"
+            - name: BEEKEEPER_NODE_COUNT
+              value: "5"
+            - name: BEEKEEPER_PUSH_GATEWAY
+              value: "pushgateway-beekeeper-test.monitoring:9091"
+            - name: BEEKEEPER_PUSH_METRICS
+              value: "false"
+            - name: BEEKEEPER_UPLOAD_NODE_COUNT
+              value: "5"
+            - name: BEEKEEPER_CHUNKS_PER_NODE
+              value: "3"
+            - name: PINGPONG_ENABLED
+              value: "false"
+            - name: BALANCES_ENABLED
+              value: "true"
+            - name: SETTLEMENTS_ENABLED
+              value: "true"
+            - name: PUSHSYNC_ENABLED
+              value: "true"
+            - name: RETRIEVAL_ENABLED
+              value: "true"
+            - name: PULLSYNC_ENABLED
+              value: "true"
+            - name: CHUNKREPAIR_ENABLED
+              value: "true"
+            - name: MANIFEST_ENABLED
+              value: "true"
+          command:
+            - sh
+            - -c
+            - >
+              if [ $PINGPONG_ENABLED == "true" ]; then \
+              beekeeper check pingpong; \
+              fi;
+              if [ $BALANCES_ENABLED == "true" ]; then \
+              beekeeper check balances; \
+              fi;
+              if [ $SETTLEMENTS_ENABLED == "true" ]; then \
+              beekeeper check settlements; \
+              fi;
+              if [ $PUSHSYNC_ENABLED == "true" ]; then
+              beekeeper check pushsync \
+              beekeeper check pushsync -; \-upload-chunks
+              fi;
+              if [ $RETRIEVAL_ENABLED == "true" ]; then \
+              beekeeper check retrieval; \
+              fi;
+              if [ $PULLSYNC_ENABLED == "true" ]; then \
+              beekeeper check pullsync; \
+              fi;
+              if [ $CHUNKREPAIR_ENABLED == "true" ]; then \
+              beekeeper check chunkrepair; \
+              fi;
+              if [ $MANIFEST_ENABLED == "true" ]; then \
+              beekeeper check manifest; \
+              fi;
+      restartPolicy: "Never"
+      nodeSelector:
             node-group: bee-dynamic
