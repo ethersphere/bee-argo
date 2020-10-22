@@ -20,7 +20,7 @@ beeCluster:
   disableNamespace: false
   insecureTLS: false
   namespace: infra-test
-  nodeCount: 20
+  nodeCount: 5
   pushGateway: pushgateway-beekeeper-test.monitoring:9091
   pushMetrics: false
 

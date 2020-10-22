@@ -158,7 +158,7 @@ spec:
                 - name: BEEKEEPER_NAMESPACE
                   value: "infra-test"
                 - name: BEEKEEPER_NODE_COUNT
-                  value: "20"
+                  value: "5"
               command:
                 - sh
                 - -c
@@ -192,7 +192,7 @@ spec:
                 - name: BEEKEEPER_NAMESPACE
                   value: "infra-test"
                 - name: BEEKEEPER_NODE_COUNT
-                  value: "20"
+                  value: "5"
                 - name: BEEKEEPER_PUSH_GATEWAY
                   value: "pushgateway-beekeeper-test.monitoring:9091"
                 - name: BEEKEEPER_PUSH_METRICS
@@ -265,7 +265,7 @@ spec:
                 - name: BEEKEEPER_NAMESPACE
                   value: "infra-test"
                 - name: BEEKEEPER_NODE_COUNT
-                  value: "20"
+                  value: "5"
               command:
                 - sh
                 - -c
@@ -299,7 +299,7 @@ spec:
                 - name: BEEKEEPER_NAMESPACE
                   value: "infra-test"
                 - name: BEEKEEPER_NODE_COUNT
-                  value: "20"
+                  value: "5"
                 - name: BEEKEEPER_PUSH_GATEWAY
                   value: "pushgateway-beekeeper-test.monitoring:9091"
                 - name: BEEKEEPER_PUSH_METRICS
@@ -373,7 +373,7 @@ spec:
                 - name: BEEKEEPER_NAMESPACE
                   value: "infra-test"
                 - name: BEEKEEPER_NODE_COUNT
-                  value: "20"
+                  value: "5"
               command:
                 - sh
                 - -c
@@ -407,7 +407,7 @@ spec:
                 - name: BEEKEEPER_NAMESPACE
                   value: "infra-test"
                 - name: BEEKEEPER_NODE_COUNT
-                  value: "20"
+                  value: "5"
                 - name: BEEKEEPER_PUSH_GATEWAY
                   value: "pushgateway-beekeeper-test.monitoring:9091"
                 - name: BEEKEEPER_PUSH_METRICS
@@ -476,7 +476,7 @@ spec:
                 - name: BEEKEEPER_NAMESPACE
                   value: "infra-test"
                 - name: BEEKEEPER_NODE_COUNT
-                  value: "20"
+                  value: "5"
               command:
                 - sh
                 - -c
@@ -510,7 +510,7 @@ spec:
                 - name: BEEKEEPER_NAMESPACE
                   value: "infra-test"
                 - name: BEEKEEPER_NODE_COUNT
-                  value: "20"
+                  value: "5"
                 - name: BEEKEEPER_PUSH_GATEWAY
                   value: "pushgateway-beekeeper-test.monitoring:9091"
                 - name: BEEKEEPER_PUSH_METRICS
@@ -580,7 +580,7 @@ spec:
                 - name: BEEKEEPER_NAMESPACE
                   value: "infra-test"
                 - name: BEEKEEPER_NODE_COUNT
-                  value: "20"
+                  value: "5"
               command:
                 - sh
                 - -c
@@ -614,7 +614,7 @@ spec:
                 - name: BEEKEEPER_NAMESPACE
                   value: "infra-test"
                 - name: BEEKEEPER_NODE_COUNT
-                  value: "20"
+                  value: "5"
                 - name: BEEKEEPER_PUSH_GATEWAY
                   value: "pushgateway-beekeeper-test.monitoring:9091"
                 - name: BEEKEEPER_PUSH_METRICS
