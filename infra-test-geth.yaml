@@ -1,0 +1,23 @@
+swap:
+  bzzaccounts:
+    - 75e84b017cb8ebec78fde433e8339ff1aad0d271
+    - 23fd97e452345aab05c7ec144b27552b633b68a6
+    - 9d13e98603d2282e311131d9e5531a1893535f86
+    - 52bc7452a5ee0fb2c5b8941f9f2e006fea0c2d20
+    - 3df82b90fc9779fdbb2d97d8e4b6c9cfcfc5d8e8
+    - 728b703d3ba4c3a0f9c0d0f2b1e5c456766d8fe5
+    - 2a638af281e4125d47daef1721ae76cdd4c6ce75
+    - be47186724aca82da45827b5df587b613098b162
+    - 293c2395305ab2d7eff19286b6c9a30d85f123b2
+    - a7ae94479b91e7568e3879b83147f00abecc9549
+geth:
+  genesis:
+    clique:
+      period: 3
+resources:
+  limits:
+    cpu: 500m
+    memory: 1024Mi
+  requests:
+    cpu: 500m
+    memory: 1024Mi
