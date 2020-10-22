@@ -891,12 +891,7 @@ spec:
               containerPort: 8545
               protocol: TCP          
           resources:
-            limits:
-              cpu: 500m
-              memory: 512Mi
-            requests:
-              cpu: 500m
-              memory: 512Mi
+            {}
           volumeMounts:
             - name: geth-config
               mountPath: /etc/config

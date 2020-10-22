@@ -14,13 +14,6 @@ geth:
   genesis:
     clique:
       period: 3
-resources:
-  limits:
-    cpu: 500m
-    memory: 1024Mi
-  requests:
-    cpu: 500m
-    memory: 1024Mi
 
 nodeSelector:
   node-group: bee-dynamic
