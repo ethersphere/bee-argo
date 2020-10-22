@@ -798,22 +798,8 @@ spec:
             items:
               - key: swarmKeys
                 path: swarm.map
-  volumeClaimTemplates:
-  - metadata:
-      name: data
-      labels:
-        helm.sh/chart: bee
-        app.kubernetes.io/name: bee
-        app.kubernetes.io/instance: bee
-        app.kubernetes.io/version: "latest"
-        app.kubernetes.io/managed-by: Helm
-    spec:
-      accessModes:
-        - "ReadWriteOnce"
-      resources:
-        requests:
-          storage: "34Gi"
-      storageClassName: "local-storage"
+        - name: data
+          emptyDir: {}
 ---
 # Source: bee/templates/ingress-debug.yaml
 apiVersion: networking.k8s.io/v1beta1
