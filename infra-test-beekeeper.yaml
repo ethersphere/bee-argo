@@ -1,0 +1,56 @@
+nodeSelector:
+  node-group: bee-dynamic
+
+serviceAccount:
+  create: true
+  createClusterRole: true
+
+initPing:
+  enabled: true
+
+beeCluster:
+  apiDomain: "svc.cluster.local:8080"
+  apiHostnames: bee-%d
+  apiInsecureTLS: true
+  apiScheme: http
+  debugApiDomain: "svc.cluster.local:6060"
+  debugApiHostnames: bee-%d-debug
+  debugApiInsecureTLS: true
+  debugApiScheme: http
+  disableNamespace: false
+  insecureTLS: false
+  namespace: infra-test
+  nodeCount: 20
+  pushGateway: pushgateway-beekeeper-test.monitoring:9091
+  pushMetrics: false
+
+check:
+  pingpong:
+    enabled: false
+  fileretrieval:
+    enabled: true
+    schedule: "*/1 * * * *"
+    fileSize: 0.1
+    filesPerNode: 2
+    uploadNodeCount: 20
+  fileretrievalfull:
+    enabled: true
+    schedule: "*/2 * * * *"
+    fileSize: 0.1
+    filesPerNode: 2
+    uploadNodeCount: 20
+  pushsync:
+    enabled: true
+    schedule: "*/3 * * * *"
+    chunksPerNode: 2
+    uploadNodeCount: 20
+  pushsyncchunks:
+    enabled: true
+    schedule: "*/4 * * * *"
+    chunksPerNode: 2
+    uploadNodeCount: 20
+  retrieval:
+    enabled: true
+    schedule: "*/5 * * * *"
+    chunksPerNode: 2
+    uploadNodeCount: 20

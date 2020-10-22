@@ -1,0 +1,631 @@
+---
+# Source: beekeeper/templates/serviceaccount.yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  namespace: infra-test-beekeeper
+  name: beekeeper
+  labels:
+
+    helm.sh/chart: beekeeper-0.1.5
+    app.kubernetes.io/name: beekeeper
+    app.kubernetes.io/instance: beekeeper
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+---
+# Source: beekeeper/templates/clusterrole.yaml
+kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: beekeeper
+  labels:
+
+    helm.sh/chart: beekeeper-0.1.5
+    app.kubernetes.io/name: beekeeper
+    app.kubernetes.io/instance: beekeeper
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+rules:
+- apiGroups: [""]
+  resources:
+  - services
+  - events
+  - namespaces
+  verbs: ["*"]
+- apiGroups: [""]
+  resources: ["endpoints"]
+  verbs: ["create", "get", "list", "watch", "update"]
+- apiGroups: ["batch"]
+  resources: ["jobs"]
+  verbs: ["get", "list", "watch", "create", "update", "delete"]
+- apiGroups: [""]
+  resources: ["secrets"]
+  verbs: ["get", "list", "watch"]
+- apiGroups: [""]
+  resources: ["persistentvolumeclaims"]
+  verbs: ["get", "list", "watch", "create", "update", "delete"]
+- apiGroups: [""]
+  resources: ["pods"]
+  verbs: ["get", "list", "watch","update", "delete"]
+- apiGroups: ["apps"]
+  resources: ["statefulsets"]
+  verbs: ["*"]
+- apiGroups: [""]
+  resources: ["configmaps"]
+  verbs: ["get", "list", "watch"]
+- apiGroups: [""]
+  resources: ["nodes"]
+  verbs: ["get", "list", "watch"]
+- apiGroups: [""]
+  resources: ["persistentvolumes"]
+  verbs: ["get", "list", "watch", "patch","update"]
+- apiGroups: ["certificates.k8s.io"]
+  resources: ["certificatesigningrequests", "certificatesigningrequests/approval"]
+  verbs: ["get", "delete", "create", "update"]
+- apiGroups: ["certificates.k8s.io"]
+  resources:
+    - "signers"
+  resourceNames:
+    - "kubernetes.io/legacy-unknown"
+  verbs: ["approve"]
+- apiGroups: [""]
+  resources: ["secrets"]
+  verbs: ["get", "create", "list", "watch", "update", "delete"]
+- apiGroups: ["admissionregistration.k8s.io"]
+  resources: ["mutatingwebhookconfigurations","validatingwebhookconfigurations"]
+  verbs: ["get", "create", "delete", "update", "patch"]
+- apiGroups: ["pingcap.com"]
+  resources:
+    - podchaos
+    - networkchaos
+    - iochaos
+    - timechaos
+    - kernelchaos
+    - stresschaos
+  verbs: ["*"]
+---
+# Source: beekeeper/templates/clusterrole.yaml
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: beekeeper
+  labels:
+
+    helm.sh/chart: beekeeper-0.1.5
+    app.kubernetes.io/name: beekeeper
+    app.kubernetes.io/instance: beekeeper
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+subjects:
+- kind: ServiceAccount
+  name: beekeeper
+  namespace: infra-test-beekeeper
+roleRef:
+  kind: ClusterRole
+  name: beekeeper
+  apiGroup: rbac.authorization.k8s.io
+---
+# Source: beekeeper/templates/fileretrieval.yaml
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: beekeeper-fileretrieval
+  labels:
+    helm.sh/chart: beekeeper-0.1.5
+    app.kubernetes.io/name: beekeeper
+    app.kubernetes.io/instance: beekeeper
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+spec:
+  schedule: "*/1 * * * *"
+  successfulJobsHistoryLimit: 3
+  failedJobsHistoryLimit: 3
+  concurrencyPolicy: "Forbid"
+  jobTemplate:
+    metadata:
+      labels:
+        app.kubernetes.io/name: beekeeper
+        app.kubernetes.io/instance: beekeeper
+    spec:
+      template:
+        spec:
+          serviceAccountName: beekeeper
+          initContainers:
+            - name: init-ping
+              image: "ethersphere/beekeeper:latest"
+              imagePullPolicy: IfNotPresent
+              env:
+                - name: BEEKEEPER_API_DOMAIN
+                  value: "svc.cluster.local:8080"
+                - name: BEEKEEPER_API_HOSTNAMES
+                  value: "bee-%d"
+                - name: BEEKEEPER_API_INSECURE_TLS
+                  value: "true"
+                - name: BEEKEEPER_API_SCHEME
+                  value: "http"
+                - name: BEEKEEPER_DEBUG_API_DOMAIN
+                  value: "svc.cluster.local:6060"
+                - name: BEEKEEPER_DEBUG_API_HOSTNAMES
+                  value: "bee-%d-debug"
+                - name: BEEKEEPER_DEBUG_API_INSECURE_TLS
+                  value: "true"
+                - name: BEEKEEPER_DEBUG_API_SCHEME
+                  value: "http"
+                - name: BEEKEEPER_DISABLE_NAMESPACE
+                  value: "false"
+                - name: BEEKEEPER_INSECURE_TLS
+                  value: "false"
+                - name: BEEKEEPER_NAMESPACE
+                  value: "infra-test"
+                - name: BEEKEEPER_NODE_COUNT
+                  value: "20"
+              command:
+                - sh
+                - -c
+                - >
+                  until beekeeper check pingpong; do echo "waiting for the cluster..."; sleep 1; done
+          containers:
+            - name: beekeeper
+              image: "ethersphere/beekeeper:latest"
+              imagePullPolicy: IfNotPresent
+              env:
+                - name: BEEKEEPER_API_DOMAIN
+                  value: "svc.cluster.local:8080"
+                - name: BEEKEEPER_API_HOSTNAMES
+                  value: "bee-%d"
+                - name: BEEKEEPER_API_INSECURE_TLS
+                  value: "true"
+                - name: BEEKEEPER_API_SCHEME
+                  value: "http"
+                - name: BEEKEEPER_DEBUG_API_DOMAIN
+                  value: "svc.cluster.local:6060"
+                - name: BEEKEEPER_DEBUG_API_HOSTNAMES
+                  value: "bee-%d-debug"
+                - name: BEEKEEPER_DEBUG_API_INSECURE_TLS
+                  value: "true"
+                - name: BEEKEEPER_DEBUG_API_SCHEME
+                  value: "http"
+                - name: BEEKEEPER_DISABLE_NAMESPACE
+                  value: "false"
+                - name: BEEKEEPER_INSECURE_TLS
+                  value: "false"
+                - name: BEEKEEPER_NAMESPACE
+                  value: "infra-test"
+                - name: BEEKEEPER_NODE_COUNT
+                  value: "20"
+                - name: BEEKEEPER_PUSH_GATEWAY
+                  value: "pushgateway-beekeeper-test.monitoring:9091"
+                - name: BEEKEEPER_PUSH_METRICS
+                  value: "false"
+              args:
+                - check
+                - fileretrieval
+                - --file-name
+                - "file"
+                - --file-size
+                - "0.1"
+                - --files-per-node
+                - "2"
+                - --upload-node-count
+                - "20"
+          restartPolicy: Never
+          nodeSelector:
+            node-group: bee-dynamic
+---
+# Source: beekeeper/templates/fileretrievalfull.yaml
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: beekeeper-fileretrievalfull
+  labels:
+    helm.sh/chart: beekeeper-0.1.5
+    app.kubernetes.io/name: beekeeper
+    app.kubernetes.io/instance: beekeeper
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+spec:
+  schedule: "*/2 * * * *"
+  successfulJobsHistoryLimit: 3
+  failedJobsHistoryLimit: 3
+  concurrencyPolicy: "Forbid"
+  jobTemplate:
+    metadata:
+      labels:
+        app.kubernetes.io/name: beekeeper
+        app.kubernetes.io/instance: beekeeper
+    spec:
+      template:
+        spec:
+          serviceAccountName: beekeeper
+          initContainers:
+            - name: init-ping
+              image: "ethersphere/beekeeper:latest"
+              imagePullPolicy: IfNotPresent
+              env:
+                - name: BEEKEEPER_API_DOMAIN
+                  value: "svc.cluster.local:8080"
+                - name: BEEKEEPER_API_HOSTNAMES
+                  value: "bee-%d"
+                - name: BEEKEEPER_API_INSECURE_TLS
+                  value: "true"
+                - name: BEEKEEPER_API_SCHEME
+                  value: "http"
+                - name: BEEKEEPER_DEBUG_API_DOMAIN
+                  value: "svc.cluster.local:6060"
+                - name: BEEKEEPER_DEBUG_API_HOSTNAMES
+                  value: "bee-%d-debug"
+                - name: BEEKEEPER_DEBUG_API_INSECURE_TLS
+                  value: "true"
+                - name: BEEKEEPER_DEBUG_API_SCHEME
+                  value: "http"
+                - name: BEEKEEPER_DISABLE_NAMESPACE
+                  value: "false"
+                - name: BEEKEEPER_INSECURE_TLS
+                  value: "false"
+                - name: BEEKEEPER_NAMESPACE
+                  value: "infra-test"
+                - name: BEEKEEPER_NODE_COUNT
+                  value: "20"
+              command:
+                - sh
+                - -c
+                - >
+                  until beekeeper check pingpong; do echo "waiting for the cluster..."; sleep 1; done
+          containers:
+            - name: beekeeper
+              image: "ethersphere/beekeeper:latest"
+              imagePullPolicy: IfNotPresent
+              env:
+                - name: BEEKEEPER_API_DOMAIN
+                  value: "svc.cluster.local:8080"
+                - name: BEEKEEPER_API_HOSTNAMES
+                  value: "bee-%d"
+                - name: BEEKEEPER_API_INSECURE_TLS
+                  value: "true"
+                - name: BEEKEEPER_API_SCHEME
+                  value: "http"
+                - name: BEEKEEPER_DEBUG_API_DOMAIN
+                  value: "svc.cluster.local:6060"
+                - name: BEEKEEPER_DEBUG_API_HOSTNAMES
+                  value: "bee-%d-debug"
+                - name: BEEKEEPER_DEBUG_API_INSECURE_TLS
+                  value: "true"
+                - name: BEEKEEPER_DEBUG_API_SCHEME
+                  value: "http"
+                - name: BEEKEEPER_DISABLE_NAMESPACE
+                  value: "false"
+                - name: BEEKEEPER_INSECURE_TLS
+                  value: "false"
+                - name: BEEKEEPER_NAMESPACE
+                  value: "infra-test"
+                - name: BEEKEEPER_NODE_COUNT
+                  value: "20"
+                - name: BEEKEEPER_PUSH_GATEWAY
+                  value: "pushgateway-beekeeper-test.monitoring:9091"
+                - name: BEEKEEPER_PUSH_METRICS
+                  value: "false"
+              args:
+                - check
+                - fileretrieval
+                - --file-name
+                - "file"
+                - --file-size
+                - "0.1"
+                - --files-per-node
+                - "2"
+                - --upload-node-count
+                - "20"
+                - --full
+          restartPolicy: Never
+          nodeSelector:
+            node-group: bee-dynamic
+---
+# Source: beekeeper/templates/pushsync.yaml
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: beekeeper-pushsync
+  labels:
+    helm.sh/chart: beekeeper-0.1.5
+    app.kubernetes.io/name: beekeeper
+    app.kubernetes.io/instance: beekeeper
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+spec:
+  schedule: "*/3 * * * *"
+  successfulJobsHistoryLimit: 3
+  failedJobsHistoryLimit: 3
+  concurrencyPolicy: "Forbid"
+  jobTemplate:
+    metadata:
+      labels:
+        app.kubernetes.io/name: beekeeper
+        app.kubernetes.io/instance: beekeeper
+    spec:
+      template:
+        spec:
+          serviceAccountName: beekeeper
+          initContainers:
+            - name: init-ping
+              image: "ethersphere/beekeeper:latest"
+              imagePullPolicy: IfNotPresent
+              env:
+                - name: BEEKEEPER_API_DOMAIN
+                  value: "svc.cluster.local:8080"
+                - name: BEEKEEPER_API_HOSTNAMES
+                  value: "bee-%d"
+                - name: BEEKEEPER_API_INSECURE_TLS
+                  value: "true"
+                - name: BEEKEEPER_API_SCHEME
+                  value: "http"
+                - name: BEEKEEPER_DEBUG_API_DOMAIN
+                  value: "svc.cluster.local:6060"
+                - name: BEEKEEPER_DEBUG_API_HOSTNAMES
+                  value: "bee-%d-debug"
+                - name: BEEKEEPER_DEBUG_API_INSECURE_TLS
+                  value: "true"
+                - name: BEEKEEPER_DEBUG_API_SCHEME
+                  value: "http"
+                - name: BEEKEEPER_DISABLE_NAMESPACE
+                  value: "false"
+                - name: BEEKEEPER_INSECURE_TLS
+                  value: "false"
+                - name: BEEKEEPER_NAMESPACE
+                  value: "infra-test"
+                - name: BEEKEEPER_NODE_COUNT
+                  value: "20"
+              command:
+                - sh
+                - -c
+                - >
+                  until beekeeper check pingpong; do echo "waiting for the cluster..."; sleep 1; done
+          containers:
+            - name: beekeeper
+              image: "ethersphere/beekeeper:latest"
+              imagePullPolicy: IfNotPresent
+              env:
+                - name: BEEKEEPER_API_DOMAIN
+                  value: "svc.cluster.local:8080"
+                - name: BEEKEEPER_API_HOSTNAMES
+                  value: "bee-%d"
+                - name: BEEKEEPER_API_INSECURE_TLS
+                  value: "true"
+                - name: BEEKEEPER_API_SCHEME
+                  value: "http"
+                - name: BEEKEEPER_DEBUG_API_DOMAIN
+                  value: "svc.cluster.local:6060"
+                - name: BEEKEEPER_DEBUG_API_HOSTNAMES
+                  value: "bee-%d-debug"
+                - name: BEEKEEPER_DEBUG_API_INSECURE_TLS
+                  value: "true"
+                - name: BEEKEEPER_DEBUG_API_SCHEME
+                  value: "http"
+                - name: BEEKEEPER_DISABLE_NAMESPACE
+                  value: "false"
+                - name: BEEKEEPER_INSECURE_TLS
+                  value: "false"
+                - name: BEEKEEPER_NAMESPACE
+                  value: "infra-test"
+                - name: BEEKEEPER_NODE_COUNT
+                  value: "20"
+                - name: BEEKEEPER_PUSH_GATEWAY
+                  value: "pushgateway-beekeeper-test.monitoring:9091"
+                - name: BEEKEEPER_PUSH_METRICS
+                  value: "false"
+              args:
+                - check
+                - pushsync
+                - --chunks-per-node
+                - "2"
+                - --upload-node-count
+                - "20"
+          restartPolicy: Never
+          nodeSelector:
+            node-group: bee-dynamic
+---
+# Source: beekeeper/templates/pushsyncchunks.yaml
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: beekeeper-pushsyncchunks
+  labels:
+    helm.sh/chart: beekeeper-0.1.5
+    app.kubernetes.io/name: beekeeper
+    app.kubernetes.io/instance: beekeeper
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+spec:
+  schedule: "*/4 * * * *"
+  successfulJobsHistoryLimit: 3
+  failedJobsHistoryLimit: 3
+  concurrencyPolicy: "Forbid"
+  jobTemplate:
+    metadata:
+      labels:
+        app.kubernetes.io/name: beekeeper
+        app.kubernetes.io/instance: beekeeper
+    spec:
+      template:
+        spec:
+          serviceAccountName: beekeeper
+          initContainers:
+            - name: init-ping
+              image: "ethersphere/beekeeper:latest"
+              imagePullPolicy: IfNotPresent
+              env:
+                - name: BEEKEEPER_API_DOMAIN
+                  value: "svc.cluster.local:8080"
+                - name: BEEKEEPER_API_HOSTNAMES
+                  value: "bee-%d"
+                - name: BEEKEEPER_API_INSECURE_TLS
+                  value: "true"
+                - name: BEEKEEPER_API_SCHEME
+                  value: "http"
+                - name: BEEKEEPER_DEBUG_API_DOMAIN
+                  value: "svc.cluster.local:6060"
+                - name: BEEKEEPER_DEBUG_API_HOSTNAMES
+                  value: "bee-%d-debug"
+                - name: BEEKEEPER_DEBUG_API_INSECURE_TLS
+                  value: "true"
+                - name: BEEKEEPER_DEBUG_API_SCHEME
+                  value: "http"
+                - name: BEEKEEPER_DISABLE_NAMESPACE
+                  value: "false"
+                - name: BEEKEEPER_INSECURE_TLS
+                  value: "false"
+                - name: BEEKEEPER_NAMESPACE
+                  value: "infra-test"
+                - name: BEEKEEPER_NODE_COUNT
+                  value: "20"
+              command:
+                - sh
+                - -c
+                - >
+                  until beekeeper check pingpong; do echo "waiting for the cluster..."; sleep 1; done
+          containers:
+            - name: beekeeper
+              image: "ethersphere/beekeeper:latest"
+              imagePullPolicy: IfNotPresent
+              env:
+                - name: BEEKEEPER_API_DOMAIN
+                  value: "svc.cluster.local:8080"
+                - name: BEEKEEPER_API_HOSTNAMES
+                  value: "bee-%d"
+                - name: BEEKEEPER_API_INSECURE_TLS
+                  value: "true"
+                - name: BEEKEEPER_API_SCHEME
+                  value: "http"
+                - name: BEEKEEPER_DEBUG_API_DOMAIN
+                  value: "svc.cluster.local:6060"
+                - name: BEEKEEPER_DEBUG_API_HOSTNAMES
+                  value: "bee-%d-debug"
+                - name: BEEKEEPER_DEBUG_API_INSECURE_TLS
+                  value: "true"
+                - name: BEEKEEPER_DEBUG_API_SCHEME
+                  value: "http"
+                - name: BEEKEEPER_DISABLE_NAMESPACE
+                  value: "false"
+                - name: BEEKEEPER_INSECURE_TLS
+                  value: "false"
+                - name: BEEKEEPER_NAMESPACE
+                  value: "infra-test"
+                - name: BEEKEEPER_NODE_COUNT
+                  value: "20"
+                - name: BEEKEEPER_PUSH_GATEWAY
+                  value: "pushgateway-beekeeper-test.monitoring:9091"
+                - name: BEEKEEPER_PUSH_METRICS
+                  value: "false"
+              args:
+                - check
+                - pushsync
+                - --chunks-per-node
+                - "2"
+                - --upload-node-count
+                - "20"
+                - --upload-chunks
+          restartPolicy: Never
+          nodeSelector:
+            node-group: bee-dynamic
+---
+# Source: beekeeper/templates/retrieval.yaml
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: beekeeper-retrieval
+  labels:
+    helm.sh/chart: beekeeper-0.1.5
+    app.kubernetes.io/name: beekeeper
+    app.kubernetes.io/instance: beekeeper
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+spec:
+  schedule: "*/5 * * * *"
+  successfulJobsHistoryLimit: 3
+  failedJobsHistoryLimit: 3
+  concurrencyPolicy: "Forbid"
+  jobTemplate:
+    metadata:
+      labels:
+        app.kubernetes.io/name: beekeeper
+        app.kubernetes.io/instance: beekeeper
+    spec:
+      template:
+        spec:
+          serviceAccountName: beekeeper
+          initContainers:
+            - name: init-ping
+              image: "ethersphere/beekeeper:latest"
+              imagePullPolicy: IfNotPresent
+              env:
+                - name: BEEKEEPER_API_DOMAIN
+                  value: "svc.cluster.local:8080"
+                - name: BEEKEEPER_API_HOSTNAMES
+                  value: "bee-%d"
+                - name: BEEKEEPER_API_INSECURE_TLS
+                  value: "true"
+                - name: BEEKEEPER_API_SCHEME
+                  value: "http"
+                - name: BEEKEEPER_DEBUG_API_DOMAIN
+                  value: "svc.cluster.local:6060"
+                - name: BEEKEEPER_DEBUG_API_HOSTNAMES
+                  value: "bee-%d-debug"
+                - name: BEEKEEPER_DEBUG_API_INSECURE_TLS
+                  value: "true"
+                - name: BEEKEEPER_DEBUG_API_SCHEME
+                  value: "http"
+                - name: BEEKEEPER_DISABLE_NAMESPACE
+                  value: "false"
+                - name: BEEKEEPER_INSECURE_TLS
+                  value: "false"
+                - name: BEEKEEPER_NAMESPACE
+                  value: "infra-test"
+                - name: BEEKEEPER_NODE_COUNT
+                  value: "20"
+              command:
+                - sh
+                - -c
+                - >
+                  until beekeeper check pingpong; do echo "waiting for the cluster..."; sleep 1; done
+          containers:
+            - name: beekeeper
+              image: "ethersphere/beekeeper:latest"
+              imagePullPolicy: IfNotPresent
+              env:
+                - name: BEEKEEPER_API_DOMAIN
+                  value: "svc.cluster.local:8080"
+                - name: BEEKEEPER_API_HOSTNAMES
+                  value: "bee-%d"
+                - name: BEEKEEPER_API_INSECURE_TLS
+                  value: "true"
+                - name: BEEKEEPER_API_SCHEME
+                  value: "http"
+                - name: BEEKEEPER_DEBUG_API_DOMAIN
+                  value: "svc.cluster.local:6060"
+                - name: BEEKEEPER_DEBUG_API_HOSTNAMES
+                  value: "bee-%d-debug"
+                - name: BEEKEEPER_DEBUG_API_INSECURE_TLS
+                  value: "true"
+                - name: BEEKEEPER_DEBUG_API_SCHEME
+                  value: "http"
+                - name: BEEKEEPER_DISABLE_NAMESPACE
+                  value: "false"
+                - name: BEEKEEPER_INSECURE_TLS
+                  value: "false"
+                - name: BEEKEEPER_NAMESPACE
+                  value: "infra-test"
+                - name: BEEKEEPER_NODE_COUNT
+                  value: "20"
+                - name: BEEKEEPER_PUSH_GATEWAY
+                  value: "pushgateway-beekeeper-test.monitoring:9091"
+                - name: BEEKEEPER_PUSH_METRICS
+                  value: "false"
+              args:
+                - check
+                - retrieval
+                - --chunks-per-node
+                - "2"
+                - --upload-node-count
+                - "20"
+          restartPolicy: Never
+          nodeSelector:
+            node-group: bee-dynamic
