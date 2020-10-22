@@ -32,25 +32,25 @@ check:
     schedule: "*/1 * * * *"
     fileSize: 0.1
     filesPerNode: 2
-    uploadNodeCount: 20
+    uploadNodeCount: 5
   fileretrievalfull:
     enabled: true
     schedule: "*/2 * * * *"
     fileSize: 0.1
     filesPerNode: 2
-    uploadNodeCount: 20
+    uploadNodeCount: 5
   pushsync:
     enabled: true
     schedule: "*/3 * * * *"
     chunksPerNode: 2
-    uploadNodeCount: 20
+    uploadNodeCount: 5
   pushsyncchunks:
     enabled: true
     schedule: "*/4 * * * *"
     chunksPerNode: 2
-    uploadNodeCount: 20
+    uploadNodeCount: 5
   retrieval:
     enabled: true
     schedule: "*/5 * * * *"
     chunksPerNode: 2
-    uploadNodeCount: 20
+    uploadNodeCount: 5

@@ -207,7 +207,7 @@ spec:
                 - --files-per-node
                 - "2"
                 - --upload-node-count
-                - "20"
+                - "5"
           restartPolicy: Never
           nodeSelector:
             node-group: bee-dynamic
@@ -314,7 +314,7 @@ spec:
                 - --files-per-node
                 - "2"
                 - --upload-node-count
-                - "20"
+                - "5"
                 - --full
           restartPolicy: Never
           nodeSelector:
@@ -418,7 +418,7 @@ spec:
                 - --chunks-per-node
                 - "2"
                 - --upload-node-count
-                - "20"
+                - "5"
           restartPolicy: Never
           nodeSelector:
             node-group: bee-dynamic
@@ -521,7 +521,7 @@ spec:
                 - --chunks-per-node
                 - "2"
                 - --upload-node-count
-                - "20"
+                - "5"
                 - --upload-chunks
           restartPolicy: Never
           nodeSelector:
@@ -625,7 +625,7 @@ spec:
                 - --chunks-per-node
                 - "2"
                 - --upload-node-count
-                - "20"
+                - "5"
           restartPolicy: Never
           nodeSelector:
             node-group: bee-dynamic
