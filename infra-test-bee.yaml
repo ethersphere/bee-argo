@@ -56,9 +56,7 @@ resources:
     cpu: 0.75
 
 persistence:
-  enabled: true
-  size: 34Gi
-  storageClass: local-storage
+  enabled: false
 
 nodeSelector:
   node-group: bee-dynamic
