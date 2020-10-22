@@ -215,31 +215,14 @@ spec:
             - sh
             - -c
             - >
-              if [ $PINGPONG_ENABLED == "true" ]; then \
-              beekeeper check pingpong; \
-              fi;
-              if [ $BALANCES_ENABLED == "true" ]; then \
-              beekeeper check balances; \
-              fi;
-              if [ $SETTLEMENTS_ENABLED == "true" ]; then \
-              beekeeper check settlements; \
-              fi;
-              if [ $PUSHSYNC_ENABLED == "true" ]; then
-              beekeeper check pushsync \
-              beekeeper check pushsync -; \-upload-chunks
-              fi;
-              if [ $RETRIEVAL_ENABLED == "true" ]; then \
-              beekeeper check retrieval; \
-              fi;
-              if [ $PULLSYNC_ENABLED == "true" ]; then \
-              beekeeper check pullsync; \
-              fi;
-              if [ $CHUNKREPAIR_ENABLED == "true" ]; then \
-              beekeeper check chunkrepair; \
-              fi;
-              if [ $MANIFEST_ENABLED == "true" ]; then \
-              beekeeper check manifest; \
-              fi;
+              if [ $PINGPONG_ENABLED == "true" ]; then beekeeper check pingpong; fi;
+              if [ $BALANCES_ENABLED == "true" ]; then beekeeper check balances; fi;
+              if [ $SETTLEMENTS_ENABLED == "true" ]; then beekeeper check settlements; fi;
+              if [ $PUSHSYNC_ENABLED == "true" ]; then beekeeper check pushsync && beekeeper check pushsync --upload-chunks; fi;
+              if [ $RETRIEVAL_ENABLED == "true" ]; then beekeeper check retrieval; fi;
+              if [ $PULLSYNC_ENABLED == "true" ]; then beekeeper check pullsync; fi;
+              if [ $CHUNKREPAIR_ENABLED == "true" ]; then beekeeper check chunkrepair; fi;
+              if [ $MANIFEST_ENABLED == "true" ]; then beekeeper check manifest; fi;
       restartPolicy: "Never"
       nodeSelector:
             node-group: bee-dynamic
