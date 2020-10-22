@@ -893,10 +893,10 @@ spec:
           resources:
             limits:
               cpu: 500m
-              memory: 1024Mi
+              memory: 512Mi
             requests:
               cpu: 500m
-              memory: 1024Mi
+              memory: 512Mi
           volumeMounts:
             - name: geth-config
               mountPath: /etc/config
@@ -913,6 +913,8 @@ spec:
             - --rpcvhosts
             - "*"
             - --mine
+      nodeSelector:
+        node-group: bee-dynamic
 ---
 # Source: geth-swap/templates/setupcontracts.yaml
 apiVersion: batch/v1
