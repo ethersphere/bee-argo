@@ -8,6 +8,12 @@ serviceAccount:
 initPing:
   enabled: true
 
+singleJob:
+  enabled: true
+  uploadNodeCount: 5
+  chunksPerNode: 3
+  restartPolicy: Never
+
 beeCluster:
   apiDomain: "svc.cluster.local:8080"
   apiHostnames: bee-%d
@@ -27,17 +33,20 @@ beeCluster:
 check:
   pingpong:
     enabled: false
-  fileretrieval:
+  balances:
     enabled: true
     schedule: "*/1 * * * *"
-    fileSize: 0.1
-    filesPerNode: 2
     uploadNodeCount: 5
-  fileretrievalfull:
+  chunkrepair:
     enabled: true
     schedule: "*/2 * * * *"
-    fileSize: 0.1
-    filesPerNode: 2
+  manifest:
+    enabled: true
+    schedule: "*/2 * * * *"
+  pullsync:
+    enabled: true
+    schedule: "*/1 * * * *"
+    chunksPerNode: 3
     uploadNodeCount: 5
   pushsync:
     enabled: true
@@ -54,3 +63,7 @@ check:
     schedule: "*/5 * * * *"
     chunksPerNode: 2
     uploadNodeCount: 5
+  settlements:
+    enabled: true
+    schedule: "*/5 * * * *"
+    uploadNodeCount: 3
