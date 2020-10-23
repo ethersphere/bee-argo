@@ -1,0 +1,229 @@
+---
+# Source: beekeeper/templates/serviceaccount.yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  namespace: infra-test-beekeeper
+  name: beekeeper
+  labels:
+
+    helm.sh/chart: beekeeper-0.1.5
+    app.kubernetes.io/name: beekeeper
+    app.kubernetes.io/instance: beekeeper
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+---
+# Source: beekeeper/templates/clusterrole.yaml
+kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: beekeeper
+  labels:
+
+    helm.sh/chart: beekeeper-0.1.5
+    app.kubernetes.io/name: beekeeper
+    app.kubernetes.io/instance: beekeeper
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+rules:
+- apiGroups: [""]
+  resources:
+  - services
+  - events
+  - namespaces
+  verbs: ["*"]
+- apiGroups: [""]
+  resources: ["endpoints"]
+  verbs: ["create", "get", "list", "watch", "update"]
+- apiGroups: ["batch"]
+  resources: ["jobs"]
+  verbs: ["get", "list", "watch", "create", "update", "delete"]
+- apiGroups: [""]
+  resources: ["secrets"]
+  verbs: ["get", "list", "watch"]
+- apiGroups: [""]
+  resources: ["persistentvolumeclaims"]
+  verbs: ["get", "list", "watch", "create", "update", "delete"]
+- apiGroups: [""]
+  resources: ["pods"]
+  verbs: ["get", "list", "watch","update", "delete"]
+- apiGroups: ["apps"]
+  resources: ["statefulsets"]
+  verbs: ["*"]
+- apiGroups: [""]
+  resources: ["configmaps"]
+  verbs: ["get", "list", "watch"]
+- apiGroups: [""]
+  resources: ["nodes"]
+  verbs: ["get", "list", "watch"]
+- apiGroups: [""]
+  resources: ["persistentvolumes"]
+  verbs: ["get", "list", "watch", "patch","update"]
+- apiGroups: ["certificates.k8s.io"]
+  resources: ["certificatesigningrequests", "certificatesigningrequests/approval"]
+  verbs: ["get", "delete", "create", "update"]
+- apiGroups: ["certificates.k8s.io"]
+  resources:
+    - "signers"
+  resourceNames:
+    - "kubernetes.io/legacy-unknown"
+  verbs: ["approve"]
+- apiGroups: [""]
+  resources: ["secrets"]
+  verbs: ["get", "create", "list", "watch", "update", "delete"]
+- apiGroups: ["admissionregistration.k8s.io"]
+  resources: ["mutatingwebhookconfigurations","validatingwebhookconfigurations"]
+  verbs: ["get", "create", "delete", "update", "patch"]
+- apiGroups: ["pingcap.com"]
+  resources:
+    - podchaos
+    - networkchaos
+    - iochaos
+    - timechaos
+    - kernelchaos
+    - stresschaos
+  verbs: ["*"]
+---
+# Source: beekeeper/templates/clusterrole.yaml
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: beekeeper
+  labels:
+
+    helm.sh/chart: beekeeper-0.1.5
+    app.kubernetes.io/name: beekeeper
+    app.kubernetes.io/instance: beekeeper
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+subjects:
+- kind: ServiceAccount
+  name: beekeeper
+  namespace: infra-test-beekeeper
+roleRef:
+  kind: ClusterRole
+  name: beekeeper
+  apiGroup: rbac.authorization.k8s.io
+---
+# Source: beekeeper/templates/singlejob.yaml
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: beekeeper
+  labels:
+    helm.sh/chart: beekeeper-0.1.5
+    app.kubernetes.io/name: beekeeper
+    app.kubernetes.io/instance: beekeeper
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+spec:
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: beekeeper
+        app.kubernetes.io/instance: beekeeper
+    spec:
+      serviceAccountName: beekeeper
+      backoffLimit: 1
+      initContainers:
+        - name: init-ping
+          image: "ethersphere/beekeeper:latest"
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: BEEKEEPER_API_DOMAIN
+              value: "svc.cluster.local:8080"
+            - name: BEEKEEPER_API_HOSTNAMES
+              value: "bee-%d"
+            - name: BEEKEEPER_API_INSECURE_TLS
+              value: "true"
+            - name: BEEKEEPER_API_SCHEME
+              value: "http"
+            - name: BEEKEEPER_DEBUG_API_DOMAIN
+              value: "svc.cluster.local:6060"
+            - name: BEEKEEPER_DEBUG_API_HOSTNAMES
+              value: "bee-%d-debug"
+            - name: BEEKEEPER_DEBUG_API_INSECURE_TLS
+              value: "true"
+            - name: BEEKEEPER_DEBUG_API_SCHEME
+              value: "http"
+            - name: BEEKEEPER_DISABLE_NAMESPACE
+              value: "false"
+            - name: BEEKEEPER_INSECURE_TLS
+              value: "false"
+            - name: BEEKEEPER_NAMESPACE
+              value: "infra-test"
+            - name: BEEKEEPER_NODE_COUNT
+              value: "5"
+          command:
+            - sh
+            - -c
+            - >
+              until beekeeper check pingpong; do echo "waiting for the cluster..."; sleep 1; done
+      containers:
+        - name: beekeeper
+          image: "ethersphere/beekeeper:latest"
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: BEEKEEPER_API_DOMAIN
+              value: "svc.cluster.local:8080"
+            - name: BEEKEEPER_API_HOSTNAMES
+              value: "bee-%d"
+            - name: BEEKEEPER_API_INSECURE_TLS
+              value: "true"
+            - name: BEEKEEPER_API_SCHEME
+              value: "http"
+            - name: BEEKEEPER_DEBUG_API_DOMAIN
+              value: "svc.cluster.local:6060"
+            - name: BEEKEEPER_DEBUG_API_HOSTNAMES
+              value: "bee-%d-debug"
+            - name: BEEKEEPER_DEBUG_API_INSECURE_TLS
+              value: "true"
+            - name: BEEKEEPER_DEBUG_API_SCHEME
+              value: "http"
+            - name: BEEKEEPER_DISABLE_NAMESPACE
+              value: "false"
+            - name: BEEKEEPER_INSECURE_TLS
+              value: "false"
+            - name: BEEKEEPER_NAMESPACE
+              value: "infra-test"
+            - name: BEEKEEPER_NODE_COUNT
+              value: "5"
+            - name: BEEKEEPER_PUSH_GATEWAY
+              value: "pushgateway-beekeeper-test.monitoring:9091"
+            - name: BEEKEEPER_PUSH_METRICS
+              value: "false"
+            - name: BEEKEEPER_UPLOAD_NODE_COUNT
+              value: "5"
+            - name: BEEKEEPER_CHUNKS_PER_NODE
+              value: "3"
+            - name: PINGPONG_ENABLED
+              value: "false"
+            - name: BALANCES_ENABLED
+              value: "true"
+            - name: SETTLEMENTS_ENABLED
+              value: "true"
+            - name: PUSHSYNC_ENABLED
+              value: "true"
+            - name: RETRIEVAL_ENABLED
+              value: "true"
+            - name: PULLSYNC_ENABLED
+              value: "true"
+            - name: CHUNKREPAIR_ENABLED
+              value: "true"
+            - name: MANIFEST_ENABLED
+              value: "true"
+          command:
+            - sh
+            - -c
+            - >
+              if [ "${PINGPONG_ENABLED}" = "true" ]; then beekeeper check pingpong || exit 1; fi;
+              if [ "${BALANCES_ENABLED}" = "true" ]; then beekeeper check balances || exit 1; fi;
+              if [ "${SETTLEMENTS_ENABLED}" = "true" ]; then beekeeper check settlements || exit 1; fi;
+              if [ "${PUSHSYNC_ENABLED}" = "true" ]; then beekeeper check pushsync || exit 1 && beekeeper check pushsync --upload-chunks || exit 1; fi;
+              if [ "${RETRIEVAL_ENABLED}" = "true" ]; then beekeeper check retrieval || exit 1; fi;
+              if [ "${PULLSYNC_ENABLED}" = "true" ]; then beekeeper check pullsync || exit 1; fi;
+              if [ "${CHUNKREPAIR_ENABLED}" = "true" ]; then beekeeper check chunkrepair || exit 1; fi;
+              if [ "${MANIFEST_ENABLED}" = "true" ]; then beekeeper check manifest || exit 1; fi;
+      restartPolicy: "Never"
+      nodeSelector:
+            node-group: bee-dynamic
