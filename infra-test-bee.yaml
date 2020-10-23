@@ -3,7 +3,7 @@ image:
   tag: latest
   pullPolicy: Always
 
-replicaCount: 5
+replicaCount: 20
 
 serviceAccount:
   create: true
