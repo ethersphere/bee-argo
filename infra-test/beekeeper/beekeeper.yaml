@@ -117,6 +117,7 @@ metadata:
     app.kubernetes.io/version: "latest"
     app.kubernetes.io/managed-by: Helm
 spec:
+  backoffLimit: 1
   template:
     metadata:
       labels:
@@ -124,7 +125,6 @@ spec:
         app.kubernetes.io/instance: beekeeper
     spec:
       serviceAccountName: beekeeper
-      backoffLimit: 1
       initContainers:
         - name: init-ping
           image: "ethersphere/beekeeper:latest"
