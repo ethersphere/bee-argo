@@ -1,3 +1,6 @@
+serviceAccount:
+  create: true
+
 swap:
   bzzaccounts:
     - 75e84b017cb8ebec78fde433e8339ff1aad0d271
