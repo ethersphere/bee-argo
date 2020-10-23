@@ -117,7 +117,7 @@ metadata:
     app.kubernetes.io/version: "latest"
     app.kubernetes.io/managed-by: Helm
 spec:
-  backoffLimit: "10"
+  backoffLimit: 10
   template:
     metadata:
       labels:
