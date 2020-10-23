@@ -1,3 +1,8 @@
+image:
+  repository: ethersphere/beekeeper
+  tag: latest
+  pullPolicy: Always
+
 nodeSelector:
   node-group: bee-dynamic
 
@@ -10,8 +15,8 @@ initPing:
 
 singleJob:
   enabled: true
-  backoffLimit: 10
-  uploadNodeCount: 5
+  backoffLimit: 2
+  uploadNodeCount: 20
   chunksPerNode: 3
   restartPolicy: Never
 
@@ -27,7 +32,7 @@ beeCluster:
   disableNamespace: false
   insecureTLS: false
   namespace: infra-test
-  nodeCount: 5
+  nodeCount: 20
   pushGateway: pushgateway-beekeeper-test.monitoring:9091
   pushMetrics: false
 
@@ -36,35 +41,17 @@ check:
     enabled: false
   balances:
     enabled: true
-    schedule: "*/1 * * * *"
-    uploadNodeCount: 5
   chunkrepair:
     enabled: true
-    schedule: "*/2 * * * *"
   manifest:
     enabled: true
-    schedule: "*/2 * * * *"
   pullsync:
     enabled: true
-    schedule: "*/1 * * * *"
-    chunksPerNode: 3
-    uploadNodeCount: 5
   pushsync:
     enabled: true
-    schedule: "*/3 * * * *"
-    chunksPerNode: 2
-    uploadNodeCount: 5
   pushsyncchunks:
     enabled: true
-    schedule: "*/4 * * * *"
-    chunksPerNode: 2
-    uploadNodeCount: 5
   retrieval:
     enabled: true
-    schedule: "*/5 * * * *"
-    chunksPerNode: 2
-    uploadNodeCount: 5
   settlements:
     enabled: true
-    schedule: "*/5 * * * *"
-    uploadNodeCount: 3
