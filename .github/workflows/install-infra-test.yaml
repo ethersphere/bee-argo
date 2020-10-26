@@ -18,7 +18,6 @@ jobs:
           helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
           helm repo update
           rm infra-test/*/sa.yaml || true
-          helm template pushgateway-infra-test -n monitoring prometheus-community/prometheus-pushgateway -f infra-test/pushgateway.yaml --no-hooks > infra-test/pushgateway/all.yaml
           helm template geth-swap -n infra-test-geth ethersphere/geth-swap -f infra-test/geth.yaml --no-hooks > infra-test/geth/all.yaml
           helm template beekeeper -n infra-test-beekeeper ethersphere/beekeeper -f infra-test/beekeeper.yaml --no-hooks > infra-test/beekeeper/all.yaml
           helm template bee -n infra-test ethersphere/bee -f infra-test/bee.yaml --no-hooks > infra-test/bee/all.yaml
