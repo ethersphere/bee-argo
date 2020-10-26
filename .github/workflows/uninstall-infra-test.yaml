@@ -1,0 +1,25 @@
+name: Infra Test
+
+on:
+  repository_dispatch:
+    types: [trigger-uninstall]
+
+jobs:
+  helm-template:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+      - name: Remove k8s yamls
+        run: |
+          docker run --rm -v "${PWD}":/workdir mikefarah/yq yq read infra-test/pushgateway/all.yaml > infra-test/pushgateway/sa.yaml
+          docker run --rm -v "${PWD}":/workdir mikefarah/yq yq read infra-test/geth/all.yaml > infra-test/geth/sa.yaml
+          docker run --rm -v "${PWD}":/workdir mikefarah/yq yq read infra-test/beekeeper/all.yaml > infra-test/beekeeper/sa.yaml
+          docker run --rm -v "${PWD}":/workdir mikefarah/yq yq read infra-test/bee/all.yaml > infra-test/bee/sa.yaml
+          rm infra-test/*/all.yaml
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "uninstall infra-test"
+          commit_author: bee-worker <bee-worker@ethswarm.org>
