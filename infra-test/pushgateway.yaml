@@ -1,8 +1,0 @@
-nameOverride: infra-test
-
-serviceAccount:
-  create: true
-
-serviceMonitor:
-  enabled: true
-  interval: 1s
