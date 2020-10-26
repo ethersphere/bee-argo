@@ -18,7 +18,7 @@ jobs:
           docker run --rm -v "${PWD}":/workdir mikefarah/yq yq read infra-test/geth/all.yaml > infra-test/geth/sa.yaml
           docker run --rm -v "${PWD}":/workdir mikefarah/yq yq read infra-test/beekeeper/all.yaml > infra-test/beekeeper/sa.yaml
           docker run --rm -v "${PWD}":/workdir mikefarah/yq yq read infra-test/bee/all.yaml > infra-test/bee/sa.yaml
-          rm infra-test/*/all.yaml
+          rm infra-test/*/all.yaml || true
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "uninstall infra-test"
