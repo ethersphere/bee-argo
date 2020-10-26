@@ -14,7 +14,6 @@ jobs:
           ref: ${{ github.head_ref }}
       - name: Remove k8s yamls
         run: |
-          docker run --rm -v "${PWD}":/workdir mikefarah/yq yq read infra-test/pushgateway/all.yaml > infra-test/pushgateway/sa.yaml
           docker run --rm -v "${PWD}":/workdir mikefarah/yq yq read infra-test/geth/all.yaml > infra-test/geth/sa.yaml
           docker run --rm -v "${PWD}":/workdir mikefarah/yq yq read infra-test/beekeeper/all.yaml > infra-test/beekeeper/sa.yaml
           docker run --rm -v "${PWD}":/workdir mikefarah/yq yq read infra-test/bee/all.yaml > infra-test/bee/sa.yaml
