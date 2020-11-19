@@ -21,11 +21,11 @@ singleJob:
   restartPolicy: Never
 
 beeCluster:
-  apiDomain: "svc.cluster.local:8080"
+  apiDomain: "svc.cluster.local:1633"
   apiHostnames: bee-%d
   apiInsecureTLS: true
   apiScheme: http
-  debugApiDomain: "svc.cluster.local:6060"
+  debugApiDomain: "svc.cluster.local:1635"
   debugApiHostnames: bee-%d-debug
   debugApiInsecureTLS: true
   debugApiScheme: http
