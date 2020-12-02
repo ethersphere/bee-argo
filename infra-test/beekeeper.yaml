@@ -46,7 +46,7 @@ check:
   manifest:
     enabled: true
   pullsync:
-    enabled: true
+    enabled: false
   pushsync:
     enabled: true
   pushsyncchunks:
