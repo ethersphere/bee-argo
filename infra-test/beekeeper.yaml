@@ -42,7 +42,7 @@ check:
   balances:
     enabled: true
   chunkrepair:
-    enabled: true
+    enabled: false
   manifest:
     enabled: true
   pullsync:
