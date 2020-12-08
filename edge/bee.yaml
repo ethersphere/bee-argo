@@ -2384,7 +2384,7 @@ spec:
               subPath: .bee.yaml
       containers:
         - name: bee
-          image: "ethersphere/bee@sha256:e6a401d7a4e0c753bb47a69f49e339868cee0a6c475ab7f81f2a4d01ae14cbe8"
+          image: "ethersphere/bee@sha256:27f380555a4b3676b8441a1a72c0e60febae70dd163a0007018072f0328ccdc1"
           imagePullPolicy: Always
           command:
             - bee
