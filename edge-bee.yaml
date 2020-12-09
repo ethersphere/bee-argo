@@ -78,7 +78,7 @@ beeConfig:
   tracing_endpoint: jaeger-operator-jaeger-agent.observability:6831
   resolver_options: "https://cloudflare-eth.com"
   swap_enable: true
-  swap_endpoint: https://rpc.slock.it/goerli
+  swap_endpoint: https://goerli.infura.io/v3/3e88bb0189ea44c0904699e0dfff5641
   swap_initial_deposit: "10000000000"
   verbosity: 5
 
