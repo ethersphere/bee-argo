@@ -65,7 +65,7 @@ data:
     resolver-options: https://cloudflare-eth.com
     standalone: false
     swap-enable: true
-    swap-endpoint: https://goerli.infura.io/v3/6a0bdcb996734d71844e948f3116a52b
+    swap-endpoint: https://rpc.slock.it/goerli
     swap-factory-address: 
     swap-initial-deposit: 10000000000
     tracing-enable: true
