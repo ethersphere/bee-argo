@@ -20,7 +20,7 @@ jobs:
           rm infra-test/*/sa.yaml || true
           helm template geth-swap -n infra-test-geth ethersphere/geth-swap -f infra-test/geth.yaml --no-hooks > infra-test/geth/all.yaml
           helm template beekeeper -n infra-test-beekeeper ethersphere/beekeeper -f infra-test/beekeeper.yaml --no-hooks > infra-test/beekeeper/all.yaml
-          helm template bee -n infra-test ethersphere/bee -f infra-test/bee.yaml --no-hooks > infra-test/bee/all.yaml
+          helm template bee -n infra-test ethersphere/bee -f infra-test/bee.yaml --no-hooks --version 0.6.0 > infra-test/bee/all.yaml
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "install infra-test"
