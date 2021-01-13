@@ -49,7 +49,7 @@ data:
     resolver-options: https://cloudflare-eth.com
     standalone: false
     swap-enable: true
-    swap-endpoint: https://goerli.infura.io/v3/3e88bb0189ea44c0904699e0dfff5641
+    swap-endpoint: wss://goerli.infura.io/ws/v3/3e88bb0189ea44c0904699e0dfff5641
     swap-factory-address: 
     swap-initial-deposit: 10000000000
     tracing-enable: true
@@ -2368,7 +2368,7 @@ spec:
               subPath: .bee.yaml
       containers:
         - name: bee
-          image: "ethersphere/bee@sha256:6be2d2b20e88eca8c267de4070e3574f5018daf1fee6e01026a57d4d5560fbdd"
+          image: "ethersphere/bee@sha256:adf537b0910e60bebbe364577e9e5fda05c5bf6822295f77104f343ee9c78eb1"
           imagePullPolicy: Always
           command:
             - bee
