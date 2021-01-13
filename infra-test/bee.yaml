@@ -75,7 +75,7 @@ beeConfig:
   tracing_endpoint: jaeger-operator-jaeger-agent.observability:6831
   resolver_options: "https://cloudflare-eth.com"
   swap_enable: true
-  swap_endpoint: http://geth-swap.infra-test-geth:8545
+  swap_endpoint: ws://geth-swap.infra-test-geth:8546
   swap_factory_address: 0x657241f4494a2f15ba75346e691d753a978c72df
   swap_initial_deposit: 1000000000000000000
   verbosity: 5
