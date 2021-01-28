@@ -8,6 +8,8 @@ replicaCount: 20
 serviceAccount:
   create: true
 
+podManagementPolicy: Parallel
+
 ingress:
   enabled: true
   annotations:
