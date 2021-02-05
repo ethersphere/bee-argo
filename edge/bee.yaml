@@ -2387,7 +2387,7 @@ spec:
               subPath: .bee.yaml
       containers:
         - name: bee
-          image: "ethersphere/bee@sha256:8eec569e6f644d2fe59d07a06c8491a420743e48a2262e8f4544ef519b91c4e8"
+          image: "ethersphere/bee@sha256:52b863ac383ff716e2181d08e8c7633daced589ad93e12e58377caba5e542b35"
           imagePullPolicy: Always
           command:
             - bee
@@ -2413,6 +2413,12 @@ spec:
               path: /readiness
               port: debug
             initialDelaySeconds: 5
+          startupProbe:
+            httpGet:
+              path: /health
+              port: debug
+            failureThreshold: 30
+            periodSeconds: 10
           resources:
             limits:
               cpu: 1.5
