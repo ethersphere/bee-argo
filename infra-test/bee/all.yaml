@@ -2394,12 +2394,6 @@ spec:
               path: /readiness
               port: debug
             initialDelaySeconds: 5
-          startupProbe:
-            httpGet:
-              path: /health
-              port: debug
-            failureThreshold: 30
-            periodSeconds: 10
           resources:
             limits:
               cpu: 1.5
