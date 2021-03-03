@@ -55,5 +55,5 @@ check:
     enabled: true
   settlements:
     enabled: true
-    fileSize: 10
+    fileSize: 20
     waitBeforeDownload: 30
