@@ -33,7 +33,7 @@ beeCluster:
   insecureTLS: false
   namespace: infra-test
   nodeCount: 20
-  pushGateway: pushgateway-infra-test.monitoring:9091
+  pushGateway: pushgateway-prometheus-pushgateway.monitoring:9091
   pushMetrics: true
 
 check:
