@@ -22,3 +22,5 @@ jobs:
         with:
           commit_message: "uninstall infra-test"
           commit_author: bee-worker <bee-worker@ethswarm.org>
+          commit_user_name: bee-worker
+          commit_user_email: bee-worker@ethswarm.org
