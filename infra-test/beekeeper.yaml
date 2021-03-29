@@ -57,3 +57,8 @@ check:
     enabled: true
     fileSize: 20
     waitBeforeDownload: 30
+
+stress:
+  upload:
+    enabled: true
+    timeout: 15m
