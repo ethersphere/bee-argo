@@ -73,6 +73,7 @@ beeConfig:
   network_id: 3
   usePasswordFile: true
   existingSecret: bee-password
+  payment_threshold: 50000000000
   tracing_enable: true
   tracing_endpoint: jaeger-operator-jaeger-agent.observability:6831
   resolver_options: "https://cloudflare-eth.com"
