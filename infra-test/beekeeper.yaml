@@ -57,7 +57,7 @@ check:
     enabled: true
     fileSize: 20
     waitBeforeDownload: 30
-    threshold: 50000000000
+    threshold: "50000000000"
 
 stress:
   upload:
