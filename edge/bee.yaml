@@ -7,7 +7,7 @@ metadata:
   namespace: bee
   labels:
 
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -20,7 +20,7 @@ metadata:
   name: bee-clefpassword
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -36,7 +36,7 @@ metadata:
   name: bee
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -89,7 +89,7 @@ metadata:
   name: bee-0-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -117,7 +117,7 @@ metadata:
   name: bee-1-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -145,7 +145,7 @@ metadata:
   name: bee-2-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -173,7 +173,7 @@ metadata:
   name: bee-3-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -201,7 +201,7 @@ metadata:
   name: bee-4-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -229,7 +229,7 @@ metadata:
   name: bee-5-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -257,7 +257,7 @@ metadata:
   name: bee-6-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -285,7 +285,7 @@ metadata:
   name: bee-7-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -313,7 +313,7 @@ metadata:
   name: bee-8-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -341,7 +341,7 @@ metadata:
   name: bee-9-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -369,7 +369,7 @@ metadata:
   name: bee-10-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -397,7 +397,7 @@ metadata:
   name: bee-11-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -425,7 +425,7 @@ metadata:
   name: bee-12-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -453,7 +453,7 @@ metadata:
   name: bee-13-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -481,7 +481,7 @@ metadata:
   name: bee-14-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -509,7 +509,7 @@ metadata:
   name: bee-15-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -537,7 +537,7 @@ metadata:
   name: bee-16-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -565,7 +565,7 @@ metadata:
   name: bee-17-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -593,7 +593,7 @@ metadata:
   name: bee-18-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -621,7 +621,7 @@ metadata:
   name: bee-19-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -649,7 +649,7 @@ metadata:
   name: bee-headless
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -683,7 +683,7 @@ metadata:
   name: bee-0-headless
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -710,7 +710,7 @@ metadata:
   name: bee-1-headless
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -737,7 +737,7 @@ metadata:
   name: bee-2-headless
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -764,7 +764,7 @@ metadata:
   name: bee-3-headless
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -791,7 +791,7 @@ metadata:
   name: bee-4-headless
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -818,7 +818,7 @@ metadata:
   name: bee-5-headless
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -845,7 +845,7 @@ metadata:
   name: bee-6-headless
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -872,7 +872,7 @@ metadata:
   name: bee-7-headless
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -899,7 +899,7 @@ metadata:
   name: bee-8-headless
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -926,7 +926,7 @@ metadata:
   name: bee-9-headless
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -953,7 +953,7 @@ metadata:
   name: bee-10-headless
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -980,7 +980,7 @@ metadata:
   name: bee-11-headless
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1007,7 +1007,7 @@ metadata:
   name: bee-12-headless
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1034,7 +1034,7 @@ metadata:
   name: bee-13-headless
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1061,7 +1061,7 @@ metadata:
   name: bee-14-headless
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1088,7 +1088,7 @@ metadata:
   name: bee-15-headless
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1115,7 +1115,7 @@ metadata:
   name: bee-16-headless
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1142,7 +1142,7 @@ metadata:
   name: bee-17-headless
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1169,7 +1169,7 @@ metadata:
   name: bee-18-headless
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1196,7 +1196,7 @@ metadata:
   name: bee-19-headless
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1223,7 +1223,7 @@ metadata:
   name: bee-0-p2p
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1251,7 +1251,7 @@ metadata:
   name: bee-1-p2p
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1279,7 +1279,7 @@ metadata:
   name: bee-2-p2p
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1307,7 +1307,7 @@ metadata:
   name: bee-3-p2p
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1335,7 +1335,7 @@ metadata:
   name: bee-4-p2p
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1363,7 +1363,7 @@ metadata:
   name: bee-5-p2p
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1391,7 +1391,7 @@ metadata:
   name: bee-6-p2p
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1419,7 +1419,7 @@ metadata:
   name: bee-7-p2p
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1447,7 +1447,7 @@ metadata:
   name: bee-8-p2p
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1475,7 +1475,7 @@ metadata:
   name: bee-9-p2p
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1503,7 +1503,7 @@ metadata:
   name: bee-10-p2p
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1531,7 +1531,7 @@ metadata:
   name: bee-11-p2p
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1559,7 +1559,7 @@ metadata:
   name: bee-12-p2p
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1587,7 +1587,7 @@ metadata:
   name: bee-13-p2p
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1615,7 +1615,7 @@ metadata:
   name: bee-14-p2p
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1643,7 +1643,7 @@ metadata:
   name: bee-15-p2p
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1671,7 +1671,7 @@ metadata:
   name: bee-16-p2p
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1699,7 +1699,7 @@ metadata:
   name: bee-17-p2p
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1727,7 +1727,7 @@ metadata:
   name: bee-18-p2p
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1755,7 +1755,7 @@ metadata:
   name: bee-19-p2p
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1783,7 +1783,7 @@ metadata:
   name: bee
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1808,7 +1808,7 @@ metadata:
   name: bee-0
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1834,7 +1834,7 @@ metadata:
   name: bee-1
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1860,7 +1860,7 @@ metadata:
   name: bee-2
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1886,7 +1886,7 @@ metadata:
   name: bee-3
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1912,7 +1912,7 @@ metadata:
   name: bee-4
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1938,7 +1938,7 @@ metadata:
   name: bee-5
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1964,7 +1964,7 @@ metadata:
   name: bee-6
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1990,7 +1990,7 @@ metadata:
   name: bee-7
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2016,7 +2016,7 @@ metadata:
   name: bee-8
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2042,7 +2042,7 @@ metadata:
   name: bee-9
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2068,7 +2068,7 @@ metadata:
   name: bee-10
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2094,7 +2094,7 @@ metadata:
   name: bee-11
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2120,7 +2120,7 @@ metadata:
   name: bee-12
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2146,7 +2146,7 @@ metadata:
   name: bee-13
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2172,7 +2172,7 @@ metadata:
   name: bee-14
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2198,7 +2198,7 @@ metadata:
   name: bee-15
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2224,7 +2224,7 @@ metadata:
   name: bee-16
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2250,7 +2250,7 @@ metadata:
   name: bee-17
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2276,7 +2276,7 @@ metadata:
   name: bee-18
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2302,7 +2302,7 @@ metadata:
   name: bee-19
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2328,7 +2328,7 @@ metadata:
   name: bee
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2393,7 +2393,7 @@ spec:
               subPath: .bee.yaml
       containers:
         - name: bee
-          image: "ethersphere/bee@sha256:9e07923932936b7d34055cf64f97d214f571e61c6a64a23420d046d5355240eb"
+          image: "ethersphere/bee@sha256:a8b239fe244f8a7b7a60bd5f42bd3e823027d282b471075b3328f74cb0d1bf6a"
           imagePullPolicy: Always
           command:
             - bee
@@ -2478,7 +2478,7 @@ metadata:
   name: bee-0-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2509,7 +2509,7 @@ metadata:
   name: bee-1-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2540,7 +2540,7 @@ metadata:
   name: bee-2-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2571,7 +2571,7 @@ metadata:
   name: bee-3-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2602,7 +2602,7 @@ metadata:
   name: bee-4-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2633,7 +2633,7 @@ metadata:
   name: bee-5-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2664,7 +2664,7 @@ metadata:
   name: bee-6-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2695,7 +2695,7 @@ metadata:
   name: bee-7-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2726,7 +2726,7 @@ metadata:
   name: bee-8-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2757,7 +2757,7 @@ metadata:
   name: bee-9-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2788,7 +2788,7 @@ metadata:
   name: bee-10-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2819,7 +2819,7 @@ metadata:
   name: bee-11-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2850,7 +2850,7 @@ metadata:
   name: bee-12-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2881,7 +2881,7 @@ metadata:
   name: bee-13-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2912,7 +2912,7 @@ metadata:
   name: bee-14-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2943,7 +2943,7 @@ metadata:
   name: bee-15-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2974,7 +2974,7 @@ metadata:
   name: bee-16-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -3005,7 +3005,7 @@ metadata:
   name: bee-17-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -3036,7 +3036,7 @@ metadata:
   name: bee-18-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -3067,7 +3067,7 @@ metadata:
   name: bee-19-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -3098,7 +3098,7 @@ metadata:
   name: bee
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -3146,7 +3146,7 @@ metadata:
   name: bee-0
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -3192,7 +3192,7 @@ metadata:
   name: bee-1
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -3238,7 +3238,7 @@ metadata:
   name: bee-2
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -3284,7 +3284,7 @@ metadata:
   name: bee-3
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -3330,7 +3330,7 @@ metadata:
   name: bee-4
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -3376,7 +3376,7 @@ metadata:
   name: bee-5
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -3422,7 +3422,7 @@ metadata:
   name: bee-6
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -3468,7 +3468,7 @@ metadata:
   name: bee-7
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -3514,7 +3514,7 @@ metadata:
   name: bee-8
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -3560,7 +3560,7 @@ metadata:
   name: bee-9
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -3606,7 +3606,7 @@ metadata:
   name: bee-10
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -3652,7 +3652,7 @@ metadata:
   name: bee-11
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -3698,7 +3698,7 @@ metadata:
   name: bee-12
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -3744,7 +3744,7 @@ metadata:
   name: bee-13
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -3790,7 +3790,7 @@ metadata:
   name: bee-14
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -3836,7 +3836,7 @@ metadata:
   name: bee-15
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -3882,7 +3882,7 @@ metadata:
   name: bee-16
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -3928,7 +3928,7 @@ metadata:
   name: bee-17
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -3974,7 +3974,7 @@ metadata:
   name: bee-18
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -4020,7 +4020,7 @@ metadata:
   name: bee-19
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.0
+    helm.sh/chart: bee-0.7.1
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
