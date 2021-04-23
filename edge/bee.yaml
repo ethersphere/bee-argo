@@ -7,7 +7,7 @@ metadata:
   namespace: bee
   labels:
 
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -20,7 +20,7 @@ metadata:
   name: bee-clefpassword
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -36,7 +36,7 @@ metadata:
   name: bee
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -90,7 +90,7 @@ metadata:
   name: bee-0-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -118,7 +118,7 @@ metadata:
   name: bee-1-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -146,7 +146,7 @@ metadata:
   name: bee-2-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -174,7 +174,7 @@ metadata:
   name: bee-3-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -202,7 +202,7 @@ metadata:
   name: bee-4-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -230,7 +230,7 @@ metadata:
   name: bee-5-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -258,7 +258,7 @@ metadata:
   name: bee-6-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -286,7 +286,7 @@ metadata:
   name: bee-7-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -314,7 +314,7 @@ metadata:
   name: bee-8-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -342,7 +342,7 @@ metadata:
   name: bee-9-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -370,7 +370,7 @@ metadata:
   name: bee-10-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -398,7 +398,7 @@ metadata:
   name: bee-11-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -426,7 +426,7 @@ metadata:
   name: bee-12-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -454,7 +454,7 @@ metadata:
   name: bee-13-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -482,7 +482,7 @@ metadata:
   name: bee-14-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -510,7 +510,7 @@ metadata:
   name: bee-15-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -538,7 +538,7 @@ metadata:
   name: bee-16-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -566,7 +566,7 @@ metadata:
   name: bee-17-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -594,7 +594,7 @@ metadata:
   name: bee-18-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -622,7 +622,7 @@ metadata:
   name: bee-19-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -650,7 +650,7 @@ metadata:
   name: bee-headless
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -684,7 +684,7 @@ metadata:
   name: bee-0-headless
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -711,7 +711,7 @@ metadata:
   name: bee-1-headless
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -738,7 +738,7 @@ metadata:
   name: bee-2-headless
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -765,7 +765,7 @@ metadata:
   name: bee-3-headless
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -792,7 +792,7 @@ metadata:
   name: bee-4-headless
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -819,7 +819,7 @@ metadata:
   name: bee-5-headless
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -846,7 +846,7 @@ metadata:
   name: bee-6-headless
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -873,7 +873,7 @@ metadata:
   name: bee-7-headless
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -900,7 +900,7 @@ metadata:
   name: bee-8-headless
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -927,7 +927,7 @@ metadata:
   name: bee-9-headless
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -954,7 +954,7 @@ metadata:
   name: bee-10-headless
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -981,7 +981,7 @@ metadata:
   name: bee-11-headless
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1008,7 +1008,7 @@ metadata:
   name: bee-12-headless
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1035,7 +1035,7 @@ metadata:
   name: bee-13-headless
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1062,7 +1062,7 @@ metadata:
   name: bee-14-headless
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1089,7 +1089,7 @@ metadata:
   name: bee-15-headless
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1116,7 +1116,7 @@ metadata:
   name: bee-16-headless
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1143,7 +1143,7 @@ metadata:
   name: bee-17-headless
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1170,7 +1170,7 @@ metadata:
   name: bee-18-headless
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1197,7 +1197,7 @@ metadata:
   name: bee-19-headless
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1224,7 +1224,7 @@ metadata:
   name: bee-0-p2p
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1252,7 +1252,7 @@ metadata:
   name: bee-1-p2p
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1280,7 +1280,7 @@ metadata:
   name: bee-2-p2p
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1308,7 +1308,7 @@ metadata:
   name: bee-3-p2p
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1336,7 +1336,7 @@ metadata:
   name: bee-4-p2p
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1364,7 +1364,7 @@ metadata:
   name: bee-5-p2p
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1392,7 +1392,7 @@ metadata:
   name: bee-6-p2p
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1420,7 +1420,7 @@ metadata:
   name: bee-7-p2p
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1448,7 +1448,7 @@ metadata:
   name: bee-8-p2p
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1476,7 +1476,7 @@ metadata:
   name: bee-9-p2p
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1504,7 +1504,7 @@ metadata:
   name: bee-10-p2p
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1532,7 +1532,7 @@ metadata:
   name: bee-11-p2p
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1560,7 +1560,7 @@ metadata:
   name: bee-12-p2p
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1588,7 +1588,7 @@ metadata:
   name: bee-13-p2p
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1616,7 +1616,7 @@ metadata:
   name: bee-14-p2p
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1644,7 +1644,7 @@ metadata:
   name: bee-15-p2p
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1672,7 +1672,7 @@ metadata:
   name: bee-16-p2p
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1700,7 +1700,7 @@ metadata:
   name: bee-17-p2p
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1728,7 +1728,7 @@ metadata:
   name: bee-18-p2p
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1756,7 +1756,7 @@ metadata:
   name: bee-19-p2p
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1784,7 +1784,7 @@ metadata:
   name: bee
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1809,7 +1809,7 @@ metadata:
   name: bee-0
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1835,7 +1835,7 @@ metadata:
   name: bee-1
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1861,7 +1861,7 @@ metadata:
   name: bee-2
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1887,7 +1887,7 @@ metadata:
   name: bee-3
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1913,7 +1913,7 @@ metadata:
   name: bee-4
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1939,7 +1939,7 @@ metadata:
   name: bee-5
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1965,7 +1965,7 @@ metadata:
   name: bee-6
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -1991,7 +1991,7 @@ metadata:
   name: bee-7
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2017,7 +2017,7 @@ metadata:
   name: bee-8
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2043,7 +2043,7 @@ metadata:
   name: bee-9
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2069,7 +2069,7 @@ metadata:
   name: bee-10
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2095,7 +2095,7 @@ metadata:
   name: bee-11
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2121,7 +2121,7 @@ metadata:
   name: bee-12
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2147,7 +2147,7 @@ metadata:
   name: bee-13
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2173,7 +2173,7 @@ metadata:
   name: bee-14
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2199,7 +2199,7 @@ metadata:
   name: bee-15
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2225,7 +2225,7 @@ metadata:
   name: bee-16
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2251,7 +2251,7 @@ metadata:
   name: bee-17
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2277,7 +2277,7 @@ metadata:
   name: bee-18
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2303,7 +2303,7 @@ metadata:
   name: bee-19
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2329,7 +2329,7 @@ metadata:
   name: bee
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2394,7 +2394,7 @@ spec:
               subPath: .bee.yaml
       containers:
         - name: bee
-          image: "ethersphere/bee@sha256:36b7b99e8518e0986d022c8c1ebecccb941d3b870874a2e2dcb1d049e848165d"
+          image: "ethersphere/bee@sha256:ad9d8ef795a40e4d3dae4fa561572a1211b97c1d4f9acc484484bc08cc52f877"
           imagePullPolicy: Always
           command:
             - bee
@@ -2473,13 +2473,13 @@ spec:
       storageClassName: "local-storage"
 ---
 # Source: bee/templates/ingress-debug.yaml
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: bee-0-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2487,30 +2487,37 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx-internal
 spec:
+  ingressClassName: 
   rules:
     - host: bee-0-debug.staging.internal
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-0-debug
-              servicePort: debug
+              service:
+                name: bee-0-debug
+                port:
+                  name: debug
     - host: bee-0-debug.bee.staging.internal
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-0-debug
-              servicePort: debug
+              service:
+                name: bee-0-debug
+                port:
+                  name: debug
 ---
 # Source: bee/templates/ingress-debug.yaml
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: bee-1-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2518,30 +2525,37 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx-internal
 spec:
+  ingressClassName: 
   rules:
     - host: bee-1-debug.staging.internal
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-1-debug
-              servicePort: debug
+              service:
+                name: bee-1-debug
+                port:
+                  name: debug
     - host: bee-1-debug.bee.staging.internal
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-1-debug
-              servicePort: debug
+              service:
+                name: bee-1-debug
+                port:
+                  name: debug
 ---
 # Source: bee/templates/ingress-debug.yaml
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: bee-2-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2549,30 +2563,37 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx-internal
 spec:
+  ingressClassName: 
   rules:
     - host: bee-2-debug.staging.internal
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-2-debug
-              servicePort: debug
+              service:
+                name: bee-2-debug
+                port:
+                  name: debug
     - host: bee-2-debug.bee.staging.internal
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-2-debug
-              servicePort: debug
+              service:
+                name: bee-2-debug
+                port:
+                  name: debug
 ---
 # Source: bee/templates/ingress-debug.yaml
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: bee-3-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2580,30 +2601,37 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx-internal
 spec:
+  ingressClassName: 
   rules:
     - host: bee-3-debug.staging.internal
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-3-debug
-              servicePort: debug
+              service:
+                name: bee-3-debug
+                port:
+                  name: debug
     - host: bee-3-debug.bee.staging.internal
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-3-debug
-              servicePort: debug
+              service:
+                name: bee-3-debug
+                port:
+                  name: debug
 ---
 # Source: bee/templates/ingress-debug.yaml
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: bee-4-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2611,30 +2639,37 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx-internal
 spec:
+  ingressClassName: 
   rules:
     - host: bee-4-debug.staging.internal
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-4-debug
-              servicePort: debug
+              service:
+                name: bee-4-debug
+                port:
+                  name: debug
     - host: bee-4-debug.bee.staging.internal
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-4-debug
-              servicePort: debug
+              service:
+                name: bee-4-debug
+                port:
+                  name: debug
 ---
 # Source: bee/templates/ingress-debug.yaml
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: bee-5-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2642,30 +2677,37 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx-internal
 spec:
+  ingressClassName: 
   rules:
     - host: bee-5-debug.staging.internal
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-5-debug
-              servicePort: debug
+              service:
+                name: bee-5-debug
+                port:
+                  name: debug
     - host: bee-5-debug.bee.staging.internal
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-5-debug
-              servicePort: debug
+              service:
+                name: bee-5-debug
+                port:
+                  name: debug
 ---
 # Source: bee/templates/ingress-debug.yaml
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: bee-6-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2673,30 +2715,37 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx-internal
 spec:
+  ingressClassName: 
   rules:
     - host: bee-6-debug.staging.internal
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-6-debug
-              servicePort: debug
+              service:
+                name: bee-6-debug
+                port:
+                  name: debug
     - host: bee-6-debug.bee.staging.internal
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-6-debug
-              servicePort: debug
+              service:
+                name: bee-6-debug
+                port:
+                  name: debug
 ---
 # Source: bee/templates/ingress-debug.yaml
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: bee-7-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2704,30 +2753,37 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx-internal
 spec:
+  ingressClassName: 
   rules:
     - host: bee-7-debug.staging.internal
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-7-debug
-              servicePort: debug
+              service:
+                name: bee-7-debug
+                port:
+                  name: debug
     - host: bee-7-debug.bee.staging.internal
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-7-debug
-              servicePort: debug
+              service:
+                name: bee-7-debug
+                port:
+                  name: debug
 ---
 # Source: bee/templates/ingress-debug.yaml
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: bee-8-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2735,30 +2791,37 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx-internal
 spec:
+  ingressClassName: 
   rules:
     - host: bee-8-debug.staging.internal
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-8-debug
-              servicePort: debug
+              service:
+                name: bee-8-debug
+                port:
+                  name: debug
     - host: bee-8-debug.bee.staging.internal
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-8-debug
-              servicePort: debug
+              service:
+                name: bee-8-debug
+                port:
+                  name: debug
 ---
 # Source: bee/templates/ingress-debug.yaml
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: bee-9-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2766,30 +2829,37 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx-internal
 spec:
+  ingressClassName: 
   rules:
     - host: bee-9-debug.staging.internal
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-9-debug
-              servicePort: debug
+              service:
+                name: bee-9-debug
+                port:
+                  name: debug
     - host: bee-9-debug.bee.staging.internal
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-9-debug
-              servicePort: debug
+              service:
+                name: bee-9-debug
+                port:
+                  name: debug
 ---
 # Source: bee/templates/ingress-debug.yaml
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: bee-10-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2797,30 +2867,37 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx-internal
 spec:
+  ingressClassName: 
   rules:
     - host: bee-10-debug.staging.internal
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-10-debug
-              servicePort: debug
+              service:
+                name: bee-10-debug
+                port:
+                  name: debug
     - host: bee-10-debug.bee.staging.internal
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-10-debug
-              servicePort: debug
+              service:
+                name: bee-10-debug
+                port:
+                  name: debug
 ---
 # Source: bee/templates/ingress-debug.yaml
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: bee-11-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2828,30 +2905,37 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx-internal
 spec:
+  ingressClassName: 
   rules:
     - host: bee-11-debug.staging.internal
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-11-debug
-              servicePort: debug
+              service:
+                name: bee-11-debug
+                port:
+                  name: debug
     - host: bee-11-debug.bee.staging.internal
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-11-debug
-              servicePort: debug
+              service:
+                name: bee-11-debug
+                port:
+                  name: debug
 ---
 # Source: bee/templates/ingress-debug.yaml
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: bee-12-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2859,30 +2943,37 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx-internal
 spec:
+  ingressClassName: 
   rules:
     - host: bee-12-debug.staging.internal
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-12-debug
-              servicePort: debug
+              service:
+                name: bee-12-debug
+                port:
+                  name: debug
     - host: bee-12-debug.bee.staging.internal
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-12-debug
-              servicePort: debug
+              service:
+                name: bee-12-debug
+                port:
+                  name: debug
 ---
 # Source: bee/templates/ingress-debug.yaml
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: bee-13-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2890,30 +2981,37 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx-internal
 spec:
+  ingressClassName: 
   rules:
     - host: bee-13-debug.staging.internal
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-13-debug
-              servicePort: debug
+              service:
+                name: bee-13-debug
+                port:
+                  name: debug
     - host: bee-13-debug.bee.staging.internal
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-13-debug
-              servicePort: debug
+              service:
+                name: bee-13-debug
+                port:
+                  name: debug
 ---
 # Source: bee/templates/ingress-debug.yaml
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: bee-14-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2921,30 +3019,37 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx-internal
 spec:
+  ingressClassName: 
   rules:
     - host: bee-14-debug.staging.internal
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-14-debug
-              servicePort: debug
+              service:
+                name: bee-14-debug
+                port:
+                  name: debug
     - host: bee-14-debug.bee.staging.internal
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-14-debug
-              servicePort: debug
+              service:
+                name: bee-14-debug
+                port:
+                  name: debug
 ---
 # Source: bee/templates/ingress-debug.yaml
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: bee-15-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2952,30 +3057,37 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx-internal
 spec:
+  ingressClassName: 
   rules:
     - host: bee-15-debug.staging.internal
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-15-debug
-              servicePort: debug
+              service:
+                name: bee-15-debug
+                port:
+                  name: debug
     - host: bee-15-debug.bee.staging.internal
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-15-debug
-              servicePort: debug
+              service:
+                name: bee-15-debug
+                port:
+                  name: debug
 ---
 # Source: bee/templates/ingress-debug.yaml
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: bee-16-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -2983,30 +3095,37 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx-internal
 spec:
+  ingressClassName: 
   rules:
     - host: bee-16-debug.staging.internal
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-16-debug
-              servicePort: debug
+              service:
+                name: bee-16-debug
+                port:
+                  name: debug
     - host: bee-16-debug.bee.staging.internal
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-16-debug
-              servicePort: debug
+              service:
+                name: bee-16-debug
+                port:
+                  name: debug
 ---
 # Source: bee/templates/ingress-debug.yaml
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: bee-17-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -3014,30 +3133,37 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx-internal
 spec:
+  ingressClassName: 
   rules:
     - host: bee-17-debug.staging.internal
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-17-debug
-              servicePort: debug
+              service:
+                name: bee-17-debug
+                port:
+                  name: debug
     - host: bee-17-debug.bee.staging.internal
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-17-debug
-              servicePort: debug
+              service:
+                name: bee-17-debug
+                port:
+                  name: debug
 ---
 # Source: bee/templates/ingress-debug.yaml
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: bee-18-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -3045,30 +3171,37 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx-internal
 spec:
+  ingressClassName: 
   rules:
     - host: bee-18-debug.staging.internal
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-18-debug
-              servicePort: debug
+              service:
+                name: bee-18-debug
+                port:
+                  name: debug
     - host: bee-18-debug.bee.staging.internal
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-18-debug
-              servicePort: debug
+              service:
+                name: bee-18-debug
+                port:
+                  name: debug
 ---
 # Source: bee/templates/ingress-debug.yaml
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: bee-19-debug
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -3076,30 +3209,37 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx-internal
 spec:
+  ingressClassName: 
   rules:
     - host: bee-19-debug.staging.internal
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-19-debug
-              servicePort: debug
+              service:
+                name: bee-19-debug
+                port:
+                  name: debug
     - host: bee-19-debug.bee.staging.internal
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-19-debug
-              servicePort: debug
+              service:
+                name: bee-19-debug
+                port:
+                  name: debug
 ---
 # Source: bee/templates/ingress.yaml
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: bee
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -3129,25 +3269,29 @@ spec:
     - hosts:
         - bee.gateway.staging.ethswarm.org
       secretName: gateway-staging-ethswarm-org-wildcard-cert
+  ingressClassName: 
   rules:
     - host: bee.gateway.staging.ethswarm.org
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee
-              servicePort: 80
+              service:
+                name: bee
+                port:
+                  number: 80
 
 # PER POD INGRESS
 ---
 # Source: bee/templates/ingress.yaml
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: bee-0
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -3177,23 +3321,27 @@ spec:
     - hosts:
         - bee-0.gateway.staging.ethswarm.org
       secretName: gateway-staging-ethswarm-org-wildcard-cert
+  ingressClassName: 
   rules:
     - host: bee-0.gateway.staging.ethswarm.org
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-0
-              servicePort: api
+              service:
+                name: bee-0
+                port:
+                  name: api
 ---
 # Source: bee/templates/ingress.yaml
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: bee-1
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -3223,23 +3371,27 @@ spec:
     - hosts:
         - bee-1.gateway.staging.ethswarm.org
       secretName: gateway-staging-ethswarm-org-wildcard-cert
+  ingressClassName: 
   rules:
     - host: bee-1.gateway.staging.ethswarm.org
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-1
-              servicePort: api
+              service:
+                name: bee-1
+                port:
+                  name: api
 ---
 # Source: bee/templates/ingress.yaml
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: bee-2
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -3269,23 +3421,27 @@ spec:
     - hosts:
         - bee-2.gateway.staging.ethswarm.org
       secretName: gateway-staging-ethswarm-org-wildcard-cert
+  ingressClassName: 
   rules:
     - host: bee-2.gateway.staging.ethswarm.org
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-2
-              servicePort: api
+              service:
+                name: bee-2
+                port:
+                  name: api
 ---
 # Source: bee/templates/ingress.yaml
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: bee-3
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -3315,23 +3471,27 @@ spec:
     - hosts:
         - bee-3.gateway.staging.ethswarm.org
       secretName: gateway-staging-ethswarm-org-wildcard-cert
+  ingressClassName: 
   rules:
     - host: bee-3.gateway.staging.ethswarm.org
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-3
-              servicePort: api
+              service:
+                name: bee-3
+                port:
+                  name: api
 ---
 # Source: bee/templates/ingress.yaml
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: bee-4
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -3361,23 +3521,27 @@ spec:
     - hosts:
         - bee-4.gateway.staging.ethswarm.org
       secretName: gateway-staging-ethswarm-org-wildcard-cert
+  ingressClassName: 
   rules:
     - host: bee-4.gateway.staging.ethswarm.org
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-4
-              servicePort: api
+              service:
+                name: bee-4
+                port:
+                  name: api
 ---
 # Source: bee/templates/ingress.yaml
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: bee-5
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -3407,23 +3571,27 @@ spec:
     - hosts:
         - bee-5.gateway.staging.ethswarm.org
       secretName: gateway-staging-ethswarm-org-wildcard-cert
+  ingressClassName: 
   rules:
     - host: bee-5.gateway.staging.ethswarm.org
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-5
-              servicePort: api
+              service:
+                name: bee-5
+                port:
+                  name: api
 ---
 # Source: bee/templates/ingress.yaml
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: bee-6
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -3453,23 +3621,27 @@ spec:
     - hosts:
         - bee-6.gateway.staging.ethswarm.org
       secretName: gateway-staging-ethswarm-org-wildcard-cert
+  ingressClassName: 
   rules:
     - host: bee-6.gateway.staging.ethswarm.org
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-6
-              servicePort: api
+              service:
+                name: bee-6
+                port:
+                  name: api
 ---
 # Source: bee/templates/ingress.yaml
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: bee-7
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -3499,23 +3671,27 @@ spec:
     - hosts:
         - bee-7.gateway.staging.ethswarm.org
       secretName: gateway-staging-ethswarm-org-wildcard-cert
+  ingressClassName: 
   rules:
     - host: bee-7.gateway.staging.ethswarm.org
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-7
-              servicePort: api
+              service:
+                name: bee-7
+                port:
+                  name: api
 ---
 # Source: bee/templates/ingress.yaml
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: bee-8
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -3545,23 +3721,27 @@ spec:
     - hosts:
         - bee-8.gateway.staging.ethswarm.org
       secretName: gateway-staging-ethswarm-org-wildcard-cert
+  ingressClassName: 
   rules:
     - host: bee-8.gateway.staging.ethswarm.org
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-8
-              servicePort: api
+              service:
+                name: bee-8
+                port:
+                  name: api
 ---
 # Source: bee/templates/ingress.yaml
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: bee-9
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -3591,23 +3771,27 @@ spec:
     - hosts:
         - bee-9.gateway.staging.ethswarm.org
       secretName: gateway-staging-ethswarm-org-wildcard-cert
+  ingressClassName: 
   rules:
     - host: bee-9.gateway.staging.ethswarm.org
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-9
-              servicePort: api
+              service:
+                name: bee-9
+                port:
+                  name: api
 ---
 # Source: bee/templates/ingress.yaml
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: bee-10
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -3637,23 +3821,27 @@ spec:
     - hosts:
         - bee-10.gateway.staging.ethswarm.org
       secretName: gateway-staging-ethswarm-org-wildcard-cert
+  ingressClassName: 
   rules:
     - host: bee-10.gateway.staging.ethswarm.org
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-10
-              servicePort: api
+              service:
+                name: bee-10
+                port:
+                  name: api
 ---
 # Source: bee/templates/ingress.yaml
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: bee-11
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -3683,23 +3871,27 @@ spec:
     - hosts:
         - bee-11.gateway.staging.ethswarm.org
       secretName: gateway-staging-ethswarm-org-wildcard-cert
+  ingressClassName: 
   rules:
     - host: bee-11.gateway.staging.ethswarm.org
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-11
-              servicePort: api
+              service:
+                name: bee-11
+                port:
+                  name: api
 ---
 # Source: bee/templates/ingress.yaml
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: bee-12
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -3729,23 +3921,27 @@ spec:
     - hosts:
         - bee-12.gateway.staging.ethswarm.org
       secretName: gateway-staging-ethswarm-org-wildcard-cert
+  ingressClassName: 
   rules:
     - host: bee-12.gateway.staging.ethswarm.org
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-12
-              servicePort: api
+              service:
+                name: bee-12
+                port:
+                  name: api
 ---
 # Source: bee/templates/ingress.yaml
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: bee-13
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -3775,23 +3971,27 @@ spec:
     - hosts:
         - bee-13.gateway.staging.ethswarm.org
       secretName: gateway-staging-ethswarm-org-wildcard-cert
+  ingressClassName: 
   rules:
     - host: bee-13.gateway.staging.ethswarm.org
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-13
-              servicePort: api
+              service:
+                name: bee-13
+                port:
+                  name: api
 ---
 # Source: bee/templates/ingress.yaml
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: bee-14
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -3821,23 +4021,27 @@ spec:
     - hosts:
         - bee-14.gateway.staging.ethswarm.org
       secretName: gateway-staging-ethswarm-org-wildcard-cert
+  ingressClassName: 
   rules:
     - host: bee-14.gateway.staging.ethswarm.org
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-14
-              servicePort: api
+              service:
+                name: bee-14
+                port:
+                  name: api
 ---
 # Source: bee/templates/ingress.yaml
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: bee-15
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -3867,23 +4071,27 @@ spec:
     - hosts:
         - bee-15.gateway.staging.ethswarm.org
       secretName: gateway-staging-ethswarm-org-wildcard-cert
+  ingressClassName: 
   rules:
     - host: bee-15.gateway.staging.ethswarm.org
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-15
-              servicePort: api
+              service:
+                name: bee-15
+                port:
+                  name: api
 ---
 # Source: bee/templates/ingress.yaml
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: bee-16
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -3913,23 +4121,27 @@ spec:
     - hosts:
         - bee-16.gateway.staging.ethswarm.org
       secretName: gateway-staging-ethswarm-org-wildcard-cert
+  ingressClassName: 
   rules:
     - host: bee-16.gateway.staging.ethswarm.org
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-16
-              servicePort: api
+              service:
+                name: bee-16
+                port:
+                  name: api
 ---
 # Source: bee/templates/ingress.yaml
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: bee-17
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -3959,23 +4171,27 @@ spec:
     - hosts:
         - bee-17.gateway.staging.ethswarm.org
       secretName: gateway-staging-ethswarm-org-wildcard-cert
+  ingressClassName: 
   rules:
     - host: bee-17.gateway.staging.ethswarm.org
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-17
-              servicePort: api
+              service:
+                name: bee-17
+                port:
+                  name: api
 ---
 # Source: bee/templates/ingress.yaml
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: bee-18
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -4005,23 +4221,27 @@ spec:
     - hosts:
         - bee-18.gateway.staging.ethswarm.org
       secretName: gateway-staging-ethswarm-org-wildcard-cert
+  ingressClassName: 
   rules:
     - host: bee-18.gateway.staging.ethswarm.org
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-18
-              servicePort: api
+              service:
+                name: bee-18
+                port:
+                  name: api
 ---
 # Source: bee/templates/ingress.yaml
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: bee-19
   namespace: bee
   labels:
-    helm.sh/chart: bee-0.7.7
+    helm.sh/chart: bee-0.7.9
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee
     app.kubernetes.io/version: "latest"
@@ -4051,14 +4271,18 @@ spec:
     - hosts:
         - bee-19.gateway.staging.ethswarm.org
       secretName: gateway-staging-ethswarm-org-wildcard-cert
+  ingressClassName: 
   rules:
     - host: bee-19.gateway.staging.ethswarm.org
       http:
         paths:
           - path: /
+            pathType: ImplementationSpecific
             backend:
-              serviceName: bee-19
-              servicePort: api
+              service:
+                name: bee-19
+                port:
+                  name: api
 ---
 # Source: bee/templates/ingress-debug.yaml
 # PER POD INGRESS
