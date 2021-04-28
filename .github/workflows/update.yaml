@@ -14,9 +14,10 @@ jobs:
           ref: ${{ github.head_ref }}
       - name: Generate k8s yamls
         run: |
+          curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | DESIRED_VERSION=v3.2.0 bash
           helm repo add ethersphere https://ethersphere.github.io/helm
           helm repo update
-          helm template bee -n bee ethersphere/bee -f edge-bee.yaml --no-hooks --set image.digest=${{ github.event.client_payload.digest }} > edge/bee.yaml
+          helm template bee -n bee ethersphere/bee -f edge-bee.yaml --no-hooks --set image.digest=sha256:f39867fc4862ea6e1c12e6e2df6696db2fe0fcb6a66c35232af16436f74db650 > edge/bee.yaml
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "commit: ${{ github.event.client_payload.sha }} digest: ${{ github.event.client_payload.digest }}"
