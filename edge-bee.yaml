@@ -71,6 +71,7 @@ updateStrategy:
 beeConfig:
   bootnode: "/dnsaddr/bootnode.staging.ethswarm.org"
   debug_api_enable: true
+  full_node: true
   gateway_mode: true
   network_id: 2
   usePasswordFile: true

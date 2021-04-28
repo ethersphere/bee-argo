@@ -2473,7 +2473,7 @@ spec:
       storageClassName: "local-storage"
 ---
 # Source: bee/templates/ingress-debug.yaml
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: bee-0-debug
@@ -2487,31 +2487,24 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx-internal
 spec:
-  ingressClassName: 
   rules:
     - host: bee-0-debug.staging.internal
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-0-debug
-                port:
-                  name: debug
+              serviceName: bee-0-debug
+              servicePort: debug
     - host: bee-0-debug.bee.staging.internal
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-0-debug
-                port:
-                  name: debug
+              serviceName: bee-0-debug
+              servicePort: debug
 ---
 # Source: bee/templates/ingress-debug.yaml
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: bee-1-debug
@@ -2525,31 +2518,24 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx-internal
 spec:
-  ingressClassName: 
   rules:
     - host: bee-1-debug.staging.internal
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-1-debug
-                port:
-                  name: debug
+              serviceName: bee-1-debug
+              servicePort: debug
     - host: bee-1-debug.bee.staging.internal
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-1-debug
-                port:
-                  name: debug
+              serviceName: bee-1-debug
+              servicePort: debug
 ---
 # Source: bee/templates/ingress-debug.yaml
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: bee-2-debug
@@ -2563,31 +2549,24 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx-internal
 spec:
-  ingressClassName: 
   rules:
     - host: bee-2-debug.staging.internal
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-2-debug
-                port:
-                  name: debug
+              serviceName: bee-2-debug
+              servicePort: debug
     - host: bee-2-debug.bee.staging.internal
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-2-debug
-                port:
-                  name: debug
+              serviceName: bee-2-debug
+              servicePort: debug
 ---
 # Source: bee/templates/ingress-debug.yaml
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: bee-3-debug
@@ -2601,31 +2580,24 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx-internal
 spec:
-  ingressClassName: 
   rules:
     - host: bee-3-debug.staging.internal
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-3-debug
-                port:
-                  name: debug
+              serviceName: bee-3-debug
+              servicePort: debug
     - host: bee-3-debug.bee.staging.internal
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-3-debug
-                port:
-                  name: debug
+              serviceName: bee-3-debug
+              servicePort: debug
 ---
 # Source: bee/templates/ingress-debug.yaml
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: bee-4-debug
@@ -2639,31 +2611,24 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx-internal
 spec:
-  ingressClassName: 
   rules:
     - host: bee-4-debug.staging.internal
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-4-debug
-                port:
-                  name: debug
+              serviceName: bee-4-debug
+              servicePort: debug
     - host: bee-4-debug.bee.staging.internal
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-4-debug
-                port:
-                  name: debug
+              serviceName: bee-4-debug
+              servicePort: debug
 ---
 # Source: bee/templates/ingress-debug.yaml
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: bee-5-debug
@@ -2677,31 +2642,24 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx-internal
 spec:
-  ingressClassName: 
   rules:
     - host: bee-5-debug.staging.internal
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-5-debug
-                port:
-                  name: debug
+              serviceName: bee-5-debug
+              servicePort: debug
     - host: bee-5-debug.bee.staging.internal
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-5-debug
-                port:
-                  name: debug
+              serviceName: bee-5-debug
+              servicePort: debug
 ---
 # Source: bee/templates/ingress-debug.yaml
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: bee-6-debug
@@ -2715,31 +2673,24 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx-internal
 spec:
-  ingressClassName: 
   rules:
     - host: bee-6-debug.staging.internal
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-6-debug
-                port:
-                  name: debug
+              serviceName: bee-6-debug
+              servicePort: debug
     - host: bee-6-debug.bee.staging.internal
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-6-debug
-                port:
-                  name: debug
+              serviceName: bee-6-debug
+              servicePort: debug
 ---
 # Source: bee/templates/ingress-debug.yaml
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: bee-7-debug
@@ -2753,31 +2704,24 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx-internal
 spec:
-  ingressClassName: 
   rules:
     - host: bee-7-debug.staging.internal
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-7-debug
-                port:
-                  name: debug
+              serviceName: bee-7-debug
+              servicePort: debug
     - host: bee-7-debug.bee.staging.internal
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-7-debug
-                port:
-                  name: debug
+              serviceName: bee-7-debug
+              servicePort: debug
 ---
 # Source: bee/templates/ingress-debug.yaml
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: bee-8-debug
@@ -2791,31 +2735,24 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx-internal
 spec:
-  ingressClassName: 
   rules:
     - host: bee-8-debug.staging.internal
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-8-debug
-                port:
-                  name: debug
+              serviceName: bee-8-debug
+              servicePort: debug
     - host: bee-8-debug.bee.staging.internal
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-8-debug
-                port:
-                  name: debug
+              serviceName: bee-8-debug
+              servicePort: debug
 ---
 # Source: bee/templates/ingress-debug.yaml
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: bee-9-debug
@@ -2829,31 +2766,24 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx-internal
 spec:
-  ingressClassName: 
   rules:
     - host: bee-9-debug.staging.internal
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-9-debug
-                port:
-                  name: debug
+              serviceName: bee-9-debug
+              servicePort: debug
     - host: bee-9-debug.bee.staging.internal
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-9-debug
-                port:
-                  name: debug
+              serviceName: bee-9-debug
+              servicePort: debug
 ---
 # Source: bee/templates/ingress-debug.yaml
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: bee-10-debug
@@ -2867,31 +2797,24 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx-internal
 spec:
-  ingressClassName: 
   rules:
     - host: bee-10-debug.staging.internal
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-10-debug
-                port:
-                  name: debug
+              serviceName: bee-10-debug
+              servicePort: debug
     - host: bee-10-debug.bee.staging.internal
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-10-debug
-                port:
-                  name: debug
+              serviceName: bee-10-debug
+              servicePort: debug
 ---
 # Source: bee/templates/ingress-debug.yaml
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: bee-11-debug
@@ -2905,31 +2828,24 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx-internal
 spec:
-  ingressClassName: 
   rules:
     - host: bee-11-debug.staging.internal
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-11-debug
-                port:
-                  name: debug
+              serviceName: bee-11-debug
+              servicePort: debug
     - host: bee-11-debug.bee.staging.internal
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-11-debug
-                port:
-                  name: debug
+              serviceName: bee-11-debug
+              servicePort: debug
 ---
 # Source: bee/templates/ingress-debug.yaml
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: bee-12-debug
@@ -2943,31 +2859,24 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx-internal
 spec:
-  ingressClassName: 
   rules:
     - host: bee-12-debug.staging.internal
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-12-debug
-                port:
-                  name: debug
+              serviceName: bee-12-debug
+              servicePort: debug
     - host: bee-12-debug.bee.staging.internal
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-12-debug
-                port:
-                  name: debug
+              serviceName: bee-12-debug
+              servicePort: debug
 ---
 # Source: bee/templates/ingress-debug.yaml
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: bee-13-debug
@@ -2981,31 +2890,24 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx-internal
 spec:
-  ingressClassName: 
   rules:
     - host: bee-13-debug.staging.internal
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-13-debug
-                port:
-                  name: debug
+              serviceName: bee-13-debug
+              servicePort: debug
     - host: bee-13-debug.bee.staging.internal
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-13-debug
-                port:
-                  name: debug
+              serviceName: bee-13-debug
+              servicePort: debug
 ---
 # Source: bee/templates/ingress-debug.yaml
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: bee-14-debug
@@ -3019,31 +2921,24 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx-internal
 spec:
-  ingressClassName: 
   rules:
     - host: bee-14-debug.staging.internal
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-14-debug
-                port:
-                  name: debug
+              serviceName: bee-14-debug
+              servicePort: debug
     - host: bee-14-debug.bee.staging.internal
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-14-debug
-                port:
-                  name: debug
+              serviceName: bee-14-debug
+              servicePort: debug
 ---
 # Source: bee/templates/ingress-debug.yaml
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: bee-15-debug
@@ -3057,31 +2952,24 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx-internal
 spec:
-  ingressClassName: 
   rules:
     - host: bee-15-debug.staging.internal
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-15-debug
-                port:
-                  name: debug
+              serviceName: bee-15-debug
+              servicePort: debug
     - host: bee-15-debug.bee.staging.internal
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-15-debug
-                port:
-                  name: debug
+              serviceName: bee-15-debug
+              servicePort: debug
 ---
 # Source: bee/templates/ingress-debug.yaml
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: bee-16-debug
@@ -3095,31 +2983,24 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx-internal
 spec:
-  ingressClassName: 
   rules:
     - host: bee-16-debug.staging.internal
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-16-debug
-                port:
-                  name: debug
+              serviceName: bee-16-debug
+              servicePort: debug
     - host: bee-16-debug.bee.staging.internal
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-16-debug
-                port:
-                  name: debug
+              serviceName: bee-16-debug
+              servicePort: debug
 ---
 # Source: bee/templates/ingress-debug.yaml
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: bee-17-debug
@@ -3133,31 +3014,24 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx-internal
 spec:
-  ingressClassName: 
   rules:
     - host: bee-17-debug.staging.internal
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-17-debug
-                port:
-                  name: debug
+              serviceName: bee-17-debug
+              servicePort: debug
     - host: bee-17-debug.bee.staging.internal
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-17-debug
-                port:
-                  name: debug
+              serviceName: bee-17-debug
+              servicePort: debug
 ---
 # Source: bee/templates/ingress-debug.yaml
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: bee-18-debug
@@ -3171,31 +3045,24 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx-internal
 spec:
-  ingressClassName: 
   rules:
     - host: bee-18-debug.staging.internal
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-18-debug
-                port:
-                  name: debug
+              serviceName: bee-18-debug
+              servicePort: debug
     - host: bee-18-debug.bee.staging.internal
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-18-debug
-                port:
-                  name: debug
+              serviceName: bee-18-debug
+              servicePort: debug
 ---
 # Source: bee/templates/ingress-debug.yaml
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: bee-19-debug
@@ -3209,31 +3076,24 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx-internal
 spec:
-  ingressClassName: 
   rules:
     - host: bee-19-debug.staging.internal
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-19-debug
-                port:
-                  name: debug
+              serviceName: bee-19-debug
+              servicePort: debug
     - host: bee-19-debug.bee.staging.internal
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-19-debug
-                port:
-                  name: debug
+              serviceName: bee-19-debug
+              servicePort: debug
 ---
 # Source: bee/templates/ingress.yaml
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: bee
@@ -3269,23 +3129,19 @@ spec:
     - hosts:
         - bee.gateway.staging.ethswarm.org
       secretName: gateway-staging-ethswarm-org-wildcard-cert
-  ingressClassName: 
   rules:
     - host: bee.gateway.staging.ethswarm.org
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee
-                port:
-                  number: 80
+              serviceName: bee
+              servicePort: 80
 
 # PER POD INGRESS
 ---
 # Source: bee/templates/ingress.yaml
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: bee-0
@@ -3321,21 +3177,17 @@ spec:
     - hosts:
         - bee-0.gateway.staging.ethswarm.org
       secretName: gateway-staging-ethswarm-org-wildcard-cert
-  ingressClassName: 
   rules:
     - host: bee-0.gateway.staging.ethswarm.org
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-0
-                port:
-                  name: api
+              serviceName: bee-0
+              servicePort: api
 ---
 # Source: bee/templates/ingress.yaml
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: bee-1
@@ -3371,21 +3223,17 @@ spec:
     - hosts:
         - bee-1.gateway.staging.ethswarm.org
       secretName: gateway-staging-ethswarm-org-wildcard-cert
-  ingressClassName: 
   rules:
     - host: bee-1.gateway.staging.ethswarm.org
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-1
-                port:
-                  name: api
+              serviceName: bee-1
+              servicePort: api
 ---
 # Source: bee/templates/ingress.yaml
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: bee-2
@@ -3421,21 +3269,17 @@ spec:
     - hosts:
         - bee-2.gateway.staging.ethswarm.org
       secretName: gateway-staging-ethswarm-org-wildcard-cert
-  ingressClassName: 
   rules:
     - host: bee-2.gateway.staging.ethswarm.org
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-2
-                port:
-                  name: api
+              serviceName: bee-2
+              servicePort: api
 ---
 # Source: bee/templates/ingress.yaml
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: bee-3
@@ -3471,21 +3315,17 @@ spec:
     - hosts:
         - bee-3.gateway.staging.ethswarm.org
       secretName: gateway-staging-ethswarm-org-wildcard-cert
-  ingressClassName: 
   rules:
     - host: bee-3.gateway.staging.ethswarm.org
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-3
-                port:
-                  name: api
+              serviceName: bee-3
+              servicePort: api
 ---
 # Source: bee/templates/ingress.yaml
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: bee-4
@@ -3521,21 +3361,17 @@ spec:
     - hosts:
         - bee-4.gateway.staging.ethswarm.org
       secretName: gateway-staging-ethswarm-org-wildcard-cert
-  ingressClassName: 
   rules:
     - host: bee-4.gateway.staging.ethswarm.org
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-4
-                port:
-                  name: api
+              serviceName: bee-4
+              servicePort: api
 ---
 # Source: bee/templates/ingress.yaml
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: bee-5
@@ -3571,21 +3407,17 @@ spec:
     - hosts:
         - bee-5.gateway.staging.ethswarm.org
       secretName: gateway-staging-ethswarm-org-wildcard-cert
-  ingressClassName: 
   rules:
     - host: bee-5.gateway.staging.ethswarm.org
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-5
-                port:
-                  name: api
+              serviceName: bee-5
+              servicePort: api
 ---
 # Source: bee/templates/ingress.yaml
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: bee-6
@@ -3621,21 +3453,17 @@ spec:
     - hosts:
         - bee-6.gateway.staging.ethswarm.org
       secretName: gateway-staging-ethswarm-org-wildcard-cert
-  ingressClassName: 
   rules:
     - host: bee-6.gateway.staging.ethswarm.org
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-6
-                port:
-                  name: api
+              serviceName: bee-6
+              servicePort: api
 ---
 # Source: bee/templates/ingress.yaml
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: bee-7
@@ -3671,21 +3499,17 @@ spec:
     - hosts:
         - bee-7.gateway.staging.ethswarm.org
       secretName: gateway-staging-ethswarm-org-wildcard-cert
-  ingressClassName: 
   rules:
     - host: bee-7.gateway.staging.ethswarm.org
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-7
-                port:
-                  name: api
+              serviceName: bee-7
+              servicePort: api
 ---
 # Source: bee/templates/ingress.yaml
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: bee-8
@@ -3721,21 +3545,17 @@ spec:
     - hosts:
         - bee-8.gateway.staging.ethswarm.org
       secretName: gateway-staging-ethswarm-org-wildcard-cert
-  ingressClassName: 
   rules:
     - host: bee-8.gateway.staging.ethswarm.org
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-8
-                port:
-                  name: api
+              serviceName: bee-8
+              servicePort: api
 ---
 # Source: bee/templates/ingress.yaml
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: bee-9
@@ -3771,21 +3591,17 @@ spec:
     - hosts:
         - bee-9.gateway.staging.ethswarm.org
       secretName: gateway-staging-ethswarm-org-wildcard-cert
-  ingressClassName: 
   rules:
     - host: bee-9.gateway.staging.ethswarm.org
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-9
-                port:
-                  name: api
+              serviceName: bee-9
+              servicePort: api
 ---
 # Source: bee/templates/ingress.yaml
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: bee-10
@@ -3821,21 +3637,17 @@ spec:
     - hosts:
         - bee-10.gateway.staging.ethswarm.org
       secretName: gateway-staging-ethswarm-org-wildcard-cert
-  ingressClassName: 
   rules:
     - host: bee-10.gateway.staging.ethswarm.org
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-10
-                port:
-                  name: api
+              serviceName: bee-10
+              servicePort: api
 ---
 # Source: bee/templates/ingress.yaml
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: bee-11
@@ -3871,21 +3683,17 @@ spec:
     - hosts:
         - bee-11.gateway.staging.ethswarm.org
       secretName: gateway-staging-ethswarm-org-wildcard-cert
-  ingressClassName: 
   rules:
     - host: bee-11.gateway.staging.ethswarm.org
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-11
-                port:
-                  name: api
+              serviceName: bee-11
+              servicePort: api
 ---
 # Source: bee/templates/ingress.yaml
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: bee-12
@@ -3921,21 +3729,17 @@ spec:
     - hosts:
         - bee-12.gateway.staging.ethswarm.org
       secretName: gateway-staging-ethswarm-org-wildcard-cert
-  ingressClassName: 
   rules:
     - host: bee-12.gateway.staging.ethswarm.org
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-12
-                port:
-                  name: api
+              serviceName: bee-12
+              servicePort: api
 ---
 # Source: bee/templates/ingress.yaml
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: bee-13
@@ -3971,21 +3775,17 @@ spec:
     - hosts:
         - bee-13.gateway.staging.ethswarm.org
       secretName: gateway-staging-ethswarm-org-wildcard-cert
-  ingressClassName: 
   rules:
     - host: bee-13.gateway.staging.ethswarm.org
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-13
-                port:
-                  name: api
+              serviceName: bee-13
+              servicePort: api
 ---
 # Source: bee/templates/ingress.yaml
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: bee-14
@@ -4021,21 +3821,17 @@ spec:
     - hosts:
         - bee-14.gateway.staging.ethswarm.org
       secretName: gateway-staging-ethswarm-org-wildcard-cert
-  ingressClassName: 
   rules:
     - host: bee-14.gateway.staging.ethswarm.org
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-14
-                port:
-                  name: api
+              serviceName: bee-14
+              servicePort: api
 ---
 # Source: bee/templates/ingress.yaml
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: bee-15
@@ -4071,21 +3867,17 @@ spec:
     - hosts:
         - bee-15.gateway.staging.ethswarm.org
       secretName: gateway-staging-ethswarm-org-wildcard-cert
-  ingressClassName: 
   rules:
     - host: bee-15.gateway.staging.ethswarm.org
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-15
-                port:
-                  name: api
+              serviceName: bee-15
+              servicePort: api
 ---
 # Source: bee/templates/ingress.yaml
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: bee-16
@@ -4121,21 +3913,17 @@ spec:
     - hosts:
         - bee-16.gateway.staging.ethswarm.org
       secretName: gateway-staging-ethswarm-org-wildcard-cert
-  ingressClassName: 
   rules:
     - host: bee-16.gateway.staging.ethswarm.org
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-16
-                port:
-                  name: api
+              serviceName: bee-16
+              servicePort: api
 ---
 # Source: bee/templates/ingress.yaml
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: bee-17
@@ -4171,21 +3959,17 @@ spec:
     - hosts:
         - bee-17.gateway.staging.ethswarm.org
       secretName: gateway-staging-ethswarm-org-wildcard-cert
-  ingressClassName: 
   rules:
     - host: bee-17.gateway.staging.ethswarm.org
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-17
-                port:
-                  name: api
+              serviceName: bee-17
+              servicePort: api
 ---
 # Source: bee/templates/ingress.yaml
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: bee-18
@@ -4221,21 +4005,17 @@ spec:
     - hosts:
         - bee-18.gateway.staging.ethswarm.org
       secretName: gateway-staging-ethswarm-org-wildcard-cert
-  ingressClassName: 
   rules:
     - host: bee-18.gateway.staging.ethswarm.org
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-18
-                port:
-                  name: api
+              serviceName: bee-18
+              servicePort: api
 ---
 # Source: bee/templates/ingress.yaml
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: bee-19
@@ -4271,18 +4051,14 @@ spec:
     - hosts:
         - bee-19.gateway.staging.ethswarm.org
       secretName: gateway-staging-ethswarm-org-wildcard-cert
-  ingressClassName: 
   rules:
     - host: bee-19.gateway.staging.ethswarm.org
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
-              service:
-                name: bee-19
-                port:
-                  name: api
+              serviceName: bee-19
+              servicePort: api
 ---
 # Source: bee/templates/ingress-debug.yaml
 # PER POD INGRESS
