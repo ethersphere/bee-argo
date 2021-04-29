@@ -14,6 +14,7 @@ jobs:
           ref: ${{ github.head_ref }}
       - name: Generate k8s yamls
         run: |
+          curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | DESIRED_VERSION=v3.2.0 bash
           helm repo add ethersphere https://ethersphere.github.io/helm
           helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
           helm repo update
