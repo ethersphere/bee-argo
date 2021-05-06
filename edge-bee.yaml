@@ -78,6 +78,8 @@ beeConfig:
   existingSecret: bee-password
   tracing_enable: true
   tracing_endpoint: jaeger-operator-jaeger-agent.observability:6831
+  postage_stamp_address: 0x538e6de1d876bbcd5667085257bc92f7c808a0f3
+  price_oracle_address: 0xfc28330f1ece0ef2371b724e0d19c1ee60b728b2
   resolver_options: "https://cloudflare-eth.com"
   swap_enable: true
   swap_endpoint: wss://goerli.infura.io/ws/v3/3e88bb0189ea44c0904699e0dfff5641
