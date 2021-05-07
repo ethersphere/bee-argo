@@ -69,7 +69,7 @@ updateStrategy:
 beeConfig:
   bootnode: "/dns4/bee-0-headless.infra-test.svc.cluster.local/tcp/1634/p2p/16Uiu2HAmG2gGvxxwYfpGjY8oGGp2oW66qPMvkikyqUeVDAEke1Ma"
   debug_api_enable: true
-  gateway_mode: true
+  gateway_mode: false
   network_id: 3
   usePasswordFile: true
   existingSecret: bee-password
