@@ -3,10 +3,13 @@ image:
   tag: latest
   pullPolicy: Always
 
-replicaCount: 20
+replicaCount: 18
 
 serviceAccount:
   create: true
+
+# podLabels:
+#  - bzz.ethswarm.org/fund: "true"
 
 ingress:
   enabled: true
