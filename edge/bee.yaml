@@ -62,7 +62,7 @@ data:
     swap-endpoint: wss://goerli.infura.io/ws/v3/3e88bb0189ea44c0904699e0dfff5641
     swap-factory-address: 
     swap-legacy-factory-addresses: 
-    swap-deployment-gas-price: 1500000000000 
+    swap-deployment-gas-price: 1.5e+12
     swap-initial-deposit: 1e+18
     tracing-enable: true
     tracing-endpoint: jaeger-operator-jaeger-agent.observability:6831
@@ -2163,7 +2163,7 @@ spec:
               subPath: .bee.yaml
       containers:
         - name: bee
-          image: "ethersphere/bee@sha256:02382a4a49ad9a049723065ea89fef8262b773271b9d4bc2f843e1c42fd7f60f"
+          image: "ethersphere/bee@sha256:798bb19b1d68a9dffd93b4deda6e2f9624ffa9407b735852c2692a2375873c9e"
           imagePullPolicy: Always
           command:
             - bee
