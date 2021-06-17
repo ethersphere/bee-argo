@@ -7,7 +7,7 @@ metadata:
   namespace: staging
   labels:
 
-    helm.sh/chart: bee-0.9.10
+    helm.sh/chart: bee-0.9.12
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-12
     app.kubernetes.io/version: "latest"
@@ -20,7 +20,7 @@ metadata:
   name: bee-12
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.9.10
+    helm.sh/chart: bee-0.9.12
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-12
     app.kubernetes.io/version: "latest"
@@ -77,7 +77,7 @@ metadata:
   name: bee-12-0-debug
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.9.10
+    helm.sh/chart: bee-0.9.12
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-12
     app.kubernetes.io/version: "latest"
@@ -105,7 +105,7 @@ metadata:
   name: bee-12-headless
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.9.10
+    helm.sh/chart: bee-0.9.12
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-12
     app.kubernetes.io/version: "latest"
@@ -139,7 +139,7 @@ metadata:
   name: bee-12-0-headless
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.9.10
+    helm.sh/chart: bee-0.9.12
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-12
     app.kubernetes.io/version: "latest"
@@ -166,7 +166,7 @@ metadata:
   name: bee-12-0-p2p
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.9.10
+    helm.sh/chart: bee-0.9.12
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-12
     app.kubernetes.io/version: "latest"
@@ -194,7 +194,7 @@ metadata:
   name: bee-12
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.9.10
+    helm.sh/chart: bee-0.9.12
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-12
     app.kubernetes.io/version: "latest"
@@ -219,7 +219,7 @@ metadata:
   name: bee-12-0
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.9.10
+    helm.sh/chart: bee-0.9.12
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-12
     app.kubernetes.io/version: "latest"
@@ -245,7 +245,7 @@ metadata:
   name: bee-12
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.9.10
+    helm.sh/chart: bee-0.9.12
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-12
     app.kubernetes.io/version: "latest"
@@ -278,7 +278,7 @@ spec:
             - sh
             - -c
             - >
-              export INDEX=$(echo $(hostname) | rev | cut -d'-' -f 1 | rev);
+              export INDEX=$(echo $(hostname) | cut -d'-' -f2-);
               mkdir -p /home/bee/.bee/keys;
               chown -R 999:999 /home/bee/.bee/keys;
               export KEY=$(cat /tmp/bee/libp2p.map | grep bee-${INDEX}: | cut -d' ' -f2);
@@ -395,7 +395,7 @@ metadata:
   name: bee-12-0-debug
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.9.10
+    helm.sh/chart: bee-0.9.12
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-12
     app.kubernetes.io/version: "latest"
@@ -421,7 +421,7 @@ metadata:
   name: bee-12
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.9.10
+    helm.sh/chart: bee-0.9.12
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-12
     app.kubernetes.io/version: "latest"
@@ -472,7 +472,7 @@ metadata:
   name: bee-12-0
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.9.10
+    helm.sh/chart: bee-0.9.12
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-12
     app.kubernetes.io/version: "latest"
