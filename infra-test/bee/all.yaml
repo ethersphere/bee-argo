@@ -2321,7 +2321,7 @@ spec:
       securityContext:
         fsGroup: 999
       nodeSelector:
-        node-group: bee-dynamic
+        node-group: private-nightly
       initContainers:
         - name: init-libp2p
           image: ethersphere/busybox:1.33

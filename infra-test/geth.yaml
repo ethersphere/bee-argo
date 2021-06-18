@@ -40,4 +40,4 @@ resources:
     memory: 1024Mi
 
 nodeSelector:
-  node-group: bee-dynamic
+  node-group: private-nightly

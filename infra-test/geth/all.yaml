@@ -881,7 +881,7 @@ spec:
       securityContext:
         {}
       nodeSelector:
-        node-group: bee-dynamic
+        node-group: private-nightly
       initContainers:
         - name: geth-setup
           image: "ethereum/client-go:v1.9.25"
