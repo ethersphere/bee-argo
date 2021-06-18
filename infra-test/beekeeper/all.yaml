@@ -419,7 +419,7 @@ spec:
                 readOnly: true
           restartPolicy: Never
           nodeSelector:
-            node-group: bee-dynamic
+            node-group: private-nightly
           volumes:
           - name: config
             configMap:

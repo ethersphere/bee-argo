@@ -61,7 +61,7 @@ persistence:
   enabled: false
 
 nodeSelector:
-  node-group: bee-dynamic
+  node-group: private-nightly
 
 updateStrategy:
   type: RollingUpdate

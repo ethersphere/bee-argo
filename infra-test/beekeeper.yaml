@@ -4,7 +4,7 @@ image:
   pullPolicy: Always
 
 nodeSelector:
-  node-group: bee-dynamic
+  node-group: private-nightly
 
 serviceAccount:
   create: true
