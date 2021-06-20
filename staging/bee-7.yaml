@@ -7,7 +7,7 @@ metadata:
   namespace: staging
   labels:
 
-    helm.sh/chart: bee-0.9.13
+    helm.sh/chart: bee-0.10.0
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-7
     app.kubernetes.io/version: "latest"
@@ -20,7 +20,7 @@ metadata:
   name: bee-7
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.9.13
+    helm.sh/chart: bee-0.10.0
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-7
     app.kubernetes.io/version: "latest"
@@ -70,6 +70,57 @@ data:
     verbosity: 5
     welcome-message: Welcome to the Swarm, you are Bee-ing connected!
 ---
+# Source: bee/templates/service-api.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: bee-7
+  namespace: staging
+  labels:
+    helm.sh/chart: bee-0.10.0
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee-7
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+spec:
+  ports:
+    - name: api
+      port: 80
+      protocol: TCP
+      targetPort: api
+  selector:
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee-7
+  type: ClusterIP
+
+# PER POD SERVICE
+---
+# Source: bee/templates/service-api.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: bee-7-0
+  namespace: staging
+  labels:
+    helm.sh/chart: bee-0.10.0
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee-7
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+    pod: bee-7-0
+    endpoint: api
+spec:
+  type: ClusterIP
+  ports:
+    - name: api
+      port: 1633
+      protocol: TCP
+      targetPort: api
+  selector:
+    app.kubernetes.io/name: bee
+    app.kubernetes.io/instance: bee-7
+    statefulset.kubernetes.io/pod-name: bee-7-0
+---
 # Source: bee/templates/service-debug.yaml
 apiVersion: v1
 kind: Service
@@ -77,7 +128,7 @@ metadata:
   name: bee-7-0-debug
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.9.13
+    helm.sh/chart: bee-0.10.0
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-7
     app.kubernetes.io/version: "latest"
@@ -105,7 +156,7 @@ metadata:
   name: bee-7-headless
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.9.13
+    helm.sh/chart: bee-0.10.0
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-7
     app.kubernetes.io/version: "latest"
@@ -139,7 +190,7 @@ metadata:
   name: bee-7-0-headless
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.9.13
+    helm.sh/chart: bee-0.10.0
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-7
     app.kubernetes.io/version: "latest"
@@ -166,7 +217,7 @@ metadata:
   name: bee-7-0-p2p
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.9.13
+    helm.sh/chart: bee-0.10.0
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-7
     app.kubernetes.io/version: "latest"
@@ -187,57 +238,6 @@ spec:
     app.kubernetes.io/instance: bee-7
     statefulset.kubernetes.io/pod-name: bee-7-0
 ---
-# Source: bee/templates/service.yaml
-apiVersion: v1
-kind: Service
-metadata:
-  name: bee-7
-  namespace: staging
-  labels:
-    helm.sh/chart: bee-0.9.13
-    app.kubernetes.io/name: bee
-    app.kubernetes.io/instance: bee-7
-    app.kubernetes.io/version: "latest"
-    app.kubernetes.io/managed-by: Helm
-spec:
-  ports:
-    - name: api
-      port: 80
-      protocol: TCP
-      targetPort: api
-  selector:
-    app.kubernetes.io/name: bee
-    app.kubernetes.io/instance: bee-7
-  type: ClusterIP
-
-# PER POD SERVICE
----
-# Source: bee/templates/service.yaml
-apiVersion: v1
-kind: Service
-metadata:
-  name: bee-7-0
-  namespace: staging
-  labels:
-    helm.sh/chart: bee-0.9.13
-    app.kubernetes.io/name: bee
-    app.kubernetes.io/instance: bee-7
-    app.kubernetes.io/version: "latest"
-    app.kubernetes.io/managed-by: Helm
-    pod: bee-7-0
-    endpoint: api
-spec:
-  type: ClusterIP
-  ports:
-    - name: api
-      port: 1633
-      protocol: TCP
-      targetPort: api
-  selector:
-    app.kubernetes.io/name: bee
-    app.kubernetes.io/instance: bee-7
-    statefulset.kubernetes.io/pod-name: bee-7-0
----
 # Source: bee/templates/statefulset.yaml
 apiVersion: apps/v1
 kind: StatefulSet
@@ -245,7 +245,7 @@ metadata:
   name: bee-7
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.9.13
+    helm.sh/chart: bee-0.10.0
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-7
     app.kubernetes.io/version: "latest"
@@ -310,7 +310,7 @@ spec:
               subPath: .bee.yaml
       containers:
         - name: bee
-          image: "ethersphere/bee@sha256:66fe58dba56d5a486cfd057cd2a577ee4f75a7d17166bbd7f5842b9b2dac9602"
+          image: "ethersphere/bee@sha256:583e79b9358fc851355651ccc2215551aba2033bd6d07cb33e65a389619e1c71"
           imagePullPolicy: Always
           command:
             - bee
@@ -395,7 +395,7 @@ metadata:
   name: bee-7-0-debug
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.9.13
+    helm.sh/chart: bee-0.10.0
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-7
     app.kubernetes.io/version: "latest"
@@ -421,7 +421,7 @@ metadata:
   name: bee-7
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.9.13
+    helm.sh/chart: bee-0.10.0
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-7
     app.kubernetes.io/version: "latest"
@@ -472,7 +472,7 @@ metadata:
   name: bee-7-0
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.9.13
+    helm.sh/chart: bee-0.10.0
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-7
     app.kubernetes.io/version: "latest"
@@ -520,5 +520,5 @@ spec:
 # Source: bee/templates/ingress.yaml
 # MAIN INGRESS
 ---
-# Source: bee/templates/service.yaml
+# Source: bee/templates/service-api.yaml
 # MAIN SERVICE
