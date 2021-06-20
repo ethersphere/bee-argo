@@ -8,6 +8,10 @@ replicaCount: 1
 serviceAccount:
   create: true
 
+singlePodSts:
+  enabled: true
+  labelFilter: bee-staging
+
 # podLabels:
 #  - bzz.ethswarm.org/fund: "true"
 

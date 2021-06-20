@@ -7,7 +7,7 @@ metadata:
   namespace: staging
   labels:
 
-    helm.sh/chart: bee-0.10.0
+    helm.sh/chart: bee-0.10.4
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-12
     app.kubernetes.io/version: "latest"
@@ -20,7 +20,7 @@ metadata:
   name: bee-12
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.10.0
+    helm.sh/chart: bee-0.10.4
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-12
     app.kubernetes.io/version: "latest"
@@ -77,7 +77,7 @@ metadata:
   name: bee-12
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.10.0
+    helm.sh/chart: bee-0.10.4
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-12
     app.kubernetes.io/version: "latest"
@@ -102,7 +102,7 @@ metadata:
   name: bee-12-0
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.10.0
+    helm.sh/chart: bee-0.10.4
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-12
     app.kubernetes.io/version: "latest"
@@ -128,7 +128,7 @@ metadata:
   name: bee-12-0-debug
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.10.0
+    helm.sh/chart: bee-0.10.4
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-12
     app.kubernetes.io/version: "latest"
@@ -156,7 +156,7 @@ metadata:
   name: bee-12-headless
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.10.0
+    helm.sh/chart: bee-0.10.4
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-12
     app.kubernetes.io/version: "latest"
@@ -190,7 +190,7 @@ metadata:
   name: bee-12-0-headless
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.10.0
+    helm.sh/chart: bee-0.10.4
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-12
     app.kubernetes.io/version: "latest"
@@ -217,7 +217,7 @@ metadata:
   name: bee-12-0-p2p
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.10.0
+    helm.sh/chart: bee-0.10.4
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-12
     app.kubernetes.io/version: "latest"
@@ -245,7 +245,7 @@ metadata:
   name: bee-12
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.10.0
+    helm.sh/chart: bee-0.10.4
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-12
     app.kubernetes.io/version: "latest"
@@ -265,6 +265,7 @@ spec:
       labels:
         app.kubernetes.io/name: bee
         app.kubernetes.io/instance: bee-12
+        labelFilter: bee-staging
     spec:
       serviceAccountName: bee-12
       securityContext:
@@ -395,7 +396,7 @@ metadata:
   name: bee-12-0-debug
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.10.0
+    helm.sh/chart: bee-0.10.4
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-12
     app.kubernetes.io/version: "latest"
@@ -421,7 +422,7 @@ metadata:
   name: bee-12
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.10.0
+    helm.sh/chart: bee-0.10.4
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-12
     app.kubernetes.io/version: "latest"
@@ -472,7 +473,7 @@ metadata:
   name: bee-12-0
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.10.0
+    helm.sh/chart: bee-0.10.4
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-12
     app.kubernetes.io/version: "latest"
