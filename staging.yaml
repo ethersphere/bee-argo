@@ -77,7 +77,7 @@ beeConfig:
   bootnode: "/dnsaddr/staging.ethswarm.org"
   debug_api_enable: true
   full_node: true
-  gateway_mode: false
+  gateway_mode: true
   network_id: 5
   usePasswordFile: true
   existingSecret: bee-password
