@@ -16,7 +16,7 @@ singlePodSts:
 #  - bzz.ethswarm.org/fund: "true"
 
 ingress:
-  enabled: true
+  enabled: false
   annotations:
     nginx.ingress.kubernetes.io/limit-rpm: "5"
     nginx.ingress.kubernetes.io/limit-burst-multiplier: "2"
