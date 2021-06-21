@@ -43,7 +43,7 @@ data:
     debug-api-addr: :1635
     debug-api-enable: true
     full-node: true
-    gateway-mode: true
+    gateway-mode: false
     global-pinning-enable: false
     nat-addr: 
     network-id: 5
