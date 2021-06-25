@@ -5,7 +5,7 @@ kind: ServiceAccount
 metadata:
   name: geth-swap
   labels:
-    helm.sh/chart: geth-swap-0.2.2
+    helm.sh/chart: geth-swap-0.3.0
     app.kubernetes.io/name: geth-swap
     app.kubernetes.io/instance: geth-swap
     app.kubernetes.io/version: "1.16.0"
@@ -33,6 +33,7 @@ data:
         "petersburgBlock": 0,
         "istanbulBlock": 0,
         "berlinBlock": 0,
+        "londonBlock": 0,
         "clique": {
           "period": 3,
           "epoch": 30000
@@ -829,7 +830,7 @@ kind: Service
 metadata:
   name: geth-swap
   labels:
-    helm.sh/chart: geth-swap-0.2.2
+    helm.sh/chart: geth-swap-0.3.0
     app.kubernetes.io/name: geth-swap
     app.kubernetes.io/instance: geth-swap
     app.kubernetes.io/version: "1.16.0"
@@ -856,7 +857,7 @@ metadata:
   name: geth-swap
   namespace: infra-test-geth
   labels:
-    helm.sh/chart: geth-swap-0.2.2
+    helm.sh/chart: geth-swap-0.3.0
     app.kubernetes.io/name: geth-swap
     app.kubernetes.io/instance: geth-swap
     app.kubernetes.io/version: "1.16.0"
@@ -962,7 +963,7 @@ kind: Job
 metadata:
   name: geth-swap-setupcontracts
   labels:
-    helm.sh/chart: geth-swap-0.2.2
+    helm.sh/chart: geth-swap-0.3.0
     app.kubernetes.io/name: geth-swap
     app.kubernetes.io/instance: geth-swap
     app.kubernetes.io/version: "1.16.0"
