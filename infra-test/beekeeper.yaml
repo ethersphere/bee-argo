@@ -31,7 +31,7 @@ beeCluster:
   debugApiScheme: http
   disableNamespace: false
   insecureTLS: false
-  namespace: infra-test
+  namespace: infra-test-bee
   nodeCount: 20
   pushGateway: pushgateway-prometheus-pushgateway.monitoring:9091
   pushMetrics: true

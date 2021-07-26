@@ -34,10 +34,10 @@ ingress:
         proxy_pass https://ethswarm-core.s3.amazonaws.com/gateway/index.html;
       }
   hosts:
-    - domain: gateway.infra-test.ethswarm.org
+    - domain: gateway.infra-test-bee.ethswarm.org
       paths:
         - /
-  #     tlsSecret: gateway-infra-test-ethswarm-org-wildcard-cert
+  #     tlsSecret: gateway-infra-test-bee-ethswarm-org-wildcard-cert
   # tls: true
 
 ingressDebug:
@@ -45,10 +45,10 @@ ingressDebug:
   annotations:
     kubernetes.io/ingress.class: nginx-internal
   hosts:
-    - domain: infra-test.internal
+    - domain: infra-test-bee.internal
       paths:
         - /
-    - domain: bee.infra-test.internal
+    - domain: bee.infra-test-bee.internal
       paths:
         - /
 
@@ -70,7 +70,7 @@ updateStrategy:
   type: RollingUpdate
 
 beeConfig:
-  bootnode: "/dns4/bee-0-headless.infra-test.svc.cluster.local/tcp/1634/p2p/16Uiu2HAmG2gGvxxwYfpGjY8oGGp2oW66qPMvkikyqUeVDAEke1Ma"
+  bootnode: "/dns4/bee-0-headless.infra-test-bee.svc.cluster.local/tcp/1634/p2p/16Uiu2HAmG2gGvxxwYfpGjY8oGGp2oW66qPMvkikyqUeVDAEke1Ma"
   debug_api_enable: true
   gateway_mode: false
   network_id: 3
@@ -83,7 +83,7 @@ beeConfig:
   price_oracle_address: 0xfc28330f1ece0ef2371b724e0d19c1ee60b728b2
   resolver_options: "https://cloudflare-eth.com"
   swap_enable: true
-  swap_endpoint: ws://geth-swap.infra-test-geth:8546
+  swap_endpoint: ws://geth-swap.infra-test-bee-geth:8546
   swap_factory_address: 0x09ad42a7d020244920309ffa14ea376dd2d3b7d5
   swap_legacy_factory_addresses: 0x657241f4494a2f15ba75346e691d753a978c72df
   swap_initial_deposit: 1000000000000000000
