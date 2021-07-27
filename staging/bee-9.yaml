@@ -7,7 +7,7 @@ metadata:
   namespace: staging
   labels:
 
-    helm.sh/chart: bee-0.10.4
+    helm.sh/chart: bee-0.10.6
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-9
     app.kubernetes.io/version: "latest"
@@ -20,7 +20,7 @@ metadata:
   name: bee-9
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.10.4
+    helm.sh/chart: bee-0.10.6
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-9
     app.kubernetes.io/version: "latest"
@@ -77,7 +77,7 @@ metadata:
   name: bee-9
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.10.4
+    helm.sh/chart: bee-0.10.6
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-9
     app.kubernetes.io/version: "latest"
@@ -102,7 +102,7 @@ metadata:
   name: bee-9-0
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.10.4
+    helm.sh/chart: bee-0.10.6
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-9
     app.kubernetes.io/version: "latest"
@@ -128,7 +128,7 @@ metadata:
   name: bee-9-0-debug
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.10.4
+    helm.sh/chart: bee-0.10.6
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-9
     app.kubernetes.io/version: "latest"
@@ -156,7 +156,7 @@ metadata:
   name: bee-9-headless
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.10.4
+    helm.sh/chart: bee-0.10.6
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-9
     app.kubernetes.io/version: "latest"
@@ -190,7 +190,7 @@ metadata:
   name: bee-9-0-headless
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.10.4
+    helm.sh/chart: bee-0.10.6
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-9
     app.kubernetes.io/version: "latest"
@@ -217,7 +217,7 @@ metadata:
   name: bee-9-0-p2p
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.10.4
+    helm.sh/chart: bee-0.10.6
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-9
     app.kubernetes.io/version: "latest"
@@ -245,7 +245,7 @@ metadata:
   name: bee-9
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.10.4
+    helm.sh/chart: bee-0.10.6
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-9
     app.kubernetes.io/version: "latest"
@@ -267,6 +267,8 @@ spec:
         app.kubernetes.io/instance: bee-9
         labelFilter: bee-staging
     spec:
+      imagePullSecrets:
+        - name: regcred
       serviceAccountName: bee-9
       securityContext:
         fsGroup: 999
@@ -311,7 +313,7 @@ spec:
               subPath: .bee.yaml
       containers:
         - name: bee
-          image: "ethersphere/bee@sha256:a5efbe815cc9834fedfcf8320cca20ac9024d5125230fdf3ad239eef14d13d3c"
+          image: "ethersphere/bee@sha256:383dfb507b42eb94e18c9c64a2d4d2ccd3c00f178ec1418315b9b42bfe045346"
           imagePullPolicy: Always
           command:
             - bee
@@ -396,7 +398,7 @@ metadata:
   name: bee-9-0-debug
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.10.4
+    helm.sh/chart: bee-0.10.6
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-9
     app.kubernetes.io/version: "latest"
