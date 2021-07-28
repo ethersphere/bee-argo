@@ -15,9 +15,6 @@ singlePodSts:
   enabled: true
   labelFilter: bee-staging
 
-# podLabels:
-#  - bzz.ethswarm.org/fund: "true"
-
 ingress:
   enabled: false
   annotations:
@@ -76,6 +73,17 @@ nodeSelector:
 updateStrategy:
   type: RollingUpdate
 
+podAnnotations:
+  grafana.io/promtail: "true"
+
+extraEnvs:
+  - name: BEE_TRACING_HOST   # NOTE: Point to the Agent daemon on the Node
+    valueFrom:
+      fieldRef:
+        fieldPath: status.hostIP
+  - name: BEE_TRACING_PORT
+    value: "6831"
+
 beeConfig:
   bootnode: "/dnsaddr/staging.ethswarm.org"
   debug_api_enable: true
@@ -85,7 +93,6 @@ beeConfig:
   usePasswordFile: true
   existingSecret: bee-password
   tracing_enable: true
-  tracing_endpoint: jaeger-operator-jaeger-agent.observability:6831
   resolver_options: "https://cloudflare-eth.com"
   swap_enable: true
   swap_endpoint: wss://goerli.infura.io/ws/v3/3e88bb0189ea44c0904699e0dfff5641
