@@ -65,7 +65,7 @@ data:
     swap-deployment-gas-price: 1.5e+12
     swap-initial-deposit: 1e+18
     tracing-enable: true
-    tracing-endpoint: jaeger-operator-jaeger-agent.observability:6831
+    tracing-endpoint: 127.0.0.1:6831
     tracing-service-name: bee
     verbosity: 5
     welcome-message: Welcome to the Swarm, you are Bee-ing connected!
@@ -266,6 +266,8 @@ spec:
         app.kubernetes.io/name: bee
         app.kubernetes.io/instance: bee-9
         labelFilter: bee-staging
+      annotations:
+        grafana.io/promtail: "true"
     spec:
       imagePullSecrets:
         - name: regcred
@@ -313,8 +315,15 @@ spec:
               subPath: .bee.yaml
       containers:
         - name: bee
-          image: "ethersphere/bee@sha256:29f8cb0f3a239be61d24631b591b596b5cf88e80eab3bac9d3d2a49ef4985e61"
+          image: "ethersphere/bee@sha256:43e0986621ad605ab5d66dff9121d486e3a8aa5b29376f8f91ae57826da5427e"
           imagePullPolicy: Always
+          env:
+            - name: BEE_TRACING_HOST
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.hostIP
+            - name: BEE_TRACING_PORT
+              value: "6831"
           command:
             - bee
             - start
