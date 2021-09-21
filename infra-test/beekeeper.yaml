@@ -8,7 +8,7 @@ nodeSelector:
 
 serviceAccount:
   create: true
-  createClusterRole: true
+  createClusterRole: false
 
 initPing:
   enabled: true
