@@ -1,0 +1,30 @@
+fullnameOverride: "beekeeper-infra-test-check"
+
+image:
+  repository: ethersphere/beekeeper
+  tag: 0.8.3
+  pullPolicy: IfNotPresent
+
+imagePullSecrets:
+  - name: regcred
+
+serviceAccount:
+  ## Specifies whether a service account should be created
+  create: true
+  ## Name of the service account to use
+  ## if not set and create is true, a name is generated using the fullname template
+  name:
+  ## create role or/and cluster role for the service account
+  createRole: true
+  createClusterRole: false
+
+nodeSelector:
+  node-group: private-nightly
+
+config:
+  command: ["beekeeper", "check", "--cluster-name=infra-test", "--checks=infra-test-balances,infra-test-manifest,infra-test-pushsync,infra-test-pushsync-chunks,infra-test-retrieval,infra-test-settlements", "--metrics-enabled", "--metrics-pusher-address=pushgateway-prometheus-pushgateway.monitoring:9091", "--timeout=1h"]
+  singleRun: true
+  GETH_URL: http://geth-swap.geth-swap:8545
+  initPing:
+    enabled: true
+    clusterName: "infra-test"
