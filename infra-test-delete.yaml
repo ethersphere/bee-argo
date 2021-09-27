@@ -1,4 +1,4 @@
-fullnameOverride: "beekeeper-infra-test-create"
+fullnameOverride: "beekeeper-infra-test-delete"
 
 image:
   repository: ethersphere/beekeeper
