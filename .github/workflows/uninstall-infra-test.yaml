@@ -14,8 +14,8 @@ jobs:
           ref: ${{ github.head_ref }}
       - name: Remove k8s yamls
         run: |
-          docker run --rm -v "${PWD}":/workdir mikefarah/yq:3.3.4 yq read infra-test/infra-test-create.yaml > infra-test/infra-test-create-sa.yaml
-          docker run --rm -v "${PWD}":/workdir mikefarah/yq:3.3.4 yq read infra-test/infra-test-check.yaml > infra-test/infra-test-check-sa.yaml
+          docker run --rm -v "${PWD}":/workdir mikefarah/yq:3.3.4 yq read infra-test/infra-test-create-job.yaml > infra-test/infra-test-create-sa.yaml
+          docker run --rm -v "${PWD}":/workdir mikefarah/yq:3.3.4 yq read infra-test/infra-test-check-job.yaml > infra-test/infra-test-check-sa.yaml
           rm infra-test/*-job.yaml || true
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
