@@ -4,12 +4,12 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   namespace: infra-test
-  name: beekeeper-infra-test-check
+  name: beekeeper-infra-test-delete
   labels:
 
     helm.sh/chart: beekeeper-0.3.5
     app.kubernetes.io/name: beekeeper
-    app.kubernetes.io/instance: beekeeper-infra-test-check
+    app.kubernetes.io/instance: beekeeper-infra-test-delete
     app.kubernetes.io/version: "latest"
     app.kubernetes.io/managed-by: Helm
 ---
@@ -17,12 +17,12 @@ metadata:
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: beekeeper-infra-test-check
+  name: beekeeper-infra-test-delete
   namespace: infra-test
   labels:
     helm.sh/chart: beekeeper-0.3.5
     app.kubernetes.io/name: beekeeper
-    app.kubernetes.io/instance: beekeeper-infra-test-check
+    app.kubernetes.io/instance: beekeeper-infra-test-delete
     app.kubernetes.io/version: "latest"
     app.kubernetes.io/managed-by: Helm
 data:
@@ -578,12 +578,12 @@ kind: Role
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   namespace: infra-test
-  name: beekeeper-infra-test-check
+  name: beekeeper-infra-test-delete
   labels:
 
     helm.sh/chart: beekeeper-0.3.5
     app.kubernetes.io/name: beekeeper
-    app.kubernetes.io/instance: beekeeper-infra-test-check
+    app.kubernetes.io/instance: beekeeper-infra-test-delete
     app.kubernetes.io/version: "latest"
     app.kubernetes.io/managed-by: Helm
 rules:
@@ -629,31 +629,31 @@ kind: RoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   namespace: infra-test
-  name: beekeeper-infra-test-check
+  name: beekeeper-infra-test-delete
   labels:
 
     helm.sh/chart: beekeeper-0.3.5
     app.kubernetes.io/name: beekeeper
-    app.kubernetes.io/instance: beekeeper-infra-test-check
+    app.kubernetes.io/instance: beekeeper-infra-test-delete
     app.kubernetes.io/version: "latest"
     app.kubernetes.io/managed-by: Helm
 subjects:
 - kind: ServiceAccount
-  name: beekeeper-infra-test-check
+  name: beekeeper-infra-test-delete
 roleRef:
   kind: Role
-  name: beekeeper-infra-test-check
+  name: beekeeper-infra-test-delete
   apiGroup: rbac.authorization.k8s.io
 ---
 # Source: beekeeper/templates/job.yaml
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: beekeeper-infra-test-check-job
+  name: beekeeper-infra-test-delete-job
   labels:
     helm.sh/chart: beekeeper-0.3.5
     app.kubernetes.io/name: beekeeper
-    app.kubernetes.io/instance: beekeeper-infra-test-check
+    app.kubernetes.io/instance: beekeeper-infra-test-delete
     app.kubernetes.io/version: "latest"
     app.kubernetes.io/managed-by: Helm
 spec:
@@ -662,35 +662,11 @@ spec:
     metadata:
       labels:
         app.kubernetes.io/name: beekeeper
-        app.kubernetes.io/instance: beekeeper-infra-test-check
+        app.kubernetes.io/instance: beekeeper-infra-test-delete
     spec:
       imagePullSecrets:
         - name: regcred
-      serviceAccountName: beekeeper-infra-test-check
-      initContainers:
-        - name: init-ping
-          image: "ethersphere/beekeeper:0.8.3"
-          imagePullPolicy: IfNotPresent
-          env:
-            - name: BEEKEEPER_ENABLE_K8S
-              value: "true"
-            - name: BEEKEEPER_IN_CLUSTER
-              value: "true"
-            - name: BEEKEEPER_GETH_URL
-              value: "http://geth-swap.geth-swap:8545"
-            - name: BEEKEEPER_BZZ_TOKEN_ADDRESS
-              value: "0x6aab14fe9cccd64a502d23842d916eb5321c26e7"
-            - name: BEEKEEPER_ETH_ACCOUNT
-              value: "0x62cab2b3b55f341f10348720ca18063cdb779ad5"
-          command:
-            - sh
-            - -c
-            - >
-              until beekeeper check --cluster-name=infra-test --checks=pingpong; do echo "waiting for the cluster..."; sleep 1; done
-          volumeMounts:
-          - name: config
-            mountPath: /home/beekeeper/.beekeeper
-            readOnly: true
+      serviceAccountName: beekeeper-infra-test-delete
       containers:
         - name: beekeeper
           image: "ethersphere/beekeeper:0.8.3"
@@ -708,11 +684,9 @@ spec:
               value: "0x62cab2b3b55f341f10348720ca18063cdb779ad5"
           command:
             - beekeeper
-            - check
+            - delete
+            - bee-cluster
             - --cluster-name=infra-test
-            - --checks=infra-test-balances,infra-test-manifest,infra-test-pushsync,infra-test-pushsync-chunks,infra-test-retrieval,infra-test-settlements
-            - --metrics-enabled
-            - --metrics-pusher-address=pushgateway-prometheus-pushgateway.monitoring:9091
             - --timeout=1h
           volumeMounts:
           - name: config
@@ -724,4 +698,4 @@ spec:
       volumes:
       - name: config
         configMap:
-          name: beekeeper-infra-test-check
+          name: beekeeper-infra-test-delete
