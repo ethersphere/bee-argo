@@ -95,7 +95,7 @@ beeConfig:
   tracing_enable: true
   resolver_options: "https://cloudflare-eth.com"
   swap_enable: true
-  swap_endpoint: ws://goerli-geth-1.goerli-geth-1:8546
+  swap_endpoint: ws://goerli-geth-2.goerli-geth-2:8546
   swap_deployment_gas_price: 1500000000000
   swap_initial_deposit: 1000000000000000000
   verbosity: 5
