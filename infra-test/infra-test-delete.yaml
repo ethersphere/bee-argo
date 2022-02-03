@@ -4,12 +4,12 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   namespace: infra-test
-  name: beekeeper-infra-test-create
+  name: beekeeper-infra-test-delete
   labels:
 
     helm.sh/chart: beekeeper-0.3.8
     app.kubernetes.io/name: beekeeper
-    app.kubernetes.io/instance: beekeeper-infra-test-create
+    app.kubernetes.io/instance: beekeeper-infra-test-delete
     app.kubernetes.io/version: "latest"
     app.kubernetes.io/managed-by: Helm
 ---
@@ -17,12 +17,12 @@ metadata:
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: beekeeper-infra-test-create
+  name: beekeeper-infra-test-delete
   namespace: infra-test
   labels:
     helm.sh/chart: beekeeper-0.3.8
     app.kubernetes.io/name: beekeeper
-    app.kubernetes.io/instance: beekeeper-infra-test-create
+    app.kubernetes.io/instance: beekeeper-infra-test-delete
     app.kubernetes.io/version: "latest"
     app.kubernetes.io/managed-by: Helm
 data:
@@ -579,12 +579,12 @@ kind: Role
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   namespace: infra-test
-  name: beekeeper-infra-test-create
+  name: beekeeper-infra-test-delete
   labels:
 
     helm.sh/chart: beekeeper-0.3.8
     app.kubernetes.io/name: beekeeper
-    app.kubernetes.io/instance: beekeeper-infra-test-create
+    app.kubernetes.io/instance: beekeeper-infra-test-delete
     app.kubernetes.io/version: "latest"
     app.kubernetes.io/managed-by: Helm
 rules:
@@ -630,31 +630,31 @@ kind: RoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   namespace: infra-test
-  name: beekeeper-infra-test-create
+  name: beekeeper-infra-test-delete
   labels:
 
     helm.sh/chart: beekeeper-0.3.8
     app.kubernetes.io/name: beekeeper
-    app.kubernetes.io/instance: beekeeper-infra-test-create
+    app.kubernetes.io/instance: beekeeper-infra-test-delete
     app.kubernetes.io/version: "latest"
     app.kubernetes.io/managed-by: Helm
 subjects:
 - kind: ServiceAccount
-  name: beekeeper-infra-test-create
+  name: beekeeper-infra-test-delete
 roleRef:
   kind: Role
-  name: beekeeper-infra-test-create
+  name: beekeeper-infra-test-delete
   apiGroup: rbac.authorization.k8s.io
 ---
 # Source: beekeeper/templates/job.yaml
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: beekeeper-infra-test-create-job
+  name: beekeeper-infra-test-delete-job
   labels:
     helm.sh/chart: beekeeper-0.3.8
     app.kubernetes.io/name: beekeeper
-    app.kubernetes.io/instance: beekeeper-infra-test-create
+    app.kubernetes.io/instance: beekeeper-infra-test-delete
     app.kubernetes.io/version: "latest"
     app.kubernetes.io/managed-by: Helm
 spec:
@@ -663,11 +663,11 @@ spec:
     metadata:
       labels:
         app.kubernetes.io/name: beekeeper
-        app.kubernetes.io/instance: beekeeper-infra-test-create
+        app.kubernetes.io/instance: beekeeper-infra-test-delete
     spec:
       imagePullSecrets:
         - name: regcred
-      serviceAccountName: beekeeper-infra-test-create
+      serviceAccountName: beekeeper-infra-test-delete
       containers:
         - name: beekeeper
           image: "ethersphere/beekeeper:0.8.3"
@@ -685,7 +685,7 @@ spec:
               value: "0x62cab2b3b55f341f10348720ca18063cdb779ad5"
           command:
             - beekeeper
-            - create
+            - delete
             - bee-cluster
             - --cluster-name=infra-test
             - --timeout=1h
@@ -699,4 +699,4 @@ spec:
       volumes:
       - name: config
         configMap:
-          name: beekeeper-infra-test-create
+          name: beekeeper-infra-test-delete
