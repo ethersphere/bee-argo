@@ -67,8 +67,8 @@ data:
     swap-deployment-gas-price: 1.5e+12
     swap-initial-deposit: 1e+18
     tracing-enable: true
-    tracing-endpoint: 127.0.0.1:6831
-    tracing-service-name: bee
+    tracing-endpoint: tempo-tempo-distributed-distributor.observability:6831
+    tracing-service-name: bee-staging
     transaction: 
     use-postage-snapshot: false
     verbosity: 5
@@ -319,15 +319,8 @@ spec:
               subPath: .bee.yaml
       containers:
         - name: bee
-          image: "ethersphere/bee@sha256:1f978df71115d2ed24acc2c5e3730643f8108e6563a7d3f3e6e20ba135b7da27"
+          image: "ethersphere/bee@sha256:019127957fa324ebda80eb4b3f568912910e12e25b82da9a3e411a21672f72e1"
           imagePullPolicy: Always
-          env:
-            - name: BEE_TRACING_HOST
-              valueFrom:
-                fieldRef:
-                  fieldPath: status.hostIP
-            - name: BEE_TRACING_PORT
-              value: "6831"
           command:
             - bee
             - start
