@@ -82,6 +82,7 @@ beeConfig:
   full_node: true
   gateway_mode: false
   network_id: 5
+  mainnet: false
   usePasswordFile: true
   existingSecret: bee-password
   tracing_enable: true
