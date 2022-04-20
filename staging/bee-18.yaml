@@ -46,7 +46,7 @@ data:
     full-node: true
     gateway-mode: false
     global-pinning-enable: false
-    mainnet: true
+    mainnet: false
     nat-addr: 
     network-id: 5
     password-file: /home/bee/.secret/password
