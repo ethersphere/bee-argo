@@ -94,6 +94,8 @@ beeConfig:
   usePasswordFile: true
   existingSecret: bee-password
   tracing_enable: true
+  tracing_service_name: staging
+  tracing_endpoint: "tempo-tempo-distributed-distributor.observability:6831"
   resolver_options: "https://cloudflare-eth.com"
   swap_enable: true
   swap_endpoint: ws://goerli-geth-1.goerli-geth-1:8546

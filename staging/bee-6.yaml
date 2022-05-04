@@ -7,7 +7,7 @@ metadata:
   namespace: staging
   labels:
 
-    helm.sh/chart: bee-0.11.5
+    helm.sh/chart: bee-0.11.7
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-6
     app.kubernetes.io/version: "latest"
@@ -20,7 +20,7 @@ metadata:
   name: bee-6
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.11.5
+    helm.sh/chart: bee-0.11.7
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-6
     app.kubernetes.io/version: "latest"
@@ -45,7 +45,6 @@ data:
     debug-api-enable: true
     full-node: true
     gateway-mode: false
-    global-pinning-enable: false
     mainnet: false
     nat-addr: 
     network-id: 5
@@ -68,11 +67,12 @@ data:
     swap-deployment-gas-price: 1.5e+12
     swap-initial-deposit: 1e+18
     tracing-enable: true
-    tracing-endpoint: 127.0.0.1:6831
-    tracing-service-name: bee
+    tracing-endpoint: tempo-tempo-distributed-distributor.observability:6831
+    tracing-service-name: staging
     transaction: 
     use-postage-snapshot: false
     verbosity: 5
+    warmup-time: 20m
     welcome-message: Welcome to the Swarm, you are Bee-ing connected!
 ---
 # Source: bee/templates/service-api.yaml
@@ -82,7 +82,7 @@ metadata:
   name: bee-6
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.11.5
+    helm.sh/chart: bee-0.11.7
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-6
     app.kubernetes.io/version: "latest"
@@ -107,7 +107,7 @@ metadata:
   name: bee-6-0
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.11.5
+    helm.sh/chart: bee-0.11.7
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-6
     app.kubernetes.io/version: "latest"
@@ -133,7 +133,7 @@ metadata:
   name: bee-6-0-debug
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.11.5
+    helm.sh/chart: bee-0.11.7
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-6
     app.kubernetes.io/version: "latest"
@@ -161,7 +161,7 @@ metadata:
   name: bee-6-headless
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.11.5
+    helm.sh/chart: bee-0.11.7
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-6
     app.kubernetes.io/version: "latest"
@@ -195,7 +195,7 @@ metadata:
   name: bee-6-0-headless
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.11.5
+    helm.sh/chart: bee-0.11.7
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-6
     app.kubernetes.io/version: "latest"
@@ -222,7 +222,7 @@ metadata:
   name: bee-6-0-p2p
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.11.5
+    helm.sh/chart: bee-0.11.7
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-6
     app.kubernetes.io/version: "latest"
@@ -250,7 +250,7 @@ metadata:
   name: bee-6
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.11.5
+    helm.sh/chart: bee-0.11.7
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-6
     app.kubernetes.io/version: "latest"
@@ -320,7 +320,7 @@ spec:
               subPath: .bee.yaml
       containers:
         - name: bee
-          image: "perun84/bee:safe_refresh_v1"
+          image: "perun84/bee:reserve_unthrottle_v2"
           imagePullPolicy: Always
           env:
             - name: BEE_TRACING_HOST
@@ -412,7 +412,7 @@ metadata:
   name: bee-6-0-debug
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.11.5
+    helm.sh/chart: bee-0.11.7
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-6
     app.kubernetes.io/version: "latest"
