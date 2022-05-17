@@ -7,10 +7,10 @@ metadata:
   namespace: staging
   labels:
 
-    helm.sh/chart: bee-0.11.9
+    helm.sh/chart: bee-0.12.0
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-12
-    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/version: "1.6.0"
     app.kubernetes.io/managed-by: Helm
 ---
 # Source: bee/templates/config.yaml
@@ -20,60 +20,30 @@ metadata:
   name: bee-12
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.11.9
+    helm.sh/chart: bee-0.12.0
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-12
-    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/version: "1.6.0"
     app.kubernetes.io/managed-by: Helm
 data:
   .bee.yaml: |+
-    allow-private-cidrs: false
     api-addr: :1633
-    block-time: 15
     bootnode: /dnsaddr/staging.ethswarm.org
-    bootnode-mode: false
-    clef-signer-enable: false
-    clef-signer-endpoint: 
-    cors-allowed-origins: 
-    data-dir: /home/bee/.bee
-    cache-capacity: 1e+06
-    db-open-files-limit: 200
-    db-block-cache-capacity: 3.3554432e+07
-    db-write-buffer-size: 3.3554432e+07
-    db-disable-seeks-compaction: false
     debug-api-addr: :1635
     debug-api-enable: true
     full-node: true
-    gateway-mode: false
     mainnet: false
-    nat-addr: 
     network-id: 5
-    password-file: /home/bee/.secret/password
-    payment-early-percent: 50
-    payment-threshold: 1e+08
-    payment-tolerance-percent: 25
-    postage-stamp-address: 
-    price-oracle-address: 
     p2p-addr: :1634
-    p2p-quic-enable: false
-    p2p-ws-enable: false
     resolver-options: https://cloudflare-eth.com
-    resync: false
-    standalone: false
-    swap-enable: true
-    swap-endpoint: ws://goerli-geth-1.goerli-geth-1:8546
-    swap-factory-address: 
-    swap-legacy-factory-addresses: 
     swap-deployment-gas-price: 1.5e+12
+    swap-endpoint: ws://goerli-geth-1.goerli-geth-1:8546
     swap-initial-deposit: 1e+18
     tracing-enable: true
     tracing-endpoint: tempo-tempo-distributed-distributor.observability:6831
-    tracing-service-name: bee-staging
-    transaction: 
-    use-postage-snapshot: false
+    tracing-service-name: staging
     verbosity: 5
-    warmup-time: 20m
-    welcome-message: Welcome to the Swarm, you are Bee-ing connected!
+    password-file: /home/bee/.secret/password
 ---
 # Source: bee/templates/service-api.yaml
 apiVersion: v1
@@ -82,10 +52,10 @@ metadata:
   name: bee-12
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.11.9
+    helm.sh/chart: bee-0.12.0
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-12
-    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/version: "1.6.0"
     app.kubernetes.io/managed-by: Helm
 spec:
   ports:
@@ -107,10 +77,10 @@ metadata:
   name: bee-12-0
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.11.9
+    helm.sh/chart: bee-0.12.0
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-12
-    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/version: "1.6.0"
     app.kubernetes.io/managed-by: Helm
     pod: bee-12-0
     endpoint: api
@@ -133,10 +103,10 @@ metadata:
   name: bee-12-0-debug
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.11.9
+    helm.sh/chart: bee-0.12.0
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-12
-    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/version: "1.6.0"
     app.kubernetes.io/managed-by: Helm
     pod: bee-12-0
     endpoint: debug
@@ -161,10 +131,10 @@ metadata:
   name: bee-12-headless
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.11.9
+    helm.sh/chart: bee-0.12.0
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-12
-    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/version: "1.6.0"
     app.kubernetes.io/managed-by: Helm
 spec:
   clusterIP: None
@@ -195,10 +165,10 @@ metadata:
   name: bee-12-0-headless
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.11.9
+    helm.sh/chart: bee-0.12.0
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-12
-    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/version: "1.6.0"
     app.kubernetes.io/managed-by: Helm
     pod: bee-12-0
     endpoint: p2p
@@ -222,10 +192,10 @@ metadata:
   name: bee-12-0-p2p
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.11.9
+    helm.sh/chart: bee-0.12.0
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-12
-    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/version: "1.6.0"
     app.kubernetes.io/managed-by: Helm
     pod: bee-12-0
     endpoint: p2p
@@ -250,10 +220,10 @@ metadata:
   name: bee-12
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.11.9
+    helm.sh/chart: bee-0.12.0
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-12
-    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/version: "1.6.0"
     app.kubernetes.io/managed-by: Helm
 spec:
   serviceName: bee-12-headless
@@ -322,6 +292,13 @@ spec:
         - name: bee
           image: "ethersphere/bee@sha256:5a81871870636ccc4e04d2c082f4d6360ea59e6a1247cebedae620746d6b7ca5"
           imagePullPolicy: Always
+          env:
+            - name: BEE_TRACING_HOST
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.hostIP
+            - name: BEE_TRACING_PORT
+              value: "6831"
           command:
             - bee
             - start
@@ -361,7 +338,8 @@ spec:
             - name: data
               mountPath: /home/bee/.bee
             - name: bee-secret
-              mountPath: /home/bee/.secret
+              mountPath: /home/bee/.secret/password
+              subPath: password
               readOnly: true
       volumes:
         - name: config-file
@@ -388,7 +366,7 @@ spec:
         helm.sh/chart: bee
         app.kubernetes.io/name: bee
         app.kubernetes.io/instance: bee-12
-        app.kubernetes.io/version: "latest"
+        app.kubernetes.io/version: "1.6.0"
         app.kubernetes.io/managed-by: Helm
     spec:
       accessModes:
@@ -405,10 +383,10 @@ metadata:
   name: bee-12-0-debug
   namespace: staging
   labels:
-    helm.sh/chart: bee-0.11.9
+    helm.sh/chart: bee-0.12.0
     app.kubernetes.io/name: bee
     app.kubernetes.io/instance: bee-12
-    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/version: "1.6.0"
     app.kubernetes.io/managed-by: Helm
 spec:
   ingressClassName: nginx-internal

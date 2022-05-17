@@ -76,24 +76,28 @@ updateStrategy:
 podAnnotations:
   grafana.io/promtail: "true"
 
+extraEnvs:
+  - name: BEE_TRACING_HOST   # NOTE: Point to the Agent daemon on the Node
+    valueFrom:
+      fieldRef:
+        fieldPath: status.hostIP
+  - name: BEE_TRACING_PORT
+    value: "6831"
+
 beeConfig:
   bootnode: "/dnsaddr/staging.ethswarm.org"
-  debug_api_enable: true
-  full_node: true
-  gateway_mode: false
-  network_id: 5
+  network-id: 5
   mainnet: false
-  usePasswordFile: true
-  existingSecret: bee-password
-  tracing_enable: true
-  tracing_service_name: bee-staging
-  tracing_endpoint: "tempo-tempo-distributed-distributor.observability:6831"
-  resolver_options: "https://cloudflare-eth.com"
-  swap_enable: true
-  swap_endpoint: ws://goerli-geth-1.goerli-geth-1:8546
-  swap_deployment_gas_price: 1500000000000
-  swap_initial_deposit: 1000000000000000000
+  tracing-enable: true
+  tracing-service-name: staging
+  tracing-endpoint: "tempo-tempo-distributed-distributor.observability:6831"
+  resolver-options: "https://cloudflare-eth.com"
+  swap-endpoint: ws://goerli-geth-1.goerli-geth-1:8546
+  swap-deployment-gas-price: 1500000000000
+  swap-initial-deposit: 1000000000000000000
   verbosity: 5
+
+existingSecret: bee-password
 
 libp2pSettings:
   enabled: true
