@@ -4,12 +4,12 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   namespace: infra-test
-  name: beekeeper-infra-test-delete
+  name: beekeeper-infra-test-check
   labels:
 
-    helm.sh/chart: beekeeper-0.4.1
+    helm.sh/chart: beekeeper-0.4.2
     app.kubernetes.io/name: beekeeper
-    app.kubernetes.io/instance: beekeeper-infra-test-delete
+    app.kubernetes.io/instance: beekeeper-infra-test-check
     app.kubernetes.io/version: "latest"
     app.kubernetes.io/managed-by: Helm
 ---
@@ -17,12 +17,12 @@ metadata:
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: beekeeper-infra-test-delete
+  name: beekeeper-infra-test-check
   namespace: infra-test
   labels:
-    helm.sh/chart: beekeeper-0.4.1
+    helm.sh/chart: beekeeper-0.4.2
     app.kubernetes.io/name: beekeeper
-    app.kubernetes.io/instance: beekeeper-infra-test-delete
+    app.kubernetes.io/instance: beekeeper-infra-test-check
     app.kubernetes.io/version: "latest"
     app.kubernetes.io/managed-by: Helm
 data:
@@ -214,60 +214,61 @@ data:
     \   cors-allowed-origins: \"\"\n    data-dir: \"/home/bee/.bee\"\n    db-open-files-limit:
     200\n    db-block-cache-capacity: 33554432\n    db-write-buffer-size: 33554432\n
     \   db-disable-seeks-compaction: false\n    debug-api-addr: \":1635\"\n    debug-api-enable:
-    true\n    full-node: true\n    gateway-mode: false\n    nat-addr: \"\"\n    network-id:
-    1983\n    p2p-addr: \":1634\"\n    p2p-quic-enable: false\n    p2p-ws-enable: false\n
-    \   password: \"beekeeper\"\n    payment-early-percent: 50\n    payment-threshold:
-    100000000\n    payment-tolerance-percent: 25\n    postage-stamp-address: \"0x538e6de1d876bbcd5667085257bc92f7c808a0f3\"\n
-    \   price-oracle-address: \"0xfc28330f1ece0ef2371b724e0d19c1ee60b728b2\"\n    resolver-options:
-    \"https://cloudflare-eth.com\"\n    standalone: false\n    swap-enable: true\n    swap-endpoint:
-    \"ws://geth-swap.geth-swap:8546\"\n    swap-factory-address: \"0x09ad42a7d020244920309ffa14ea376dd2d3b7d5\"\n
-    \   swap-legacy-factory-addresses: \"0x657241f4494a2f15ba75346e691d753a978c72df\"\n
-    \   swap-initial-deposit: 10000000000000000\n    tracing-enabled: false\n    tracing-endpoint:
-    \"jaeger-operator-jaeger-agent.observability:6831\"\n    tracing-service-name: \"bee-infra-test\"\n
-    \   verbosity: 5\n    welcome-message: \"Welcome to the Infra Test!\"\n  bootnode-infra-test:\n
-    \   _inherit: \"infra-test\"\n    bootnode-mode: true\n\n# checks defines checks
-    Beekeeper can execute against the cluster\n# type filed allows defining same check
-    with different names and options \nchecks:\n  infra-test-balances:\n    options:\n
-    \     dry-run: false\n      file-name: balances\n      file-size: 1048576 # 1mb
-    = 1*1024*1024\n      postage-amount: 1000\n      postage-depth: 17\n      postage-wait:
-    5s\n      upload-node-count: 3\n      wait-before-download: 5s\n    timeout: 5m\n
-    \   type: balances\n  infra-test-cashout:\n    options:\n      node-group: bee\n
-    \   timeout: 5m\n    type: cashout\n  infra-test-chunk-repair:\n    options:\n      metrics-enabled:
-    \n      node-group: bee\n      number-of-chunks-to-repair: 1\n      postage-amount:
-    1000\n      postage-depth: 17\n      postage-wait: 5s\n      seed: \n    timeout:
-    5m\n    type: chunk-repair\n  infra-test-file-retrieval:\n    options:\n      file-name:
-    file-retrieval\n      file-size: 1048576 # 1mb = 1*1024*1024\n      files-per-node:
-    1\n      full: false\n      postage-amount: 1000\n      postage-depth: 17\n      postage-wait:
-    5s\n      upload-node-count: 3\n    timeout: 5m\n    type: file-retrieval\n  infra-test-full-connectivity:\n
-    \   timeout: 5m\n    type: full-connectivity\n    options:\n      boot-nodes:\n
-    \     - bootnode  \n      group-1:\n      - light\n      group-2:\n      - bee\n
-    \     - bootnode\n  infra-test-gc:\n    options:\n      cache-size: 10\n      reserve-size:
-    16\n    timeout: 5m\n    type: gc\n  infra-test-kademlia:\n    options:\n      dynamic:
-    false\n    timeout: 5m\n    type: kademlia\n  infra-test-manifest:\n    options:\n
-    \     files-in-collection: 10\n      max-pathname-length: 64\n      postage-amount:
-    1000\n      postage-depth: 17\n      postage-wait: 5s\n    timeout: 5m\n    type:
-    manifest\n  infra-test-peer-count:\n    timeout: 5m\n    type: peer-count\n  infra-test-pingpong:\n
-    \   options:\n      metrics-enabled: \n    timeout: 5m\n    type: pingpong\n  infra-test-pss:\n
-    \   options:\n      address-prefix: 2\n      metrics-enabled:\n      node-count:
-    3\n      postage-amount: 1000\n      postage-depth: 17\n      postage-wait: 5s\n
-    \     request-timeout: 5m\n    timeout: 5m\n    type: pss\n  infra-test-pullsync:\n
-    \   options:\n      chunks-per-node: 1\n      postage-amount: 1000\n      postage-depth:
-    17\n      postage-wait: 5s\n      replication-factor-threshold: 2\n      upload-node-count:
-    1\n    timeout: 5m\n    type: pullsync\n  infra-test-pushsync:\n    options:\n      chunks-per-node:
-    1\n      metrics-enabled:\n      mode: default\n      postage-amount: 1000\n      postage-depth:
-    17\n      postage-wait: 5s\n      retries: 5\n      retry-delay: 1s\n      upload-node-count:
-    1\n    timeout: 5m\n    type: pushsync\n  infra-test-pushsync-chunks:\n    options:\n
-    \     chunks-per-node: 1\n      metrics-enabled:\n      mode: chunks\n      postage-amount:
-    1000\n      postage-depth: 17\n      postage-wait: 5s\n      exclude-node-group:\n
-    \     - light\n      retries: 5\n      retry-delay: 1s\n      upload-node-count:
-    1\n    timeout: 5m\n    type: pushsync\n  infra-test-pushsync-light-chunks:\n    options:\n
-    \     chunks-per-node: 1\n      metrics-enabled:\n      mode: light-chunks\n      postage-amount:
-    1000\n      postage-depth: 17\n      postage-wait: 5s\n      exclude-node-group:\n
-    \     - light\n      retries: 5\n      retry-delay: 1s\n      upload-node-count:
-    1\n    timeout: 5m\n    type: pushsync\n  infra-test-retrieval:\n    options:\n
-    \     chunks-per-node: 1\n      metrics-enabled:\n      postage-amount: 1000\n      postage-depth:
-    17\n      postage-wait: 5s\n      upload-node-count: 1\n    timeout: 5m\n    type:
-    retrieval\n  infra-test-settlements:\n    options:\n      dry-run: false\n      expect-settlements:
+    true\n    full-node: true\n    gateway-mode: false\n    mainnet: false\n    nat-addr:
+    \"\"\n    network-id: 1983\n    p2p-addr: \":1634\"\n    p2p-quic-enable: false\n
+    \   p2p-ws-enable: false\n    password: \"beekeeper\"\n    payment-early-percent:
+    50\n    payment-threshold: 100000000\n    payment-tolerance-percent: 25\n    postage-stamp-address:
+    \"0x538e6de1d876bbcd5667085257bc92f7c808a0f3\"\n    price-oracle-address: \"0xfc28330f1ece0ef2371b724e0d19c1ee60b728b2\"\n
+    \   resolver-options: \"https://cloudflare-eth.com\"\n    standalone: false\n    swap-enable:
+    true\n    swap-endpoint: \"ws://geth-swap.geth-swap:8546\"\n    swap-factory-address:
+    \"0x09ad42a7d020244920309ffa14ea376dd2d3b7d5\"\n    swap-legacy-factory-addresses:
+    \"0x657241f4494a2f15ba75346e691d753a978c72df\"\n    swap-initial-deposit: 10000000000000000\n
+    \   tracing-enabled: false\n    tracing-endpoint: \"jaeger-operator-jaeger-agent.observability:6831\"\n
+    \   tracing-service-name: \"bee-infra-test\"\n    verbosity: 5\n    welcome-message:
+    \"Welcome to the Infra Test!\"\n  bootnode-infra-test:\n    _inherit: \"infra-test\"\n
+    \   bootnode-mode: true\n\n# checks defines checks Beekeeper can execute against
+    the cluster\n# type filed allows defining same check with different names and options
+    \nchecks:\n  infra-test-balances:\n    options:\n      dry-run: false\n      file-name:
+    balances\n      file-size: 1048576 # 1mb = 1*1024*1024\n      postage-amount: 1000\n
+    \     postage-depth: 17\n      postage-wait: 5s\n      upload-node-count: 3\n      wait-before-download:
+    5s\n    timeout: 5m\n    type: balances\n  infra-test-cashout:\n    options:\n      node-group:
+    bee\n    timeout: 5m\n    type: cashout\n  infra-test-chunk-repair:\n    options:\n
+    \     metrics-enabled: \n      node-group: bee\n      number-of-chunks-to-repair:
+    1\n      postage-amount: 1000\n      postage-depth: 17\n      postage-wait: 5s\n
+    \     seed: \n    timeout: 5m\n    type: chunk-repair\n  infra-test-file-retrieval:\n
+    \   options:\n      file-name: file-retrieval\n      file-size: 1048576 # 1mb =
+    1*1024*1024\n      files-per-node: 1\n      full: false\n      postage-amount: 1000\n
+    \     postage-depth: 17\n      postage-wait: 5s\n      upload-node-count: 3\n    timeout:
+    5m\n    type: file-retrieval\n  infra-test-full-connectivity:\n    timeout: 5m\n
+    \   type: full-connectivity\n    options:\n      boot-nodes:\n      - bootnode  \n
+    \     group-1:\n      - light\n      group-2:\n      - bee\n      - bootnode\n  infra-test-gc:\n
+    \   options:\n      cache-size: 10\n      reserve-size: 16\n    timeout: 5m\n    type:
+    gc\n  infra-test-kademlia:\n    options:\n      dynamic: false\n    timeout: 5m\n
+    \   type: kademlia\n  infra-test-manifest:\n    options:\n      files-in-collection:
+    10\n      max-pathname-length: 64\n      postage-amount: 1000\n      postage-depth:
+    17\n      postage-wait: 5s\n    timeout: 5m\n    type: manifest\n  infra-test-peer-count:\n
+    \   timeout: 5m\n    type: peer-count\n  infra-test-pingpong:\n    options:\n      metrics-enabled:
+    \n    timeout: 5m\n    type: pingpong\n  infra-test-pss:\n    options:\n      address-prefix:
+    2\n      metrics-enabled:\n      node-count: 3\n      postage-amount: 1000\n      postage-depth:
+    17\n      postage-wait: 5s\n      request-timeout: 5m\n    timeout: 5m\n    type:
+    pss\n  infra-test-pullsync:\n    options:\n      chunks-per-node: 1\n      postage-amount:
+    1000\n      postage-depth: 17\n      postage-wait: 5s\n      replication-factor-threshold:
+    2\n      upload-node-count: 1\n    timeout: 5m\n    type: pullsync\n  infra-test-pushsync:\n
+    \   options:\n      chunks-per-node: 1\n      metrics-enabled:\n      mode: default\n
+    \     postage-amount: 1000\n      postage-depth: 17\n      postage-wait: 5s\n      retries:
+    5\n      retry-delay: 1s\n      upload-node-count: 1\n    timeout: 5m\n    type:
+    pushsync\n  infra-test-pushsync-chunks:\n    options:\n      chunks-per-node: 1\n
+    \     metrics-enabled:\n      mode: chunks\n      postage-amount: 1000\n      postage-depth:
+    17\n      postage-wait: 5s\n      exclude-node-group:\n      - light\n      retries:
+    5\n      retry-delay: 1s\n      upload-node-count: 1\n    timeout: 5m\n    type:
+    pushsync\n  infra-test-pushsync-light-chunks:\n    options:\n      chunks-per-node:
+    1\n      metrics-enabled:\n      mode: light-chunks\n      postage-amount: 1000\n
+    \     postage-depth: 17\n      postage-wait: 5s\n      exclude-node-group:\n      -
+    light\n      retries: 5\n      retry-delay: 1s\n      upload-node-count: 1\n    timeout:
+    5m\n    type: pushsync\n  infra-test-retrieval:\n    options:\n      chunks-per-node:
+    1\n      metrics-enabled:\n      postage-amount: 1000\n      postage-depth: 17\n
+    \     postage-wait: 5s\n      upload-node-count: 1\n    timeout: 5m\n    type: retrieval\n
+    \ infra-test-settlements:\n    options:\n      dry-run: false\n      expect-settlements:
     true\n      file-name: settlements\n      file-size: 20 # 1mb = 1*1024*1024\n      postage-amount:
     1000\n      postage-depth: 17\n      postage-wait: 5s\n      threshold: 50000000000\n
     \     upload-node-count: 3\n      wait-before-download: 30s\n    timeout: 5m\n    type:
@@ -576,12 +577,12 @@ kind: Role
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   namespace: infra-test
-  name: beekeeper-infra-test-delete
+  name: beekeeper-infra-test-check
   labels:
 
-    helm.sh/chart: beekeeper-0.4.1
+    helm.sh/chart: beekeeper-0.4.2
     app.kubernetes.io/name: beekeeper
-    app.kubernetes.io/instance: beekeeper-infra-test-delete
+    app.kubernetes.io/instance: beekeeper-infra-test-check
     app.kubernetes.io/version: "latest"
     app.kubernetes.io/managed-by: Helm
 rules:
@@ -627,31 +628,31 @@ kind: RoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   namespace: infra-test
-  name: beekeeper-infra-test-delete
+  name: beekeeper-infra-test-check
   labels:
 
-    helm.sh/chart: beekeeper-0.4.1
+    helm.sh/chart: beekeeper-0.4.2
     app.kubernetes.io/name: beekeeper
-    app.kubernetes.io/instance: beekeeper-infra-test-delete
+    app.kubernetes.io/instance: beekeeper-infra-test-check
     app.kubernetes.io/version: "latest"
     app.kubernetes.io/managed-by: Helm
 subjects:
 - kind: ServiceAccount
-  name: beekeeper-infra-test-delete
+  name: beekeeper-infra-test-check
 roleRef:
   kind: Role
-  name: beekeeper-infra-test-delete
+  name: beekeeper-infra-test-check
   apiGroup: rbac.authorization.k8s.io
 ---
 # Source: beekeeper/templates/job.yaml
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: beekeeper-infra-test-delete-job
+  name: beekeeper-infra-test-check-job
   labels:
-    helm.sh/chart: beekeeper-0.4.1
+    helm.sh/chart: beekeeper-0.4.2
     app.kubernetes.io/name: beekeeper
-    app.kubernetes.io/instance: beekeeper-infra-test-delete
+    app.kubernetes.io/instance: beekeeper-infra-test-check
     app.kubernetes.io/version: "latest"
     app.kubernetes.io/managed-by: Helm
 spec:
@@ -660,11 +661,39 @@ spec:
     metadata:
       labels:
         app.kubernetes.io/name: beekeeper
-        app.kubernetes.io/instance: beekeeper-infra-test-delete
+        app.kubernetes.io/instance: beekeeper-infra-test-check
     spec:
       imagePullSecrets:
         - name: regcred
-      serviceAccountName: beekeeper-infra-test-delete
+      serviceAccountName: beekeeper-infra-test-check
+      initContainers:
+        - name: init-ping
+          image: "ethersphere/beekeeper:0.8.3"
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: BEEKEEPER_ENABLE_K8S
+              value: "true"
+            - name: BEEKEEPER_IN_CLUSTER
+              value: "true"
+            - name: BEEKEEPER_CONFIG_GIT_REPO
+              value: ""
+            - name: BEEKEEPER_CONFIG_GIT_BRANCH
+              value: "main"
+            - name: BEEKEEPER_GETH_URL
+              value: "http://geth-swap.geth-swap:8545"
+            - name: BEEKEEPER_BZZ_TOKEN_ADDRESS
+              value: "0x6aab14fe9cccd64a502d23842d916eb5321c26e7"
+            - name: BEEKEEPER_ETH_ACCOUNT
+              value: "0x62cab2b3b55f341f10348720ca18063cdb779ad5"
+          command:
+            - sh
+            - -c
+            - >
+              until beekeeper check --cluster-name=infra-test --checks=pingpong; do echo "waiting for the cluster..."; sleep 1; done
+          volumeMounts:
+          - name: config
+            mountPath: /home/beekeeper/.beekeeper
+            readOnly: true
       containers:
         - name: beekeeper
           image: "ethersphere/beekeeper:0.8.3"
@@ -686,9 +715,11 @@ spec:
               value: "0x62cab2b3b55f341f10348720ca18063cdb779ad5"
           command:
             - beekeeper
-            - delete
-            - bee-cluster
+            - check
             - --cluster-name=infra-test
+            - --checks=infra-test-balances,infra-test-manifest,infra-test-pushsync,infra-test-pushsync-chunks,infra-test-retrieval,infra-test-settlements
+            - --metrics-enabled
+            - --metrics-pusher-address=pushgateway-prometheus-pushgateway.monitoring:9091
             - --timeout=1h
           volumeMounts:
           - name: config
@@ -700,4 +731,4 @@ spec:
       volumes:
       - name: config
         configMap:
-          name: beekeeper-infra-test-delete
+          name: beekeeper-infra-test-check
