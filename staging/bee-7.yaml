@@ -29,7 +29,6 @@ data:
   .bee.yaml: |+
     api-addr: :1633
     bootnode: /dnsaddr/staging.ethswarm.org
-    bootnode-mode: true
     debug-api-addr: :1635
     debug-api-enable: true
     full-node: true
