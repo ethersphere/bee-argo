@@ -87,6 +87,7 @@ extraEnvs:
 beeConfig:
   bootnode: "/dnsaddr/staging.ethswarm.org"
   network-id: 5
+  bootnode-mode: true
   mainnet: false
   tracing-enable: true
   tracing-service-name: staging
