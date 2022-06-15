@@ -1,6 +1,6 @@
 image:
-  repository: ethersphere/bee
-  tag: latest
+  repository: perun84/bee
+  tag: storage-syncer
   pullPolicy: Always
 
 imagePullSecrets:
@@ -8,8 +8,12 @@ imagePullSecrets:
 
 replicaCount: 1
 
+beeCommand: ["/entrypoint.sh", "-e", "-v", "stagingv1"]
+probesEnable: false
+
 serviceAccount:
-  create: true
+  name: storage-syncer
+  create: false
 
 singlePodSts:
   enabled: true
@@ -76,13 +80,13 @@ updateStrategy:
 podAnnotations:
   grafana.io/promtail: "true"
 
-extraEnvs:
-  - name: BEE_TRACING_HOST   # NOTE: Point to the Agent daemon on the Node
-    valueFrom:
-      fieldRef:
-        fieldPath: status.hostIP
-  - name: BEE_TRACING_PORT
-    value: "6831"
+#extraEnvs:
+#  - name: BEE_TRACING_HOST   # NOTE: Point to the Agent daemon on the Node
+#    valueFrom:
+#      fieldRef:
+#        fieldPath: status.hostIP
+#  - name: BEE_TRACING_PORT
+#    value: "6831"
 
 beeConfig:
   bootnode: "/dnsaddr/staging.ethswarm.org"
@@ -100,8 +104,11 @@ beeConfig:
 existingSecret: bee-password
 
 libp2pSettings:
-  enabled: true
+  enabled: false
   existingSecret: bee-libp2pkeys
+
+swarmSettings:
+  enabled: false
 
 p2pFixedPort:
   enabled: true
