@@ -1,6 +1,6 @@
 image:
-  repository: perun84/bee
-  tag: storage-syncer
+  repository: ethersphere/bee
+  tag: 1.6.1
   pullPolicy: Always
 
 imagePullSecrets:
@@ -8,9 +8,14 @@ imagePullSecrets:
 
 replicaCount: 1
 
-beeCommand: ["/entrypoint.sh", "-e", "-v", "stagingv2"]
 probesEnable: false
-
+extraInitContainers:
+ - name: storage-importer
+   image: perun84/bee:storage-syncer
+   command: ["/entrypoint.sh", "-i", "-v", "stagingv1"]
+   volumeMounts:
+     - mountPath: /home/bee/.bee
+       name: data
 serviceAccount:
   name: storage-syncer
   create: false

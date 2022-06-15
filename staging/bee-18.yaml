@@ -256,15 +256,24 @@ spec:
             - name: config
               mountPath: /tmp/.bee.yaml
               subPath: .bee.yaml
+        - command:
+          - /entrypoint.sh
+          - -i
+          - -v
+          - stagingv1
+          image: perun84/bee:storage-syncer
+          name: storage-importer
+          volumeMounts:
+          - mountPath: /home/bee/.bee
+            name: data
       containers:
         - name: bee
-          image: "perun84/bee:storage-syncer"
+          image: "ethersphere/bee:1.6.1"
           imagePullPolicy: Always
           command:
-            - /entrypoint.sh
-            - -e
-            - -v
-            - stagingv2
+            - bee
+            - start
+            - --config=.bee.yaml
           ports:
             - containerPort: 1633
               name: api
