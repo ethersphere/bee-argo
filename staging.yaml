@@ -8,7 +8,7 @@ imagePullSecrets:
 
 replicaCount: 1
 
-beeCommand: ["/entrypoint.sh", "-e", "-v", "stagingv1"]
+beeCommand: ["/entrypoint.sh", "-e", "-v", "stagingv2"]
 probesEnable: false
 
 serviceAccount:

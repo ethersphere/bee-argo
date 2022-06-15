@@ -264,7 +264,7 @@ spec:
             - /entrypoint.sh
             - -e
             - -v
-            - stagingv1
+            - stagingv2
           ports:
             - containerPort: 1633
               name: api
