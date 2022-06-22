@@ -290,7 +290,7 @@ spec:
               subPath: .bee.yaml
       containers:
         - name: bee
-          image: "perun84/bee:ayscn_refresh-v5"
+          image: "perun84/bee:ayscn_refresh-v6"
           imagePullPolicy: Always
           env:
             - name: BEE_TRACING_HOST
