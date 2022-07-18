@@ -289,7 +289,7 @@ spec:
               subPath: .bee.yaml
       containers:
         - name: bee
-          image: "ethersphere/bee@vandot/bee:ayscn_refresh"
+          image: "vandot/bee:ayscn_refresh"
           imagePullPolicy: Always
           env:
             - name: BEE_TRACING_HOST
