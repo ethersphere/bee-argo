@@ -7,7 +7,7 @@ metadata:
   name: beekeeper-infra-test-check
   labels:
 
-    helm.sh/chart: beekeeper-0.4.2
+    helm.sh/chart: beekeeper-0.4.3
     app.kubernetes.io/name: beekeeper
     app.kubernetes.io/instance: beekeeper-infra-test-check
     app.kubernetes.io/version: "latest"
@@ -20,7 +20,7 @@ metadata:
   name: beekeeper-infra-test-check
   namespace: infra-test
   labels:
-    helm.sh/chart: beekeeper-0.4.2
+    helm.sh/chart: beekeeper-0.4.3
     app.kubernetes.io/name: beekeeper
     app.kubernetes.io/instance: beekeeper-infra-test-check
     app.kubernetes.io/version: "latest"
@@ -580,7 +580,7 @@ metadata:
   name: beekeeper-infra-test-check
   labels:
 
-    helm.sh/chart: beekeeper-0.4.2
+    helm.sh/chart: beekeeper-0.4.3
     app.kubernetes.io/name: beekeeper
     app.kubernetes.io/instance: beekeeper-infra-test-check
     app.kubernetes.io/version: "latest"
@@ -631,7 +631,7 @@ metadata:
   name: beekeeper-infra-test-check
   labels:
 
-    helm.sh/chart: beekeeper-0.4.2
+    helm.sh/chart: beekeeper-0.4.3
     app.kubernetes.io/name: beekeeper
     app.kubernetes.io/instance: beekeeper-infra-test-check
     app.kubernetes.io/version: "latest"
@@ -650,7 +650,7 @@ kind: Job
 metadata:
   name: beekeeper-infra-test-check-job
   labels:
-    helm.sh/chart: beekeeper-0.4.2
+    helm.sh/chart: beekeeper-0.4.3
     app.kubernetes.io/name: beekeeper
     app.kubernetes.io/instance: beekeeper-infra-test-check
     app.kubernetes.io/version: "latest"
