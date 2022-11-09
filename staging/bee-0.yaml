@@ -288,7 +288,7 @@ spec:
               subPath: .bee.yaml
       containers:
         - name: bee
-          image: "ethersphere/bee@sha256:36df87331f275e22b3c53c89dbe748bcacea86816ae5401e1cc4d7edd5bfb479"
+          image: "ethersphere/bee@sha256:898320ca901ceae17e6c83a227065555719ef145ae0152ff82982f487a8f0e8c"
           imagePullPolicy: Always
           env:
             - name: BEE_TRACING_HOST
